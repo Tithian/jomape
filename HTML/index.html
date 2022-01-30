@@ -2,15 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio</title>
+    <title>Ejercicios HTML</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;}
+
+        li.navbar {
+          float: left;}
+
+        #navli {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;}
+
+        #navli:hover:not(.active) {
+          background-color: #111;}
+
+        .inicio {
+          background-color: #04AA6D;}
+
+    </style>
 </head>
-<style>
-    li {
-    padding: 25px;
-    box-sizing: border-box;
-    }
-</style>
+<header>
+        <ul>
+          <li class="navbar"><a id="navli" class="inicio" href="../index.html">Inicio</a></li>
+          <li class="navbar"><a id="navli" href="../HTML/index.html">Ejercicios HTML</a></li>
+          <li class="navbar"><a id="navli" href="../CSSEJ/index.html">Ejercicios CSS</a></li>
+          <li class="navbar"><a id="navli" href="#">Ejercicios JavaScript</a></li>
+            <!-- todo: añadir enlace de Javascript -->
+        </ul>
+</header>
 <body>
+
     <h1>Jose Antonio Macías Pérez</h1>
     <h2><strong>Ejercicios</strong></h2>
 
@@ -29,3 +58,10 @@
 <br>
 </body>
 </html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicios CSS</title>
+
+</head>
+<body>

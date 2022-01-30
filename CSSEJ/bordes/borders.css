@@ -1,0 +1,57 @@
+body {
+    background-color: grey;
+}
+
+div {
+    padding: 10px;
+    margin: 10%;
+    background: white;
+}
+
+#normal {
+    border: 4px solid;
+}
+
+#bottom {
+    border-bottom: 5px solid;
+}
+#rounded {
+    border: 4px solid red;
+    border-radius: 10px;
+}
+#b_left {
+    border-left: 8px solid blue;
+}
+#dotted {
+    border: 4px dotted orange;
+}
+#dashed {
+    border: 4px dashed purple;
+}
+#double {
+    border: 4px double green;
+}
+#groove {
+    border: 4px groove pink;
+}
+#ridge {
+    border: 4px ridge brown;
+}
+#inset {
+    border: 4px inset yellow;
+}
+#outset {
+    border: 4px outset coral;
+}
+#none {
+    border: 100 px none;
+}
+#hidden {
+    border: 10px hidden orange;
+}
+#crazy {
+    border-top: 5px dotted blue;
+    border-right: 5px solid red;
+    border-bottom: 5px double yellow;
+    border-left: 5px dashed orange;
+}
