@@ -1,76 +1,110 @@
-    .divexterno {
-        background-color: #4ffff2;    }
-    .h1externo {
-        color: #111;
-        font-family: sans-serif;
-        font-size: 100px;
-        font-weight: bold;
-        letter-spacing: -1px;
-        line-height: 1;
-        text-align: left;    }
-    .pexterno {
-        color: #590456;
-        font-family: 'Helvetica Neue', sans-serif;
-        font-size: 14px;
-        line-height: 24px;
-        margin: 0 0 24px;
-        text-align: left;
-        text-justify: inter-word;    }
-    * {
-        font-family: fantasy;
-    }
-    div {
-        padding: 50px;
-    }
-    div * {
-        font-style: italic;
-    }
-    div span {
-        font-style: normal;
-    }
-    div, span {
-        border: 5px solid red;
-        padding:  0em 1em;
-        border-radius: 16px;
-        font-size: 24px;
-        line-height: 2;
-        -webkit-box-decoration-break: clone;
-        -o-box-decoration-break: clone;
-        box-decoration-break: clone;
-    }
-    div > span {
-        border: 0px;
-        padding: 0px;
-        font-size: 24px;
-        line_height: 1;
-    }
-    div + span {
-        background-color: #00ab4c;
-    }
-    .paragraph {
-        font-family: arial;
-    }
-    div.paragraph {
-        font-family: arial;
-        color: #4b140f;
-    }
-    #item {
-        background-color: #000000;
-        color: yellow;
-    }
-    p#item {
-        color: orange;
-    }
-    div[class] {
-        margin: 20px;
-        box-shadow: 10px 10px #888888;
-    }
-    div[class="clase uno"] {
-        box-shadow: 20px 20px #550055;
-    }
-    div[class~="clase"] {
-        text-align: right;
-    }
-    span[class|="cl"] {
-        text-shadow: 5px 5px #555555;
-    }
+.divexterno {
+    background-color: #4ffff2;    }
+.h1externo {
+    color: #111;
+    font-family: sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: left;    }
+.pexterno {
+    color: #590456;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 24px;
+    text-align: left;
+    text-justify: inter-word;    }
+* {
+    font-family: fantasy;
+}
+div {
+    padding: 50px;
+}
+div * {
+    font-style: italic;
+}
+div span {
+    font-style: normal;
+}
+div, span {
+    border: 5px solid red;
+    padding:  0em 1em;
+    border-radius: 16px;
+    font-size: 24px;
+    line-height: 2;
+    -webkit-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+div > span {
+    border: 0px;
+    padding: 0px;
+    font-size: 24px;
+    line_height: 1;
+}
+div + span {
+    background-color: #00ab4c;
+}
+.paragraph {
+    font-family: arial;
+}
+div.paragraph {
+    font-family: arial;
+    color: #4b140f;
+}
+#item {
+    background-color: #000000;
+    color: yellow;
+}
+p#item {
+    color: orange;
+}
+div[class] {
+    margin: 20px;
+    box-shadow: 10px 10px #888888;
+}
+div[class="clase uno"] {
+    box-shadow: 20px 20px #550055;
+}
+div[class~="clase"] {
+    text-align: right;
+}
+span[class|="cl"] {
+    text-shadow: 5px 5px #555555;
+}
+
+header {
+    margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-family: none;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.inicio {
+  background-color: #04AA6D;
+}
