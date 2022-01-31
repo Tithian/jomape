@@ -1,0 +1,222 @@
+body {
+    background: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    margin-bottom: 5px;
+}
+
+h1{
+    font-size: 500%;
+    text-align: center;
+    outline-width: 5px;
+    outline-color: #fcedd8;
+    color: #eb452b;
+    font-family: 'Niconne', cursive;
+    font-weight: 700;
+}
+
+h1:hover{
+    font-size: 500%;
+    text-align: center;
+    color: #fcedd8;
+    font-family: 'Niconne', cursive;
+    font-weight: 700;
+    text-shadow: 5px 5px 0px #eb452b,
+                10px 10px 0px #efa032,
+                15px 15px 0px #46b59b,
+                20px 20px 0px #017e7f,
+                25px 25px 0px #052939,
+                30px 30px 0px #333,
+                35px 35px 0px #333,
+                40px 40px 0px #333,
+                45px 45px 0px #333;
+    transition: 1s linear;
+}
+
+.uno:link {
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    display: inline-flex;
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: #333;
+    text-decoration: none;
+}
+
+.uno:focus {
+    border: 2px solid white;
+}
+
+.uno:visited{
+    color: #333;
+    background: #000;
+    text-decoration: none;
+}
+
+.uno:hover{
+    color: yellow;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    cursor: -webkit-grab; cursor: grab;
+    transition: 1s linear;
+}
+
+.uno:active{
+    background: #FFF;
+    cursor: -webkit-grabbing; cursor: grabbing;
+    transform: translateY(10px);
+    transition: 0.1s;
+}
+
+.dos:link {
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    text-decoration: none;
+    display: inline-flex;
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: #333;
+}
+
+.dos:focus{
+    border: 2px solid white;
+}
+
+.dos:visited{
+    text-shadow: 1px 0 0 #fff;
+    text-decoration: none;
+    display: inline-flex;
+    margin: 2%;
+    padding: 1%;
+    border: hidden;
+    background: #000;
+}
+
+.dos:active{
+    color: yellow;
+    background: yellow;
+    transform: translateY(10px);
+    transition: 0.1s;
+}
+
+.dos:hover{
+    background: #fff;
+    border: 1px solid blue;
+    transition: 1s linear;
+    cursor: cell;
+}
+
+.tres:link {
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    display: inline-flex;
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: #333;
+    text-decoration: none;
+}
+
+.tres:focus {
+    border: 2px solid white;
+}
+
+.tres:visited {
+    text-shadow: 1px 0 0 orange;
+    text-decoration: none;
+    border: 1px solid orange;
+    background: #000;
+}
+
+.tres:hover {
+    text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow;
+    display: inline-flex;
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    background: red;
+    text-decoration: none;
+    transition: 1s linear;
+}
+
+.tres:active {
+    text-shadow: 2px 0 0 red, -2px 0 0 red, 0 2px 0 red, 0 -2px 0 red, 1px 1px red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+    display: inline-flex;
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: yellow;
+    text-decoration: none;
+    transform: translateY(10px);
+    transition: 0.1s;
+}
+
+.cuatro:link {
+    display: inline-flex;
+    text-decoration: none;
+    padding: 1%;
+    margin: 2%;
+    cursor: hidden;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px #999;
+}
+
+.cuatro:focus {
+    color: blue;
+}
+
+.cuatro:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(10px);
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
