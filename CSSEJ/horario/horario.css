@@ -1,0 +1,98 @@
+body {
+    background: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    margin-bottom: 5px;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+    background: white;
+    width: 900px;
+}
+
+table {
+  color: white;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;  font-family: arial, sans-serif;
+  text-align: auto;
+  border-collapse: collapse;
+  width: 800px;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  background-color: rgba(69, 69, 69, 0.25);
+}
+
+.contenedor {
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gbd {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+.plar {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+.fol {
+    background-color: rgba(112, 82, 2, 0.5);
+}
+.iso {
+    background-color: rgba(153,50,204, 0.5);
+}
+.lm {
+    background-color: rgba(255,0,0, 0.2);
+}
+.fuh {
+    background-color: rgba(255,184,28, 0.5);
+}
+
+.recreo {
+    background: linear-gradient(45deg, rgba(0, 0, 255, 0.2) 20%, rgba(0, 255, 0, 0.2) 40%, rgba(153,50,204, 0.5) 60%, rgba(255,0,0, 0.2) 80%, rgba(255,184,28, 0.5) 100%);
+}
