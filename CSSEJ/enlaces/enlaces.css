@@ -197,7 +197,7 @@ h1:hover{
     text-decoration: none;
     padding: 1%;
     margin: 2%;
-    cursor: hidden;
+    cursor: none;
     color: #fff;
     background-color: #04AA6D;
     border: none;
