@@ -40,71 +40,14 @@ div {
 	 font-family: "Quicksand", sans-serif;
 	 color: #333;
 }
- aside.context {
-	 text-align: center;
-	 color: #333;
-	 line-height: 1.7;
-}
- aside.context a {
-	 text-decoration: none;
-	 color: #333;
-	 padding: 3px 0;
-	 border-bottom: 1px dashed;
-}
- aside.context .explanation {
-	 max-width: 700px;
-	 margin: 4em auto 0;
-}
- footer {
-	 text-align: center;
-	 margin: 3em auto;
-	 width: 100%;
-}
- footer a {
-	 text-decoration: none;
-	 display: inline-block;
-	 width: 45px;
-	 height: 45px;
-	 border-radius: 50%;
-	 background: transparent;
-	 border: 1px dashed #333;
-	 color: #333;
-	 margin: 5px;
-}
- footer a:hover {
-	 background: rgba(255, 255, 255, 0.1);
-}
- footer a .icons {
-	 margin-top: 12px;
-	 display: inline-block;
-	 font-size: 20px;
-}
- h1 {
-	 width: 100%;
-	 margin: 3em auto 1.5em;
-	 font-size: 40px;
-	 text-align: center;
-}
- h1 small {
-	 text-transform: none;
-	 display: block;
-	 margin: 20px 0;
-	 font: 300 20px "QuickSand", sans-serif;
-	 color: #999;
-}
+
  h4 {
 	 width: 100%;
 	 margin: 2em auto 0;
 	 font-size: 20px;
 	 text-align: center;
 }
- h4 small {
-	 text-transform: uppercase;
-	 display: block;
-	 margin: 10px 0;
-	 font: 300 15px "QuickSand", sans-serif;
-	 color: #999;
-}
+
  .contenedor_principal {
 	 display: flex;
 	 flex-wrap: wrap;
@@ -149,17 +92,16 @@ div {
 }
  .palette__cover span {
 	 display: inline-block;
-	 position: absolute;
-	 bottom: 7.5px;
-	 left: 10px;
-	 padding: 10px;
-	 max-width: 50%;
+	 position: center;
+	 padding: auto;
+	 margin: auto;
 }
+
  .palette__cover__top {
 	 position: absolute;
 	 left: 0;
 	 width: calc(100% + 64px);
-	 margin-left: -32px;
+	 margin-left: -26px;
 	 z-index: 4;
 	 border-radius: 3px 3px 4px 4px;
 	 opacity: 0;
@@ -231,9 +173,8 @@ div {
  .palette--one .palette__cover__top {
 	 background: #ecb404;
 }
- .palette--one .palette__cover span {
-	 max-width: 50%;
-	 background: #ffc303;
+.palette--one .palette__cover span {
+    background: #ffc303;
 }
  .palette--two .palette__base {
 	 display: grid;
@@ -249,7 +190,6 @@ div {
 	 background: #e23a5d;
 }
  .palette--two .palette__cover span {
-	 max-width: 62%;
 	 background: #ee4266;
 }
  .palette--two .palette__shade:nth-child(1) {
@@ -271,9 +211,9 @@ div {
 	 background: #016cb4;
 }
  .palette--three .palette__cover span {
-	 max-width: 48%;
 	 background: #0075c4;
 }
+
  .palette--three .palette__base {
 	 display: grid;
 	 grid-gap: 8px;
@@ -340,7 +280,6 @@ div {
 	 background: #171926;
 }
  .palette--four .palette__cover span {
-	 max-width: 59%;
 	 background: #2a2e45;
 }
 
