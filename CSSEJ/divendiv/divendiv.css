@@ -60,46 +60,8 @@ p {
     border: 4px dashed white;
 }
 
-body {
-    background: black;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-a.navbar {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-a.navbar:hover:not(.active) {
-  background-color: #111;
-}
-
-a.inicio {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    background-color: #04AA6D;
-}
-a.inicio:hover:not(.active) {
-  background-color: #111;
-}
-
-header {
-    margin-bottom: 5px;
+ body {
+	 background: faf5f6;
+	 font-family: "Quicksand", sans-serif;
+	 color: #333;
 }

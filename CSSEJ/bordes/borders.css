@@ -87,3 +87,8 @@ li a:hover:not(.active) {
 header {
     margin-bottom: 5px;
 }
+ body {
+	 background: faf5f6;
+	 font-family: "Quicksand", sans-serif;
+	 color: #333;
+}
