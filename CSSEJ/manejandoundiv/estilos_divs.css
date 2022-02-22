@@ -1,0 +1,51 @@
+/* No aparece enunciado alguno en el ejercicio, no tengo claro que había que hacer */
+
+#padre {
+    border: 3px solid black;
+    background: red;
+    padding: 50% 10%;
+    }
+body {
+    background: #333;
+    font-family: "Quicksand", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.navbar {
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    margin-bottom: 5px;
+}

@@ -159,7 +159,8 @@ div {
 	 position: absolute;
 	 left: 0;
 	 width: calc(100% + 64px);
-	 margin-left: -27px;
+	 margin-top: -1px;
+	 margin-left: -26px;
 	 z-index: 4;
 	 border-radius: 3px 3px 4px 4px;
 	 opacity: 0;
@@ -362,12 +363,141 @@ div {
 }
 
  .palette--ten .palette__cover {
-	 background: #1a6de2;
+	 background: #a0d144;
 }
  .palette--ten .palette__cover__top {
-	 background: #1557b5;
+	 background: #88b339;
 }
  .palette--ten .palette__cover span {
+	 max-width: 59%;
+	 background: #a0d144;
+}
+
+ .palette--once .palette__base {
+	 display: grid;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto 20% 20%;
+}
+ .palette--once .palette__cover {
+	 background: #dc793f;
+}
+ .palette--once .palette__cover__top {
+	 background: #bc6734;
+}
+ .palette--once .palette__cover span {
+	 max-width: 59%;
+	 background: #dc793f;
+}
+
+ .palette--doce .palette__base {
+	 display: grid;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto 20% 20%;
+}
+ .palette--doce .palette__cover {
+	 background: #b20c6f;
+}
+ .palette--doce .palette__cover__top {
+	 background: #98095e;
+}
+ .palette--doce .palette__cover span {
+	 max-width: 59%;
+	 background: #b20c6f;
+}
+
+ .palette--trece .palette__base {
+	 display: grid;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto 20% 20%;
+}
+ .palette--trece .palette__cover {
+	 background: #4ff138;
+}
+ .palette--trece .palette__cover__top {
+	 background: #42ce2e;
+}
+ .palette--trece .palette__cover span {
+	 max-width: 59%;
+	 background: #4ff138;
+}
+
+ .palette--catorce .palette__base {
+	 display: grid;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto 20% 20%;
+}
+ .palette--catorce .palette__cover {
+	 background: #784c14;
+}
+ .palette--catorce .palette__cover__top {
+	 background: #663f0f;
+}
+ .palette--catorce .palette__cover span {
+	 max-width: 59%;
+	 background: #784c14;
+}
+
+ .palette--15 .palette__base {
+	 display: grid;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto 20% 20%;
+}
+ .palette--15 .palette__cover {
+	 background: #d8df9a;
+}
+ .palette--15 .palette__cover__top {
+	 background: #b9be83;
+}
+ .palette--15 .palette__cover span {
+	 max-width: 59%;
+	 background: #d8df9a;
+}
+
+ .palette--16 .palette__base {
+	 display: grid;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto 20% 20%;
+}
+ .palette--16 .palette__cover {
+	 background: #3e88d9;
+}
+ .palette--16 .palette__cover__top {
+	 background: #3473b9;
+}
+ .palette--16 .palette__cover span {
+	 max-width: 59%;
+	 background: #3e88d9;
+}
+
+ .palette--17 .palette__base {
+	 display: grid;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto 20% 20%;
+}
+ .palette--17 .palette__cover {
+	 background: #46b445;
+}
+ .palette--17 .palette__cover__top {
+	 background: #3a993a;
+}
+ .palette--17 .palette__cover span {
+	 max-width: 59%;
+	 background: #46b445;
+}
+
+ .palette--con .palette__base {
+	 display: grid;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto 20% 20%;
+}
+
+ .palette--con .palette__cover {
+	 background: #1a6de2;
+}
+ .palette--con .palette__cover__top {
+	 background: #1557b5;
+}
+ .palette--con .palette__cover span {
 	 max-width: 59%;
 	 background: #1a6de2;
 }

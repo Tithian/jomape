@@ -1,0 +1,82 @@
+body {
+    background: #d3d3d3;
+    background: faf5f6;
+	font-family: "Quicksand", sans-serif;
+	color: #333;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    margin-bottom: 5px;
+}
+#contenido {
+    background: white;
+
+}
+body #contenido {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 24 px;
+    color: red;
+}
+@font-face {
+        font-family: "chumbifont";
+        src: url("../src/BoldenVan.ttf");
+}
+h2 {
+    font-family: "chumbifont", sans-serif;
+    font-size: 18px;
+    color: navy;
+    /* Me niego en rotundo a utilizar Comic Sans */
+}
+
+p {
+    font-family: Verdana, sans-serif;
+    font-size: 16 px;
+    color: grey;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-right: 20px;
+}
+h1, h2, p {
+    margin-left: 20px;
+}

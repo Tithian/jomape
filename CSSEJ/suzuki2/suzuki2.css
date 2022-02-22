@@ -1,0 +1,65 @@
+/* En este ejemplo vamos a hacer una versión distinta, en la que vamos a añadir una imagen de fondo.
+
+7. Por último añadir en la cabecera la etiqueta necesaria para añadirle el icono a la página web.
+*/
+body {
+    background: #E6E6FA url("imagenes/bg_page.png") repeat-y fixed center;
+    font-family: "Quicksand", sans-serif;
+}
+.cont {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    font-family: Calibri;
+    font-size: 32px;
+    color: darkred; /* Soy daltónico, ni siquiera se si esto ha surtifo efecto */
+    text-align: center;
+}
+p {
+    font-family: Verdana;
+    font-size: 16px;
+    color: grey;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.navbar {
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    margin-bottom: 5px;
+}

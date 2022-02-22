@@ -1,0 +1,73 @@
+
+	h1 {	font-family: Verdana; 
+		font-size: 24px;
+		color: red;
+		margin-left: 20px;		}
+		
+	h2 {	font-family: "Brush Script MT", cursive;
+		font-size: 18px;
+		color: navy;
+		background: #444;
+		margin-left: 20px;		}
+		
+	p { 	font-family: Verdana; 
+		font-size: 16px; 
+		color: gray;
+		text-align: justify;
+		margin-left: 20px;
+		margin-right: 20px;}
+
+	.impar {font-family: "Audiowide", sans-serif}
+			
+	.par {font-family: "Sofia", sans-serif}
+    @font-face {
+        font-family: "chumbifont";
+        src: url("../src/BoldenVan.ttf");
+}
+	#ultimo {font-family: "chumbifont", sans-serif}
+
+body {
+    background: black;
+    background: faf5f6;
+	font-family: "Quicksand", sans-serif;
+	color: #333;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    margin-bottom: 5px;
+}
