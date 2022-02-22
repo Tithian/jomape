@@ -1,0 +1,83 @@
+#main {
+    float: left;
+    width: 580px;
+}
+#sidebar {
+    padding: 15px;
+    background: #E9F6FE;
+    margin-left: 600px;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: Arial Black;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #AFC3D6;
+    margin-bottom: 5px;
+}
+
+#main>h2 {
+    color: #E8A064;
+    border-bottom: 2px solid white;
+    background: url("images/bullet_flower.png");
+    padding: 0px 0px 10px 80px;
+}
+
+body {
+    color: #B1967C;
+    font-family: Palatino Linotype, Baskerville;
+    width: 800px;
+    margin: 0px auto;
+    margin-top: 150px;
+    background: #CDE6FF url("images/bg_body.png") repeat-x top 100px center;
+    font-family: "Quicksand", sans-serif;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar>li {
+   list-style-image: none;
+   margin-left: 0px;
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    margin-bottom: 5px;
+    width: 100%;
+}

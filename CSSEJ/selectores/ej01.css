@@ -22,6 +22,8 @@ body {
     margin: 0 0 24px;
     text-align: left;
     text-justify: inter-word;    }
+
+ /* esto es un selector universal, afecta a absolutamente tó */
 * {
     font-family: fantasy;
 }

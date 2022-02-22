@@ -1,0 +1,84 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.navbar {
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+p {
+    color: #505050;
+    font-family: Calibri;
+    font-size: 16px;
+    margin-left: 75px;
+}
+
+h1, h2, h3 {
+    color: #BD8100;
+    font-family: Baskerville;
+    border-top: 2px solid #86A100;
+    padding-top: 7px;
+    padding-left: 75px;
+}
+
+.note {
+    color: #333;
+    border: 2px dashed #BD8110;
+    background: #FBF8A9;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+
+.note>strong {
+    color: orange;
+}
+
+body {
+    background: #FDF8AB url("imagenes/fondo.png") repeat-y fixed center;
+    padding: 0px;
+    margin: 0px auto;
+    width: 760px;
+    font-family: "Quicksand", sans-serif;
+}
+
+#banner {
+    width: 760px;
+    height: 200px;
+}
