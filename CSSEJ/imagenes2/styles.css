@@ -13,13 +13,6 @@ ul { padding-left: 1.4em; list-style:square; }
 q:before, q:after { content:''; }
 /* end reset */
 
-#wrapper {
-	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-  overflow: hidden; /* contain float */
-}
-
 #main {
 	float: right;
 	width: 565px;
@@ -78,3 +71,182 @@ q:before, q:after { content:''; }
 	font: 14px Tahoma, Geneva, sans-serif;
 }
 
+/* Para empezar añadimos al body la imagen de fondo bg_page.png y el color de fondo FFF. Activa la
+repetición de la imagen que estimes oportuna */
+
+body {
+    background: url('images/bg_page.png') repeat-x center;
+    font-family: "Quicksand", sans-serif;
+    margin-top: 20px;
+
+}
+/*
+Vamos a mejorar el selector de id wrapper que contiene la hoja de estilos. Añadimos color de
+fondo FFF, la imagen de fondo bg_main.jpg, que se colocará mediante la propiedad backgroundposition en top y left. Sin repetición.
+*/
+
+#wrapper {
+    background: url('images/bg_main.jpg') no-repeat #FFF;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+    overflow: hidden; /* contain float */
+}
+
+/*
+No queda del todo mal pero vamos a empujar hacia abajo el titular superior grande y la barra
+lateral izquierda. Para ello al id banner le ponemos un margen superior de 48px y al id
+announcement otro de 115px
+*/
+
+#banner {
+    margin-top: 48px;
+}
+
+
+/*
+Los bordes que ofrece CSS son un tanto limitados. Veamos cómo podemos usar imágenes como
+bordes. Añade estilo para la etiqueta h2 dentro del div main. Añade la imagen de fondo
+underline.png sin repetición, colocada a la izquierda y abajo.
+*/
+
+#main>h2 {
+    border-bottom: 10px solid transparent;
+    border-image: url('images/underline.png') 15;
+}
+
+/* El subrayado se pisa con el texto. Pon un relleno inferior de 7px. */
+/* PC: Pues con mi código no sucede eso así que no lo veo necesario */
+
+/* Para seguir mejorando nuestra web vamos a
+cambiar las viñetas de la lista por imágenes. Lo
+primero que hacemos es eliminar las viñetas
+originales, por lo que en los elementos li del
+announcement ponemos el list-style a none.
+
+Añadimos las nuevas imágenes. Para ello usamos el
+archivo bullet.png como imagen de fondo sin
+repetición. Modifica el relleno izquierdo a 25px y
+un margen inferior de 10px.
+
+Está casi perfecto. La viñeta queda un poco alta.
+Para mejorar el aspecto añadimos por último la
+propiedad position con valores 0 y 4px.
+*/
+
+.last>li {
+    list-style: none;
+    list-style-image: url('images/bullet.png');
+    list-style-position: inside;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    position: 0px 4px;
+}
+
+/*
+ La lista de nuestra web necesita una imagen de fondo
+para que resalte. El problema es que una imagen
+normal podría quedar pequeña si el contenido de la lista
+es muy grande. Para ello nos vamos a inventar una
+imagen de fondo que se pueda “estirar” y que nos
+permita alargar la imagen acorde con el contenido.
+
+El truco reside en usar una imagen partida en tres. La
+parte superior y la inferior son fijas. La central se
+repetirá tantas veces como necesitemos para adaptarse
+al contenido.
+
+Busca el selector #announcement y añade una imagen
+de fondo llamada scroll_middle.jpg, con repetición-y,
+centrada y en el top. Esto nos ha permitido colocar la
+parte central del fondo, pero no tenemos ni la cabecera
+ni el pie.
+*/
+
+#announcement {
+    margin-top: 115px;
+    background: url('images/scroll_middle.jpg') repeat-y center top;
+}
+
+/*Localiza el estilo #announcement li dos márgenes, uno
+izquierdo de 30px y otro derecho de 40px.*/
+
+#announcement li {
+    margin-left: 30px;
+    margin-right: 40px;
+}
+
+/*
+Para añadir la parte superior del pergamino busca selector
+que afecta a los h2 que están dentro de announcement.
+Añade la imagen de fondo scroll_top.jpg sin repetición y
+con un relleno superior de 70px
+*/
+
+#announcement>h2 {
+    background: url('images/scroll_top.jpg') no-repeat;
+    padding-top: 70px;
+}
+
+/*
+Ahora falta lo más difícil. Debemos colocar la imagen inferior que cerrará el manuscrito. Debemos
+vincular esa imagen a algún elemento de la web. Por ello debemos añadir la clase last a la etiqueta
+ul que está debajo del h2, tal y como se muestra:
+
+Para terminar, creamos un selector para el id last que está dentro de announcement, colocándole
+la imagen de fondo scroll_boton.jpg, sin repetición, centrada y abajo. Daremos un relleno inferior
+de 65px para que quede bien
+*/
+
+.last {
+    background: url('images/scroll_bottom.jpg') no-repeat center bottom;
+    padding-bottom: 65px;
+}
+
+/* Barra de Navegación */
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar>li {
+   list-style-image: none;
+   margin-left: 0px;
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    margin-bottom: 5px;
+    width: 100%;
+}

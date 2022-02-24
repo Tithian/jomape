@@ -1,0 +1,174 @@
+/*
+1. Poner el color del fondo del body con el color C0C0C0.
+*/
+body {
+    background: #C0C0C0;
+    font-family: "Quicksand", sans-serif;
+    margin-top: 70px;
+}
+
+/*
+2. Al contenedor wrapper, vamos a ponerle de color de fondo blanco, un ancho del 90% con respecto al padre, un alto de
+600 pixeles. Le ponemos un margen de 0 pixeles en la vertical y centrado en la horizontal. Añadimos un margen solido de
+1 pixel en color negro.
+*/
+#wrapper {
+    background: white;
+    width: 90%;
+    height: 600px;
+    margin: 0px auto;
+    border: 1px solid black;
+}
+/*
+3. El banner, lo pondremos con color de fondo FF6600, una altura de 75 pixeles y con el borde inferior de 1 pixel en
+color negro solido.
+*/
+#banner {
+    background: #FF6600;
+    height: 75px;
+    border-bottom: 1px solid black;
+}
+
+/*
+4. El contenedor signup, tendrá un tamaño de 180 pixeles de ancho por 30 pixeles de alto, un color de fondo de 9966CC,
+un borde de 1 pixel de color negro solido. Lo vamos a flotar a la derecha, y lo separamos de margen superior y derecho
+5 pixeles respectivamente.
+*/
+#signup {
+    width: 180px;
+    height: 30px;
+    background: #9966CC;
+    border: 1px solid black;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/*
+5. El div main, tendrá un altura de 300 pixeles. Añádele una única regla css para ponerle de color de fondo 9966CC, la
+imagen que se incluye en esta práctica, sin repetición alineado a la izquierda y abajo. Incluye el borde inferior de 1
+pixel en color negro solido.
+*/
+#main {
+    height: 300px;
+    background: url('azul.jpg') no-repeat left bottom;
+    border-bottom: 1px solid black;
+}
+
+/*
+6. El contenedor tag, tiene un tamaño de 120 x 60 pixeles, con color de fondo ff6600 y un borde de 1 pixel en color
+negro solido. Lo pondremos con posicionamiento flotante a la derecha separado del margen superior y del margen derecho
+100 pixeles respectivamente.
+*/
+
+#tag {
+    width: 120px;
+    height: 60px;
+    background: #FF6600;
+    border: 1px solid black;
+    float: right;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+/*
+7. Pasamos al contenedor news, éste tendrá un alto de 150 pixeles, con el fondo en blanco, el contenido de dicho
+contenedor estará centrado y tendrá un borde inferior de 1 pixel en color negro solido.
+*/
+#news {
+    height: 150px;
+    background: white;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+/*
+8. Cada uno de los contenedores identificados como news1 tendrán de color de fondo el C0C0C0, un ancho del 30%, el alto
+será de 130 pixeles, estarán separados del margen superior 10 pixeles. Además queremos verlos como elementos en línea
+y no como elementos de bloques.
+*/
+.news1 {
+    background: #C0C0C0;
+    width: 30%;
+    height: 130px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid black;
+}
+/*
+9. Nos centramos ahora en el pie de la página web. Éste tendrá un alto de 75 pixeles, de color de fondo 33CC33. Su
+contenido estará centrado y tendrá un borde inferior de 1 pixel en color negro solido.
+*/
+#footer {
+    background: #9966CC;
+    margin-top: 10px;
+    height: 55px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+/*
+10. El contenedor testimony, contact y location tendrán un color de fondo de 9966CC, el margen superior será de 10
+pixeles, el alto será de 55 pixeles, el borde de 1 pixel en color negro solido, y serán elementos visualizados en linea.
+Las diferencias entre ellos será el ancho: testimony tendrá un ancho de un 25%, contact tendrá el 45% y location
+tendrá un 15%.
+*/
+#footer>div {
+    border: 1px solid black;
+}
+#testimony {
+    width: 25%;
+}
+#contact {
+    width: 45%;
+    border: 1px;
+}
+#location {
+    width: 15%;
+}
+
+/*Barra de Navegación*/
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar>li {
+   list-style-image: none;
+   margin-left: 0px;
+  float: left;
+}
+
+a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a.navbar:hover:not(.active) {
+  background-color: #111;
+}
+
+a.inicio {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #04AA6D;
+}
+a.inicio:hover:not(.active) {
+  background-color: #111;
+}
+
+header {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    margin-bottom: 5px;
+    width: 100%;
+}
