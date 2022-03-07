@@ -22,7 +22,7 @@ h2 {
 #main>h2 {
     color: #E8A064;
     border-bottom: 2px solid white;
-    background: url("images/bullet_flower.png");
+    background: url("images/bullet_flower.png") no-repeat;
     padding: 0px 0px 10px 80px;
 }
 
