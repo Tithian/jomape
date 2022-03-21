@@ -84,10 +84,12 @@ span[class|="cl"] {
 }
 
 header {
+    font-family: "Quicksand", sans-serif;
     margin-bottom: 5px;
 }
 
-ul {
+ul.navbar {
+    font-family: "Quicksand", sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -96,20 +98,22 @@ ul {
   font-family: none;
 }
 
-li {
+li.navbar {
+    font-family: "Quicksand", sans-serif;
   float: left;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: none;
+li.navbar a {
+    font-family: "Quicksand", sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: none;
 }
 
-li a:hover:not(.active) {
+li.navbar a:hover:not(.active) {
   background-color: #111;
 }
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+         <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="formularioget.css">
+          <title>Formulario GET</title>
+</head>
+<body>
+<form action="php/insertar_cv.php" method="get">
+    <fieldset>
+        <legend><h2>Rellena tu CV</h2></legend>
+        <div class="field">
+            <label for="nombre">Nombre</label>
+            <input name="nombre" id="nombre" type="text" maxlength="30" size="30" placeholder="Jhon" value="">
+        </div>
+        <div class="field">
+            <label for="apellidos">Apellidos</label>
+            <input name="apellidos" id="apellidos" maxlength="80" size="80" type="text" placeholder="Dough">
+        </div>
+        <div class="field">
+            <label for="contrasenya">Contrase&ntildea</label>
+            <input name="contrasenya" id="contrasenya" type="password" max="30" size="30">
+        </div>
+        <div class="field">
+            <label for="dni">DNI</label>
+            <input name="dni" id="dni" type="text" size="9" maxlength="9" placeholder="12345678A">
+        </div>
+        <div class="field">
+            <span>G&eacute;nero</span>
+            <input  type="radio" name="genero" id="hombre" value="Hombre" checked="checked">
+            <label for="hombre">Hombre</label>
+            <input  type="radio" name="genero" id="mujer" value="Mujer">
+            <label for="mujer">Mujer</label>
+        </div>
+        <div class="field">
+
+        </div>
+        <div class="field">
+            <input name="suscribe" type="checkbox" id="suscribe" checked="checked">
+            <label for="suscribe">Suscribirme al bolet&iacute;n de novedades</label>
+        </div>
+        <div class="field">
+            <label for="image">Incluir mi foto</label>
+            <input type="file" name="image" id="image">
+        </div>
+        <div class="buttons">
+            <input type="submit" name="enviar" value="Guardar cambios">
+            <input type="reset" name="borrar" value="Borrar los datos incluidos">
+        </div>
+    </fieldset>
+
+
+<!--    <div>-->
+<!--        <input name="afi_musica" type="checkbox" value="musica" checked="checked"> Subscribirme al boletín de novedades<br>-->
+<!--    </div><br>-->
+<!--    <div>-->
+<!--        <label for="myfile">Incluir mi foto:</label>-->
+<!--        <input type="text" value="" size="30">-->
+<!--        <input type="file" id="myfile" name="myfile">-->
+<!--        <br><br>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    <input type="submit" name="enviar" value="Guardar cambios">-->
+<!--    <input type="reset" name=" cancelar" value="Borrar los datos incluidos">-->
+<!--    </div>-->
+</body>
+</html>
+

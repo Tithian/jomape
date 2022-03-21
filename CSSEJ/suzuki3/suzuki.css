@@ -37,7 +37,7 @@ header {
     margin-bottom: 5px;
 }
 
-ul.nav {
+ul.navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -45,11 +45,11 @@ ul.nav {
   background-color: #333;
 }
 
-li.nav {
+li.navbar {
   float: left;
 }
 
-li.nav a {
+li.navbar a {
   display: block;
   color: white;
   text-align: center;
@@ -57,7 +57,7 @@ li.nav a {
   text-decoration: none;
 }
 
-li.nav a:hover:not(.active) {
+li.navbar a:hover:not(.active) {
   background-color: #111;
 }
 
