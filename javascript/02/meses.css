@@ -1,0 +1,7 @@
+.aqui {
+    color: blue;
+    text-decoration: underline;
+}
+.aqui:hover {
+    cursor: pointer;
+}
