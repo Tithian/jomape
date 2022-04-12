@@ -10,7 +10,7 @@ ol {
     flex-direction: column;
 }
 
-ul {
+ul.navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;

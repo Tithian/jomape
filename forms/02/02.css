@@ -1,0 +1,13 @@
+.field {
+    border: 1px black solid;
+    margin: 2%;
+}
+
+form {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+label {
+    display: block;
+}

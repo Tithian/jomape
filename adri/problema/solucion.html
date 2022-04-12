@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        function validar() {
+            let diveditabledemierdadeadrian = document.querySelector("[contenteditable]");
+            let contenido = diveditabledemierdadeadrian.textContent.toUpperCase();
+            let respuesta = "ADRIAN";
+            let respuesta2 = "ADRIÁN";
+            if(contenido===respuesta || contenido===respuesta2) {
+                document.getElementById('salida').innerHTML = "Hola Adrián";
+            } else {
+                document.getElementById('salida').innerHTML = "Fuera de aquí, zángano";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+
+
+
+ <!-- Desde aquí -->
+
+    <!-- 1º ENTRADA RECOGE LOS DATOS -->
+    <div>¿Eres el delegado de ASIR?</div>
+    <div>Introduce tu nombre:</div>
+    <div id="entrada" name="entrada" contenteditable="true"></div>
+   
+<!-- 2º CON EL BOTON LO VALIDAMOS -->
+    <button onclick="validar()">COMPROBAR</button>
+
+
+    <!-- 3º IMPRIME EN EL DIV SI FUE VERDADERO O FALSO -->
+    <div>
+        <h2 id="salida">La respuesta es: </h2>
+    </div>
+
+
+
+
+
+
+<!--    <script>-->
+<!--        function validar() {-->
+<!--            var checkBox = document.getElementById("entrada").value.toString();-->
+<!--            var respuesta = "adrian"; // La respuesta correcta.-->
+
+<!--            if (checkBox === respuesta) {-->
+<!--                // Si sale verdadero imprime esto-->
+<!--                document.getElementById('salida').innerHTML = "Correcto";-->
+<!--                return true;-->
+<!--            } else {-->
+<!--                // Si sale falso, esto otro-->
+<!--                document.getElementById('salida').innerHTML = "Incorrecto";-->
+<!--                return false;-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+</body>
+
+</html>

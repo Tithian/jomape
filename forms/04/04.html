@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+         <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="botones.css">
+          <title>Formulario4</title>
+</head>
+
+<body>
+    <form action="04.php" method="post">
+        <h1>Información sobre el producto</h1>
+        <fieldset>
+            <legend><h2>Datos básicos</h2></legend>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input name="nombre" id="nombre" type="text" value="" size="30" maxlength="30">
+            </div>
+
+            <div>
+                <label>Descripción</label>
+                <textarea name="descripcion" cols="40" rows="5 "></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Datos económicos</h2></legend><br>
+            <div>
+                <p>Precio: <input type="number" name="precio" value="" min="1" max="9999">Euros</p>
+            </div>
+            <div>
+                <p>Impuestos:</p>
+                <select id="impuesto" name="impuesto">
+                    <option value="" selected="selected">- Selecciona -</option>
+                    <option value="7">7%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                </select>
+</div>
+        <br>
+    <div>
+        <p>Promoción:</p>
+        <p><input type="radio" name="promo" value="none"/>Ninguno</p>
+        <p><input type="radio" name="promo" value="trans"/>Transporte gratuito</p>
+        <p><input type="radio" name="promo" value="five"/>Descuento 5%</p>
+    </div>
+
+    <div>
+        <input value="Calcuar Precio" type="submit"/></p>
+    </div>
+    </fieldset>
+
+
+</form>
+</body>
+</html>

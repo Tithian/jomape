@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Ejercicios</title>
+
+</head>
+<body>
+
+
+    <form onsubmit="sumaDe()">
+        <div class="title">Ejercicio 01</div>
+        <div class="subtitle">Introduce tres números y calcula la suma, mostrándola con alert.</div>
+        <div class="input-container">
+            <input id="sum1" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="sum1" class="placeholder">Primer Número</label>
+        </div>
+        <div class="input-container">
+            <input id="sum2" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="sum2" class="placeholder">Segundo Número</label>
+        </div>
+        <div class="input-container">
+            <input id="sum3" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="sum3" class="placeholder">Tercer Número</label>
+        </div>
+        <button type="submit" class="submit" onfocus="sumaDeTool()" onmouseover="sumaDeTool()">Sumar</button><span id="toolsuma"></span>
+    </form>
+
+
+    <form onsubmit="mediaDe()">
+        <div class="title">Ejercicio 02</div>
+        <div class="subtitle">Introduce cinco números en cajas de texto y calcula la media.</div>
+        <div class="input-container">
+            <input id="med1" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="med1" class="placeholder">Primer Número</label>
+        </div>
+        <div class="input-container">
+            <input id="med2" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="med2" class="placeholder">Segundo Número</label>
+        </div>
+        <div class="input-container">
+            <input id="med3" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="med3" class="placeholder">Tercer Número</label>
+        </div>
+        <div class="input-container">
+            <input id="med4" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="med4" class="placeholder">Cuarto Número</label>
+        </div>
+        <div class="input-container">
+            <input id="med5" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="med5" class="placeholder">Quinto Número</label>
+        </div>
+        <button type="submit" class="submit" onfocus="mediaDeTool()" onmouseover="mediaDeTool()">Calcular Media</button><span id="toolmedia"></span>
+    </form>
+
+
+    <form onsubmit="cuadDe()">
+        <div class="title">Ejercicio 03</div>
+        <div class="subtitle">Calcula el cuadrado de un número introducido por teclado.</div>
+        <div class="input-container">
+            <input id="cuad" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="cuad" class="placeholder">Número</label>
+        </div>
+
+        <button type="submit" class="submit" onfocus="cuadDeTool()" onmouseover="cuadDeTool()">Calcular Cuadrado</button><span id="toolcuad"></span>
+    </form>
+
+
+    <form onsubmit="opDe()">
+        <div class="title">Ejercicio 04</div>
+        <div class="subtitle">Introduce dos números por teclado y calcula la suma, la resta, el producto y el resto imprimiéndolos en la web.</div>
+        <div class="input-container">
+            <input id="op1" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="op1" class="placeholder">Número</label>
+        </div>
+        <div class="input-container">
+            <input id="op2" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="op2" class="placeholder">Número</label>
+        </div>
+        <button type="submit" class="submit" onfocus="opDeTool()" onmouseover="opDeTool()">Calcular</button><span id="toolop"></span>
+    </form>
+
+
+    <form onsubmit="sueldoDe()">
+        <div class="title">Ejercicio 05</div>
+        <div class="subtitle">Calcula el sueldo del mes de un empleado a partir del número de horas trabajadas y el precio por hora. Tendremos que descontar el % de IRPF que se indique.</div>
+        <div class="input-container">
+            <input id="horat" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="horat" class="placeholder">Horas Trabajadas</label>
+        </div>
+        <div class="input-container">
+            <input id="horap" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="horap" class="placeholder">Precio Por Hora</label>
+        </div>
+        <div class="input-container">
+            <input id="irpf" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="irpf" class="placeholder">IRPF</label>
+        </div>
+        <button type="submit" class="submit" onfocus="sueldoDeTool()" onmouseover="sueldoDeTool()">Calcular Salario</button><span id="toolsueldo"></span>
+    </form>
+
+
+    <form onsubmit="segunDe()">
+        <div class="title">Ejercicio 06</div>
+        <div class="subtitle">Introduce horas, minutos y segundos y calcula el total de segundos.</div>
+        <div class="input-container">
+            <input id="horasseg" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="horasseg" class="placeholder">Horas</label>
+        </div>
+        <div class="input-container">
+            <input id="minutos" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="minutos" class="placeholder">Minutos</label>
+        </div>
+        <div class="input-container">
+            <input id="segundos" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="segundos" class="placeholder">Segundos</label>
+        </div>
+        <button type="submit" class="submit" onfocus="segunDeTool()" onmouseover="segunDeTool()">Calcular Segundos</button><span id="toolsegundos"></span>
+    </form>
+
+
+    <form onsubmit="precioDe()">
+        <div class="title">Ejercicio 07</div>
+        <div class="subtitle">Introduce el precio unitario de un producto, el número de unidades compradas, el descuento aplicado y calcula el total con el IVA indicado.</div>
+        <div class="input-container">
+            <input id="unitprice" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="unitprice" class="placeholder">Precio de la Unidad</label>
+        </div>
+        <div class="input-container">
+            <input id="units" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="units" class="placeholder">Unidades</label>
+        </div>
+        <div class="input-container">
+            <input id="descuento" class="input" type="text" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="descuento" class="placeholder">Porcentaje de Descuento</label>
+        </div>
+        <div class="input-container">
+            <input id="iva" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="iva" class="placeholder">IVA</label>
+        </div>
+        <button type="submit" class="submit" onfocus="precioDeTool()" onmouseover="precioDeTool()">Calcular Precio</button><span id="toolprecio"></span>
+    </form>
+
+
+    <form onsubmit="precioReverseDe()">
+        <div class="title">Ejercicio 08</div>
+        <div class="subtitle">Calcula el precio bruto y el IVA a partir del precio total introducido por teclado. <strong>(Si no introduces IVA, calculará el 21%).</strong></div>
+        <div class="input-container">
+            <input id="preciototal" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="preciototal" class="placeholder">Precio Neto</label>
+        </div>
+        <div class="input-container">
+            <input id="ivaopt" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="ivaopt" class="placeholder">IVA (Opcional)</label>
+        </div>
+        <button type="submit" class="submit" onfocus="precioReverseDeTool()" onmouseover="precioReverseDeTool()">Calcular Precio</button><span id="toolprecioreverse"></span>
+    </form>
+
+
+    <form onsubmit="exponenteDe()">
+        <div class="title">Ejercicio 09</div>
+        <div class="subtitle">Introducir número base y exponente y calcular la potencia.</div>
+        <div class="input-container">
+            <input id="base" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="base" class="placeholder">Base</label>
+        </div>
+        <div class="input-container">
+            <input id="exponente" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="exponente" class="placeholder">Exponente</label>
+        </div>
+        <button type="submit" class="submit" onfocus="exponenteDeTool()" onmouseover="exponenteDeTool()">Calcular Potencia</button><span id="toolexp"></span>
+    </form>
+
+
+    <form onsubmit="sueldo2De()">
+        <div class="title">Ejercicio 10</div>
+        <div class="subtitle">
+            Calcula el sueldo del mes de un empleado a partir del número de horas trabajadas.
+            El número de horas mensuales son 160. Todas las demás son extras.
+            Se introduce también el precio por hora normal y el precio por hora extra y el IRPF.
+        </div>
+        <div class="input-container">
+            <input id="hextras" class="input" type="text" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="hextras" class="placeholder">Cantidad de Horas Extra</label>
+        </div>
+        <div class="input-container">
+            <input id="pnormal" class="input" type="text" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="pnormal" class="placeholder">Precio de Hora Normal</label>
+        </div>
+        <div class="input-container">
+            <input id="pextra" class="input" type="text" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="pextra" class="placeholder">Precio de Hora Extra</label>
+        </div>
+        <div class="input-container">
+            <input id="irpf2" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="irpf2" class="placeholder">IRPF</label>
+        </div>
+        <button type="submit" class="submit" onfocus="sueldo2DeTool()" onmouseover="sueldo2DeTool()">Calcular Salario</button><span id="toolsueldo2"></span>
+    </form>
+
+
+    <form onsubmit="meSubeLaBilirrubina()">
+        <div class="title">Ejercicio 11</div>
+        <div class="subtitle">
+            Diseña un algoritmo para pasar de grados Fahrenheit a ºC, sabiendo que C = (F-32)*5/9. <strong></strong>
+        </div>
+        <div class="inrad">
+            <input id="ftoc" class="radio" type="radio" name="temp" value="farc" checked="checked">
+            <label for="ftoc" class="radiolabel"><strong>Farenheint a Celsius</strong></label><br>
+            <input id="ctof" class="radio" type="radio" name="temp" value="celf">
+            <label for="ctof" class="radiolabel"><strong>Celsius a Farenheint</strong></label>
+        </div>
+        <div class="input-container">
+            <input id="canttemp" class="input" type="text" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="canttemp" class="placeholder">Temperatura</label>
+        </div>
+        <button type="submit" class="submit" onfocus="meSubeLaBilirrubinaTool()" onmouseover="meSubeLaBilirrubinaTool()">Convertir</button><span id="tooltemp"></span>
+    </form>
+
+    <form onsubmit="superDe()">
+        <div class="title">Ejercicio 12</div>
+        <div class="subtitle">
+            Calcula la superficie de un triángulo a partir de la base y la altura sabiendo que s=b*a/2.
+        </div>
+        <div class="input-container">
+            <input id="basetri" class="input" type="text" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="basetri" class="placeholder">Base</label>
+        </div>
+        <div class="input-container">
+            <input id="alturatri" class="input" type="text" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="alturatri" class="placeholder">Altura</label>
+        </div>
+        <button type="submit" class="submit" onfocus="superDeTool()" onmouseover="superDeTool()">Calcular Superficie</button><span id="toolsup"></span>
+    </form>
+
+
+    <form onsubmit="circunDe()">
+        <div class="title">Ejercicio 13</div>
+        <div class="subtitle">
+            Introduce el radio de una circunferencia y halla la longitud y el área sabiendo que L=2*PI*radio y A=PI*radio2.
+        </div>
+        <div class="input-container">
+            <input id="circunradio" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="circunradio" class="placeholder">Radio</label>
+        </div>
+        <button type="submit" class="submit" onfocus="circunDeTool()" onmouseover="circunDeTool()">Calcular</button><span id="toolcir"></span>
+    </form>
+
+
+    <form onsubmit="anosDe()">
+        <div class="title">Ejercicio 14</div>
+        <div class="subtitle">
+            A partir de un número de días, determinar el número de años, meses y días.
+        </div>
+        <div class="input-container">
+            <input id="dias" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="dias" class="placeholder">Días</label>
+        </div>
+        <button type="submit" class="submit" onfocus="anosDeTool()" onmouseover="anosDeTool()">Calcular</button><span id="toolanos"></span>
+    </form>
+
+
+    <form onsubmit="separaNum()">
+        <div class="title">Ejercicio 15</div>
+        <div class="subtitle">
+            Leer un número de cuatro cifras y descomponer en unidades, decenas, centenas y millares.
+        </div>
+        <div class="input-container">
+            <input id="cifras" class="input" type="text" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="cifras" class="placeholder">Número de 4 Cifras</label>
+        </div>
+        <button type="submit" class="submit" onfocus="separaNumTool()" onmouseover="separaNumTool()">Calcular</button><span id="toolsep"></span>
+    </form>
+
+
+    <form class="formwrapper" onsubmit="seAcercaElFin()">
+        <div class="wrapper">
+            <div class="title bg">Ejercicio Extra</div>
+            <div class="title fg">Ejercicio Extra</div>
+        </div>
+        <div class="subtitle funcont">
+            <h3 class="neon">Introduce la fecha de nacimiento de un individuo para calcular cuanto tiempo lleva respirando.</h3>
+            <h3 class="neon">Es obligatorio el formato AÑO/MES/DÍA</h3>
+            <h3 class="neon">Ejemplo: 2000/12/31</h3>
+        </div>
+        <button type="submit" class="submit fin">
+            ¡Se Acerca el FIN!
+        </button>
+    </form>
+<!--
+
+-->
+
+</body>
+</html>
