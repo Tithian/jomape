@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="e3.css">
+    <script src="e3.js"></script>
+</head>
+
+<body>
+    <div class="caja">
+        <h3>Ej 3-4-5</h3>
+        <div class="caja2">
+            <h3>Calcuar el cuadrado</h3>
+            <input type="text" id="entrada-cuadrado">
+            <button onclick="cuadrado()">Calcular</button>
+            <div class="salida">
+                <p id="salida-cuadrado"></p>
+            </div>
+        </div>q
+        <hr>
+        <div class="caja2">
+            <h3>Calcular raíz cuadrada</h3>
+            <input type="text" id="entrada-raiz">
+            <button onclick="raizCuadrada()">Calcular</button>
+            <div class="salida">
+                <p id="salida-raiz"></p>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="caja2">
+            <h3>Operaciones varias</h3>
+            <label for="">Número 1</label>
+            <input type="text" id="entrada-op1" size="4">
+            <label for="">Numero 2</label>
+            <input type="text" id="entrada-op2" size="4">
+            <button onclick="operaciones()">Calcular</button>
+            <div class="salida">
+                <p id="salida-operaciones"></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Calculadora sueldo IRPF -->
+        <div class="caja2">
+            <h3>Calculadora Sueldo</h3>
+
+            <label for="">Número de horas</label>
+            <input type="text" id="precioH" size="4">
+            <br>
+            <label for="">Precio por hora &nbsp&nbsp</label>
+            <input type="text" id="horasH" size="4">
+            <br>
+            <label for="">Tipo de tributo</label>
+            <select name="irpf" id="irpf">
+                <option value="" selected default disabled>IRPF</option>
+                <option value="0.04">Tipo 4%</option>
+                <option value="0.08">Tipo 8%</option>
+                <option value="0.12">Tipo 12%</option>
+            </select>
+            <br>
+            <button onclick="salario()">Calcular</button>
+            <div class="salida">
+                <p id="salario"></p>
+            </div>
+        </div>
+
+        <!-- Calculadora normal  -->
+        <div class="caja2">
+            <h2>Calculadora</h2>
+            <form name="calc">
+                <input type="Text" name="operando1" value="0" size="12">
+                <br>
+                <input type="Text" name="operando2" value="0" size="12">
+                <br>
+                <input type="Button" name="" value=" + " onclick="calcula('+')">
+                <input type="Button" name="" value=" - " onclick="calcula('-')">
+                <input type="Button" name="" value=" X " onclick="calcula('*')">
+                <input type="Button" name="" value=" / " onclick="calcula('/')">
+                <br>
+                <input type="Text" name="resultado" value="0" size="12">
+            </form>
+        </div>
+
+        <hr>
+
+        <!-- Fechas Horas Minutos Segundos  -->
+        <div class="caja2">
+            <h2>Introducir Valores</h2>
+            <div class="flex-column">
+                <div class="left">
+                    <fieldset>
+                        <legend>Calculadora de Segundos</legend>
+                        <input type="text" size="2" id="cHoras"> Horas <br>
+                        <input type="text" size="2" id="cMinutos"> Minutos <br>
+                        <input type="text" size="2" id="cSegundos"> Segundos <br>
+
+                        <button onclick="calculadoraSegundos()">Enviar</button>
+                </div>
+                <div class="salida">
+                    <p id="salidaSegungos"></p>
+                </div>
+                </fieldset>
+            </div>
+
+        </div>
+
+
+
+        <div class="caja2">
+            <h4>Tormento HACK</h4>
+            <p>License activated for <b class="cyan">*KoNaTa*</b> until <b>2022/05/16</b></p>
+            <div class="caja3">
+                <fieldset>
+                    <legend>BK Settings</legend>
+                    <input type="text" size="5"> +Strength <br>
+                    <input type="text" size="5"> +Agility <br>
+                    <input type="text" size="5"> +Vitality <br>
+                    <input type="text" size="5"> +Energy <br>
+                    <br>
+                    <input type="checkbox">Anti-reflect
+                    <input type="checkbox">Jumps
+                    <br>
+                    <input type="checkbox">Anti-Push
+                    <input type="checkbox">Ice
+                    <br>
+                    <input type="range" min="0" max="100"> Hit-Hack
+                    <input type="range" min="0" max="100"> Speed- Hack
+                    <br>
+                    <input type="submit" value="Apply">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </div>
+        </div>
+
+
+        <div class="caja2">
+            <h2>Calcular precios, cantidad, iva</h2>
+            <div class="caja3">
+                <input type="text" size="4"> Nombre del producto <br>
+                <input type="text" size="4" id="pProducto"> Precio Unitario <br>
+                <input type="text" size="4" id="pCantidad"> Cantidad <br>
+                <input type="text" size="4" id="pDescuento"> Descuento %<br>
+                <select name="" id="tipoIva2">
+                    <option value="0" disabled selected>IVA</option>
+                    <option value="4"> IVA 4%</option>
+                    <option value="8"> IVA 8%</option>
+                    <option value="12"> IVA 12%</option>
+                    <option value="21"> IVA 21%</option>
+                </select>
+                <button onclick="preciosIva2()">Calcular</button>
+            </div>
+            <div class="salida">
+                <p id="salidaPrecios1"></p>
+            </div>
+            <div class="salida">
+                <p id="salidaPrecios2"></p>
+            </div>
+            <div class="salida">
+                <p id="salidaPrecios3"></p>
+            </div>
+        </div>
+
+        <hr>
+        <hr>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+Escribe aquí si encuentras problemas:
+1º	Debería recoger más de un posible resultado ya que hay muchas opciones de llegar a sacar la misma consulta, esto puede recogerse por feedback a través de usuario.
+2º
+3º
+4º
+
+
+
+Escribe aquí si quieres proponer cambios;
+1º	un archivo JS a parte, eso fundamental.
+2º	En el HTML solo funciones sencillitas, para eso
+	Haz una función que recoja un parametro tipo texto y ahí te ahorras de escribir 20mil veces document.getElementById('entrada').innerHTML"
+3º	Yo usaría condicionales para que se desplieguen las opciones que solo sean posibles de usar.
+4º	Busca una plantilla visual más bonita y trabaja a partir de ahí. Luego para rediseñar el CSS te las vas a ver canutas.
+
+
+
+Escribe aquí si has hecho cambios;
+1º
+2º
+3º
+4º
+5º

@@ -1,0 +1,54 @@
+body{
+    width: 440px;
+    height: auto;
+    background: #001;
+}
+
+.caja{
+    height: 100%;
+    background: #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+.caja2{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    width: 90%;
+    margin: 10px auto;
+}
+.caja3{
+
+    padding: 4px;
+    width: 90%;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.salida{
+    background: bisque;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+button{
+    margin: 5px 5px;
+}
+
+.left{
+    text-align: left;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cyan{
+    color:blue;
+}

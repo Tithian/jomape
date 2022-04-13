@@ -1,0 +1,217 @@
+body{
+    background: #000;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.flex-column-evently{
+    display: flex;
+    flex-direction: colum;
+    justify-content: space-evenly;    
+}
+.flex-column{
+    display: flex;
+    flex-direction: colum;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-column-spaced{
+    display: flex;
+    flex-direction: colum;
+    justify-content: space-between;    
+}
+
+.flex-row-evenly{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.caja{ /*Caja grande del contenido*/
+    background-color: #666;
+    border: 2px solid gold;
+    border-radius: 5px;
+    width: 500px;
+    margin: 50px auto;
+    padding: 10px;
+
+}
+
+.caja2{ /*Cajas pequeñas dentro del contenido (caja)*/
+    background-color: #444;
+    border: 1px solid chartreuse;
+    border-radius: 5px;
+    width: 410px;
+    height:auto;
+    margin: 10px auto;
+    padding: 8px;
+}
+.caja3{ /*Cajas pequeñas dentro del contenido (caja)*/
+    background-color: #444;
+    border: 1px solid chartreuse;
+    border-radius: 5px;
+    height:auto;
+    margin: 10px auto;
+    padding: 10px;
+    color: chartreuse;
+}
+
+.caja2:hover{ /*Cajas pequeñas dentro del contenido (caja)*/
+    background-color: #444;
+    border: 1px solid chartreuse;
+    border-radius: 5px;
+
+    text-shadow: 0px 0px 2px white;
+    color: chartreuse;
+    transition: .5s;
+}
+
+.left{
+    text-align: left;
+}
+
+.justify{
+    text-align: justify;
+}
+.cyan{
+    color: cyan;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.grid-layout{
+    display:grid;
+    grid-template-columns: 95% 5%;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+}
+
+
+.grid-c1{
+    background: black;
+    border:1px solid #444;
+    cursor: not-allowed;
+}
+.grid-c2{
+    background: orangered;
+    border:1px solid #444;
+    cursor: help;
+}
+.grid-c2:hover{
+    transition:.5s;
+    transform: rotate(45deg);
+    transform-origin: 20% 40%;
+}
+
+
+
+
+
+
+#entrada{
+    text-align: left;
+    height: auto;
+    width: 477px;
+    color: withe;
+    background: #fff;
+    border: solid 1px chartreuse;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+}
+#salida{
+    text-align: center;
+    height: 10px;
+    width: 200px;
+    color: black;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px auto;
+    line-height: 10px;
+
+}
+
+.tecla{ /*Teclas dml*/
+    
+    width: 76px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 5px;
+    background: red;
+    padding: 5px;
+    /*contenteditable="true" en el div de html*/
+}
+
+.tecla2{ /*Puntuacion*/
+
+    width: 26px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 10px;
+    background: green;
+    padding: 5px;
+
+}
+
+.clientes{ /*clientes*/
+    
+    width: 76px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 5px;
+    background: yellow;
+    color: black;
+    padding: 5px;
+
+}
+.productos{ /*productos*/    
+    width: 76px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 5px;
+    color: black;
+    background: goldenrod;
+    padding: 5px;
+
+}
+.compras{ /*compras*/    
+    width: 76px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 5px;
+    color: black;
+    background: yellowgreen;
+    padding: 5px;
+
+}
+.categorias{ /*productos*/    
+    width: 76px;
+    height: 20px;
+    border: 1px solid black;
+    margin: 5px;
+    color: black;
+    background: orange;
+    /*contenteditable="true" en el div de html*/
+    padding: 5px;
+}
+
+
+
+
+
+
+/*-------------------------------*/

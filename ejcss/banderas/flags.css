@@ -1,0 +1,124 @@
+div {
+	border:1px solid black;
+	box-shadow: 10px 10px 5px grey;
+	width: 800px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+    }
+strong {
+    color: #FFFFFF;
+}
+
+div.flag {
+    margin: 2%;
+    display: inline-block;
+    border: 1px solid black;
+    box-shadow: 5px 10px 5px grey;
+    text-shadow: 0 0 3px #FF0000;
+
+    }
+
+#col {
+    width: 220px;
+    height: 147px;
+    background-image: linear-gradient(180deg, #FCD116 0 50%, #003893 50% 75%, #CE1126 75% 100%);
+    }
+#fra {
+    width: 220px;
+    height: 147px;
+    background-image: linear-gradient(90deg, #002395 0 33%, #FFF 33% 67%, #ED2939 67% 100%);
+    }
+#ita {
+    width: 220px;
+    height: 147px;
+    background-image: linear-gradient(90deg, #009246 0 33%, #FFF 33% 67%, #CE2B37 67% 100%);
+    }
+#esp {
+    width: 220px;
+    height: 147px;
+    background-image: linear-gradient(180deg, #AA151B 0% 25%, #F1BF00 25% 75%, #AA151B 75% 100%);
+    }
+#ger {
+    width: 220px;
+    height: 147px;
+    background-image: linear-gradient(180deg, #000 0 33%, #FF0000 33% 67%, #FFCC00 67% 100%);;
+    }
+#jap {
+    width: 220px;
+    height: 147px;
+    background-image: radial-gradient(circle, #FF0000 0 33%, #FFFFFF 33% 100%);;
+    }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.inicio {
+  background-color: #04AA6D;
+}
+
+header {
+    margin-bottom: 10px;
+}
+ body {
+	 background: faf5f6;
+	 font-family: "Quicksand", sans-serif;
+	 color: #333;
+}
+
+/*
+
+*/
+.dropdown {
+    padding-right: 40px;
+
+}
+.dropdown .dropdown-menu {
+    position: fixed;
+  transition: all 0.5s;
+  overflow: hidden;
+  transform-origin: top center;
+  transform: scale(1, 0);
+  display: block;
+  background: #333;
+}
+.dropdown:hover .dropdown-menu {
+  transform: scale(1);
+}
+
+img {
+    transition: 0.5s;
+    margin-bottom: -10px;
+    position: relative;
+    top: -7px;
+    left: 4px;
+}
+
+.dropdown:hover img {
+    transition: 0.5s;
+  transform: rotate(-180deg);
+}
+
+
+

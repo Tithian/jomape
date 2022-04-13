@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 1 JS</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <script>
+        function validar() {
+            let intento = document.querySelector("[contenteditable]");
+            let contenido = intento.textContent.toUpperCase();
+            let respuesta = "SELECT NOMBRE, APELLIDOS FROM CLIENTES;";
+            let respuesta2 = "select nombre, apellidos from clientes;";
+            if (contenido === respuesta || contenido === respuesta2) {
+                document.getElementById('salida').innerHTML = "Correcto";
+            } else {
+                document.getElementById('salida').innerHTML = "Incorrecto";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="caja">
+
+        <h2 class="cyan">Ejercicios de programación básca.</h2>
+        <div class="caja3">
+
+            <p>Busca nombres, apellidos de tabla clientes ordenados por id.</p>
+
+        </div>
+        <div id="entrada" name="entrada" contenteditable="true"></div>
+        <div>
+            <h2 id="salida" contenteditable="false"></h2>
+        </div>
+        
+
+        <button>Anterior</button>
+        <button onclick="validar()">COMPROBAR</button>
+        <button>Siguiente</button>
+        
+
+        <!-- <form method="POST">
+            <textarea name="entrada" id="salida" cols="80" rows="10"></textarea> <br>
+            <input type="submit" value="Comprobar" name="btn1">
+        </form> -->
+        <div class="caja2">
+            <div class="flex-column">
+                <!-- Teclas DML -->
+
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += 'SELECT'">
+                    <div class="tecla">SELECT</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' FROM'">
+                    <div class="tecla">FROM</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' WHERE'">
+                    <div class="tecla">WHERE</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' ORDER BY'">
+                    <div class="tecla">ORDER BY</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' HAVING'">
+                    <div class="tecla">HAVING</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' LIKE'">
+                    <div class="tecla">LIKE</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' AS'">
+                    <div class="tecla">AS</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' GROUP BY'">
+                    <div class="tecla">GROUP BY</div>
+                </a>
+
+            </div>
+
+            <div class="flex-column">
+            </a>
+            <a href="#" onClick="document.getElementById('entrada').innerHTML += ','">
+                <div class="tecla2">,</div>
+            </a>
+            <a href="#" onClick="document.getElementById('entrada').innerHTML += '.'">
+                <div class="tecla2">.</div>
+            </a>
+            <a href="#" onClick="document.getElementById('entrada').innerHTML += '('">
+                <div class="tecla2">(</div>
+            </a>
+            <a href="#" onClick="document.getElementById('entrada').innerHTML += ')'">
+                <div class="tecla2">)</div>
+            </a>
+            <a href="#" onClick="document.getElementById('entrada').innerHTML += '&lt'">
+                <div class="tecla2">&lt</div>
+            </a>
+            <a href="#" onClick="document.getElementById('entrada').innerHTML += '&gt'">
+                <div class="tecla2">&gt</div>
+            </a>
+            <a href="#" onClick="document.getElementById('entrada').innerHTML += ' = '">
+                <div class="tecla2">=</div>
+            </a>
+            </div>
+
+            <div class="flex-column">
+                <!-- teclas clientes -->
+                
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' clientes'">
+                    <div class="clientes"><b>clientes</b></div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' id'">
+                    <div class="clientes">id</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' dni'">
+                    <div class="clientes">dni</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' nombre'">
+                    <div class="clientes">nombre</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' apellidos'">
+                    <div class="clientes">apellidos</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' direccion'">
+                    <div class="clientes">direccion</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' tlf'">
+                    <div class="clientes">tlf</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ';'">
+                    <div class="clientes">;</div>
+                </a>
+            </div>
+            <div class="flex-column">
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' productos'">
+                    <div class="productos"><b>productos</b></div>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' cod'">
+                    <div class="productos">cod</div>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' nombre'">
+                    <div class="productos">nombre</div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' precio'">
+                    <div class="productos">precio</div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' stock'">
+                    <div class="productos">stock</div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' categoria'">
+                    <div class="productos">cat_fk</div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ''">
+                    <div class="productos"></div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ''">
+                    <div class="productos"></div>
+                </a>
+            </div>
+
+
+            <div class="flex-column">
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' compras'">
+                    <div class="compras"><b>compras</b></div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' id_fk'">
+                    <div class="compras">id_fk</div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' cod_fk'">
+                    <div class="compras">cod_fk</div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' fecha'">
+                    <div class="compras">fecha</div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ' cprecio'">
+                    <div class="compras">precio</div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ''">
+                    <div class="compras"></div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ''">
+                    <div class="compras"></div>
+                </a>
+                </a> <a href="#" onClick="document.getElementById('entrada').innerHTML += ''">
+                    <div class="compras"></div>
+                </a>
+            </div>
+
+            <div class="flex-column">
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' categorias'">
+                    <div class="categorias"><b>categorias</b></div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' id'">
+                    <div class="categorias">id</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ' nombre'">
+                    <div class="categorias">nombre</div>
+                </a>
+                <a href="#" onClick="document.getElementById('entrada').innerHTML += ''">
+                    <div class="categorias"></div>
+                </a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
