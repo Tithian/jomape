@@ -1,50 +1,19 @@
 <!DOCTYPE html>
-<html lang="es" xmlns="http://www.w3.org/1999/html">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <title>Ejercicios</title>
+  <meta charset="UTF-8">
+  <title>CodePen - Fallout 3 Terminal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
-<header>
-    <ul class="navbar">
-        <li class="navbar"><a class="inicio" href="../../index.html">Inicio</a></li>
-        <li class="navbar"><a class="navbar" href="../../ejhtml/index.html">Ejercicios HTML</a></li>
-        <li class="navbar"><a class="navbar" href="../../ejcss/index.html">Ejercicios CSS</a></li>
-        <li class="navbar"><a class="navbar" href="../../ejforms/forms.html">Ejercicios FORM</a></li>
-        <li class="navbar dropdown">
-          <a class="navbar">Ejercicios JS<img src="../../css/arrow2.png"></a>
-          <div class="dropdown-menu">
-            <a href="index.html">Relación 01</a>
-            <a>Relación 02</a>
-          </div>
-        </li>
-    </ul>
-</header>
 <body>
-    <form class="formwrapper" onsubmit="seAcercaElFin()">
-        <div class="wrapper">
-            <div class="title bg">Ejercicio 01</div>
-            <div class="title fg">Ejercicio 01</div>
-        </div>
-        <div class="subtitle funcont">
-            <h3 class="">Introduce la fecha de nacimiento de un individuo para calcular cuanto tiempo lleva respirando.</h3>
-            <h3 class="">Es obligatorio el formato AÑO/MES/DÍA</h3>
-            <h3 class="">Ejemplo: 2000/12/31</h3>
-        </div>
-        <button type="submit" class="submit fin">
-            ¡Se Acerca el FIN!
-        </button>
-    </form>
-    <div class="footer">
-
-    </div>
-<!--
-
--->
+<div>
+<output id="salida"><q id="consola">Si yo meto una Q que tal se ve.</q></output>
+  <button onclick="write()">Continuar</button>
+</div>
+  <script  src="script.js"></script>
 
 </body>
 </html>

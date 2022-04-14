@@ -1,3 +1,4 @@
+/*
 body {
   align-items: center;
   background-color: #000;
@@ -20,12 +21,16 @@ form {
   width: 320px;
   margin: 2%;
 }
+*/
 /*
+
+*//*
 
 */
 /*
 GOLDEN LETTERS
-*/
+*//*
+
 
 * {
   box-sizing: border-box;
@@ -78,9 +83,11 @@ div.fg{
   color: #1e2127;
   transform: scale(1);
 }
+*/
 /*
 
-*/
+*//*
+
 
 .subtitle {
   color: #eee;
@@ -207,9 +214,11 @@ strong {
 }
 
 
+*/
 /*
 A partir de aqui va la parte del toolbox
-*/
+*//*
+
 
 form button+span {display: none;}
 form button:hover+span {display: block;
@@ -252,9 +261,13 @@ form button:focus {text-indent:0;}
     padding-top: 3px; }
 
 
-/* <select> styles */
+*/
+/* <select> styles *//*
+
 select {
-  /* Personalize */
+  */
+/* Personalize *//*
+
   width: 100%;
   height: 100%;
   padding: 4px 20px 0;
@@ -273,11 +286,13 @@ select {
 }
 
 
+*/
 /*
 
 golden classic
 
-*/
+*//*
+
 
 @import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
 
@@ -327,9 +342,11 @@ h3 span:nth-child(14){ animation-delay:.65s; }
 
 
 
+*/
 /*
 Neon
-*/
+*//*
+
 .neon{
   color: #fff;
   font-size: 1.25em;
@@ -345,15 +362,19 @@ Neon
     0 0  90px #0f0
 }
 
-/* Don't show shadows when selecting text */
+*/
+/* Don't show shadows when selecting text *//*
+
 ::-moz-selection { background: red; color: #fff; text-shadow: none; }
      ::selection { background: red; color: #fff; text-shadow: none; }
 
- /*
+ */
+/*
 
 NEON INPUT
 
-*/
+*//*
+
 
 
   .fin {
@@ -400,11 +421,13 @@ NEON INPUT
         0 0  90px #0f0;
   }
 
+*/
 /*
 
 RADIO HOPPING
 
-*/
+*//*
+
 
 
 .radiobutt label,
@@ -472,9 +495,11 @@ RADIO HOPPING
   padding-top: 15px;
 }
 
+*/
 /*
 NAVBAR
-*/
+*//*
+
 header {
     display: block;
     width: 99%;
@@ -518,9 +543,11 @@ div {
     padding: 5px;
 }
 
+*/
 /*
 
-*/
+*//*
+
 .dropdown {
     padding-right: 40px;
 
@@ -550,4 +577,95 @@ img {
     transition: 0.5s;
   transform: rotate(-180deg);
 }
+
+.magicbox {
+    position: relative;
+    margin-left: 5%;
+    width: 320px;
+    height: 700px;
+    border-radius: 25px;
+    background: white;
+}
+*/
+
+/*
+
+*/
+@keyframes blink {
+  0%,
+  49% {
+    border-right-color: transparent;
+  }
+  50%,
+  100% {
+    border-right-color: currentColor;
+  }
+}
+@keyframes scan {
+  0% {
+    background-position: 0 -100vh;
+  }
+  35%,
+  100% {
+    background-position: 0 100vh;
+  }
+}
+html {
+  background-color: black;
+  padding: 1em;
+}
+output {
+  border-radius: 1em;
+  background-color: #131;
+  background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
+  background-position: center;
+  display: block;
+  height: 70vh;
+  padding: 2em;
+  box-shadow: inset 0 0 10em 1em rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  font-family: monospace;
+  color: rgba(128, 255, 128, 0.8);
+  position: relative;
+}
+output::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: linear-gradient(0deg, transparent 0%, rgba(32, 128, 32, 0.2) 2%, rgba(32, 128, 32, 0.8) 3%, rgba(32, 128, 32, 0.2) 3%, transparent 100%);
+  background-repeat: no-repeat;
+  animation: scan 7.5s linear 0s infinite;
+}
+output::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: radial-gradient(ellipse 50% 15% at 50% 15%, rgba(255, 255, 255, 0.05), transparent), radial-gradient(ellipse 50% 10% at 50% 12%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 50% 5% at 50% 10%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 50% 3% at 50% 9%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 200% 20% at 50% 0%, rgba(0, 0, 0, 0.5), transparent), linear-gradient(0deg, rgba(0, 0, 0, 0.2) 50%, transparent 50%);
+  background-size: 100%, 100%, 100%, 100%, 100%, 100% 0.25ch;
+}
+output q {
+  border-right: 0 solid currentColor;
+  animation: blink 500ms linear 0s infinite;
+  text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  line-height: 150%;
+}
+output q::before {
+  content: "> ";
+}
+output q:last-child {
+  border-right-width: 1ch;
+}
+
+
 
