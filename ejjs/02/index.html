@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" user-scalable=no>
   <title>CodePen - Fallout 3 Terminal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
@@ -9,11 +9,10 @@
 
 </head>
 <body>
-<div>
-<output id="salida"><q id="consola">Si yo meto una Q que tal se ve.</q></output>
-  <button onclick="write()">Continuar</button>
+<div id="terminal">
+<output id="salida"><q id="consola"></q></output>
+  <button onclick="init()">Continuar</button>
 </div>
   <script  src="script.js"></script>
-
 </body>
 </html>
