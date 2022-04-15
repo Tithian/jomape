@@ -1,14 +1,10 @@
 var $rnd = function() {return (Math.random() * 50 + 25) | 0;};
 
-const TypeWriter = function(contenedor, texto, wait = $rnd()) {
+const TypeWriter = function(contenedor, texto) {
     this.contenedor = contenedor;
-    this.wait = wait;
     this.texto = texto;
     this.indice = 0;
-    this.finish = texto.length;
     this.type();
-        console.log("Contenedor: "+this.contenedor);
-        console.log("Texto:"+this.texto);
         console.log(this.finish);
     this.isDeleting = false;
 }
@@ -18,15 +14,15 @@ TypeWriter.prototype.type = function () {
     console.log("Total: "+this.finish);
 
     // Inserta texto en el HTML
-    if(this.indice<this.finish) {
-        this.contenedor.innerHTML += `<span class="txt">${this.texto[this.indice]}</span>`;
+    if(this.indice<this.texto.length) {
+        this.contenedor.innerHTML = this.texto.substring(0, this.indice);
         this.indice++;
+        // Velocidad
+        setTimeout(() => this.type(), $rnd());
     }
 
-    // Velocidad
-    let typeSpeed = $rnd();
 
-    setTimeout(() => this.type(), this.wait);
+
 
 /*    if(this.isDeleting) {
         typeSpeed /= 2;
@@ -53,9 +49,9 @@ document.addEventListener('DOMContentLoaded', init);
 function init() {
     const contenedor = document.getElementById("consola");
     const texto = "Bienvenido al examen de comandos de Linux Rosalía \"Dark Souls Distrb.\". Introduce un comando que pare la guerra en Ucrania, que busque en el mundo solo las bolas de dragón comprendidas entre 2-5 estrellas ordenado de forma inversa y envía el documento sin machacar su contenido al correo de Joe-Biden con el asunto \"Que te jodan Biden\". Ovbiamente todo en una sola línea.";
-    wait  = $rnd();
 
-    new TypeWriter(contenedor, texto, wait);
+
+    new TypeWriter(contenedor, texto);
 }
 
 /*
