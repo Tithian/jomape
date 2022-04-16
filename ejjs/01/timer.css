@@ -1,51 +1,48 @@
-
-:root {
-  --gold: #ffb338;
-  --light-shadow: #77571d;
-  --dark-shadow: #3e2904;
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #17D4FE;
+    font-size: 2em;
+    font-family: Orbitron;
+    /* orbitron-regular - latin */
+    color: #fff;
+    font-size: 2.5em;
+    line-height: 1.5;
+    text-shadow:
+    0 0  5px #fff,
+    0 0  10px #fff,
+    0 0  15px #fff,
+    0 0  20px #0f0,
+    0 0  35px #0f0,
+    0 0  40px #0f0,
+    0 0  60px #0f0,
+    0 0  90px #0f0
 }
 
-.wrapper {
-  display: grid;
-  grid-template-areas: 'overlap';
-  place-content: center;
+/* Don't show shadows when selecting text */
+::-moz-selection { background: red; color: #fff; text-shadow: none; }
+     ::selection { background: red; color: #fff; text-shadow: none; }
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: url('Library3am.otf');
+  letter-spacing: 7px;
   text-transform: uppercase;
 }
-.wrapper > div {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: #363833;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-size: 8vh;
-  grid-area: overlap;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 4px transparent;
-  margin: 10%;
+
+span {
+    padding: 5%;
 }
-div.bg {
-  background-image: repeating-linear-gradient( 105deg,
-    var(--gold) 0% ,
-    var(--dark-shadow) 5%,
-    var(--gold) 12%);
-  color: transparent;
-  filter: drop-shadow(5px 15px 15px black);
-  transform: scaleY(1.05);
-  transform-origin: top;
-  width: 100%;
-}
-div.fg{
-  background-image: repeating-linear-gradient( 5deg,
-    var(--gold) 0% ,
-    var(--light-shadow) 23%,
-    var(--gold) 31%);
-  color: #1e2127;
-  transform: scale(1);
-  width: 100%;
-}
+
 body {
     background: url("time.gif");
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 110vh;
 }

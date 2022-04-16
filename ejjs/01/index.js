@@ -464,20 +464,16 @@ function seAcercaElFin() {
                                 's = secs  - mins  * 60;'+
                                 'document.getElementById("timer").innerHTML ='+
                                 "'<div class=\"wrapper\">'+"+
-                                 "'<div class=\"bg\">'"+" + d + '<span> Dias</span></div>' +"+
-                                 "'<div class=\"fg\">'"+" + d + '<span> Dias</span></div>' +"+
+                                 "'<div>'"+" + d + '<span> Dias</span></div>' +"+
                                  "'</div>'+"+
                                  "'<div class=\"wrapper\">'+"+
-                                 "'<div class=\"bg\">'"+" + h + '<span> horas</span></div>' +"+
-                                 "'<div class=\"fg\">'"+" + h + '<span> horas</span></div>' +"+
+                                 "'<div>'"+" + h + '<span> horas</span></div>' +"+
                                  "'</div>'+"+
                                  "'<div class=\"wrapper\">'+"+
-                                 "'<div class=\"bg\">'"+" + m + '<span> minutos</span></div>' +"+
-                                 "'<div class=\"fg\">'"+" + m + '<span> minutos</span></div>' +"+
+                                 "'<div>'"+" + m + '<span> minutos</span></div>' +"+
                                  "'</div>'+"+
                                  "'<div class=\"wrapper\">'+"+
-                                 "'<div class=\"bg\">'"+" + s + '<span> segundos</span></div>' +"+
-                                 "'<div class=\"fg\">'"+" + s + '<span> segundos</span></div></div>';"+
+                                 "'<div>'"+" + s + '<span> segundos</span></div></div>';"+
                             '}'+
                             "setInterval('updateTimer()', 1000 );"+
                         '</script>'+
