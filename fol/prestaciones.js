@@ -154,7 +154,7 @@ function desempleoCalc() {
 		}
 	}
 
-	if (chk_dias) {
+	if (chk_dias && dias<=100000) {
 		switch (true) {
 			case(dias>359 && dias<540):
 				dias_paro = 120;
@@ -198,27 +198,37 @@ function desempleoCalc() {
 //		fill("Los días de paro son: "+dias_paro, false, "tooldesempleo");
 	} else {
 		fill("Introducza una cantidad de días cotizados correcta.", false, "tooldesempleo");
+
 	}
 	if (chk_cant && dias_paro>0) {
 		brdiaria = Math.round((cant_cot/180)*100)/100;
-		fill("BR: "+brdiaria, false, "tooldesempleo");
+		console.log("BR:"+brdiaria);
+		fill("Ese ya gana mucho dinero, y encima queriendo cobrar el paro, que poca vergüenza.",false, "tooldesempleo");
 	} else if (dias_paro!=0 && chk_dias) {
+		if (dias>100000) {
+			fill("Tampoco te flipes, mete 4 cifras maximo.", false, "tooldesempleo");
+		} else {
 		fill("Introduzca una cantidad en € cotizada correcta.", false, "tooldesempleo");
+		}
 	}
 
-	if (dias_paro<=180 && dias_paro>0) {
+
+	if (dias_paro<=180 && dias_paro>0 && cant_cot<100000) {
 		set = Math.round((brdiaria*0.7)*100)/100;
 		var tramo1 = Math.round((set*30)*100)/100;
+		console.log("El tramo entra por aquí:"+tramo1);
 		if (tramo1>max) {
 			tramo1 = max;
+			console.log("Como es mucho, pasa a ser:"+tramo1);
 		} else if(tramo1<min) {
 			tramo1 = min;
 		}
 
-	} else if(dias_paro>0){
+	} else if(dias_paro>0 && cant_cot<100000){
 		set = Math.round((brdiaria*0.7)*100)/100;
 		cin = Math.round((brdiaria*0.5)*100)/100;
 		var tramo1 = Math.round((set*30)*100)/100;
+		console.log("TRAMO1 AQUI:"+tramo1);
 		// Aplicamos el descuento
 		// Aqui comprobamos lo que cobraría con los topes máximos y mínimos
 		if (tramo1>max) {
@@ -233,9 +243,11 @@ function desempleoCalc() {
 			tramo2 = min;
 		}
 	}
-
-	var t1 = tramo1-desc;
-	var t2 = tramo2-desc;
+	console.log("El tramo no trolea: "+tramo1);
+	console.log("El descuento es: "+desc);
+	var t1 = Math.round((tramo1-desc)*100)/100;
+	console.log("Lo que trolea es esto: "+t1);
+	var t2 = Math.round((tramo2-desc)*100)/100;
 	var tt1, tt2, meses_restantes;
 
 	if (t2 && tramo1) {
@@ -254,8 +266,12 @@ function desempleoCalc() {
 	}
 
 
-console.log(meses_restantes);
-
+//console.log(meses_restantes);
+//console.log("Descuento: "+desc);
+//console.log("Días de paro: "+dias_paro);
+//console.log("Tramo1: "+t1);
+//console.log("Minimo: "+min);
+//console.log("Máximo: "+max);
 }
 
 /*
