@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora de Desempleo</title>
+	<link rel="stylesheet" href="../ejjs/01/index.css">
+	<script src="prestaciones.js"></script>
+</head>
+<body>
+<form class="fol" id="baja" onsubmit="bajaCalc()">
+	<div class="title">Calculadora de Prestación por Baja Laboral</div>
+	<div class="subtitle">Solo admite campos positivos.</div>
+
+<div class="inrad">
+	<div class="radiobutt">
+		<input id="ecanl" class="radio" type="radio" name="bc" value="brcc" checked="checked" onclick="inv()" onfocus="inv()">
+		<label for="ecanl" class="radiolabel">Enfermedad Común o Accidente No Laboral</label>
+	</div>
+	<div class="radiobutt">
+		<input id="atep" class="radio" type="radio" name="bc" value="brcp" onclick="magic()" onfocus="magic()">
+		<label for="atep" class="radiolabel">Accidente de Trabajo o Enfermedad Profesional</label>
+	</div>
+</div>
+
+	<div class="input-container">
+		<input id="inicio_baja" class="input" type="date" placeholder=" " />
+		<div class="cut"></div>
+		<label for="base" class="placeholder">Empieza: </label>
+	</div>
+
+	<div class="input-container">
+		<input id="fin_baja" class="input" type="date" placeholder=" " />
+		<div class="cut"></div>
+		<label for="base" class="placeholder">Termina: </label>
+	</div>
+
+	<div class="input-container">
+		<input id="base" class="input" type="number" placeholder=" " />
+		<div class="cut cut-extralong"></div>
+		<label for="base" class="placeholder">Salario Base Mensual</label>
+	</div>
+
+	<div class="input-container" id="">
+		<input id="num_pagas" class="input" type="number" value="2" placeholder=" " />
+		<div class="cut cut-extralong"></div>
+		<label for="num_pagas" class="placeholder">Número de Pagas Extra Anuales</label>
+	</div>
+
+
+	<div class="input-container" id="magic">
+		<input id="media_horas_extra" class="input" type="number" placeholder=" " />
+		<div class="cut cut-extralong"></div>
+		<label for="media_horas_extra" class="placeholder">Media de Horas Extra del Año Previo</label>
+	</div>
+
+
+	<button type="submit" class="submit" onfocus="bajaCalc()" onmouseover="bajaCalc()">Calcular Prestación</button><span id="toolbaja"></span>
+</form>
+
+<form class="fol" id="desempleo">
+	<div class="title">Calculadora de Desempleo.</div>
+	<div class="subtitle">Calculadora de desempleo.</div>
+
+	<div class="input-container">
+		<input id="total_dias_cotizados" class="input" type="number" placeholder=" " />
+		<div class="cut cut-extralong"></div>
+		<label for="total_dias_cotizados" class="placeholder">Dias cotizados en los últimos 6 años.</label>
+	</div>
+
+	<div class="input-container">
+		<input id="cantidad_cotizada" class="input" type="number" placeholder=" " />
+		<div class="cut"></div>
+		<label for="cantidad_cotizada" class="placeholder">Cantidad en € cotizada en los últimos 180 días.</label>
+	</div>
+
+	<div class="input-container">
+		<input id="hijos" class="input" type="number" placeholder=" " />
+		<div class="cut cut-extralong"></div>
+		<label for="hijos" class="placeholder">Número de Hij@s</label>
+	</div>
+
+	<button class="submit" onfocus="desempleoCalc()" onmouseover="desempleoCalc()">Calcular Prestación</button><span id="tooldesempleo"></span>
+</form>
+
+</body>
+</html>

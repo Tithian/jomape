@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="e3.css">
+    <script src="e3.js"></script>
+
+</head>
+
+<body>
+    
+    
+    <div class="caja">
+
+
+        <div class="navbar">
+            <div class="navbar-in"><a href="#">Inicio</a></div>
+            <div class="navbar-in">Anterior</div>
+            <div class="navbar-in">Siguiente</div>
+        </div>
+<br>
+
+        <h2>Práctica 1 Javascript</h2>
+
+        <div class="caja2">
+            <h3>Ejercicio 1</h3>
+            <p class="left">Introduce tres números y calcula la suma, mostrándola con alert.</p>
+            <div class="3">
+                <input type="text" id="entrada11" size="4" class="input-entrada">
+                <input type="text" id="entrada12" size="4" class="input-entrada">
+                <input type="text" id="entrada13" size="4" class="input-entrada">
+            </div>
+            <button onclick="ejercicio1()" class="input-entrada">Calcular</button>
+            <a href="#ancla12"><button class="input-entrada">Siguiente</button></a>
+        </div>
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+        <!-- Ejercicio 2 -->
+        <div id="ancla12"></div>
+        <div class="caja2">
+            <h3>Ejercicio 2</h3>
+            <p class="left">Introduce cinco números en cajas de texto y calcula la media</p>
+
+            <div class="center">
+                <form action="">
+                    <input type="text" id="n1" size="2" class="input-entrada">
+                    <input type="text" id="n2" size="2" class="input-entrada">
+                    <input type="text" id="n3" size="2" class="input-entrada">
+                    <input type="text" id="n4" size="2" class="input-entrada">
+                    <input type="text" id="n5" size="2" class="input-entrada">
+                </form>
+
+            </div>
+            <button onclick="ejercicio2()" class="input-entrada">Calcular</button>
+            <hr>
+            <div class="salida">
+                <p id="salida2"></p>
+            </div>
+        </div>
+
+        
+        
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+
+
+        <div class="caja2">
+            <div id="ancla3"></div>
+            <h3>Ejercicio 3</h3>
+            <p class="left">Calcula el cuadrado de un número introducido por teclado.</p>
+            <input type="text" id="entrada-cuadrado" class="input-entrada">
+            <a href="#ancla3"><button onclick="ejercicio3()" class="input-entrada">Calcular</button></a>
+            <br><br>
+            <div class="salida">
+                
+                <p id="salida-cuadrado"></p>
+            </div>
+            <a href="#ancla32"><button class="input-entrada">Siguiente</button></a>
+        </div>
+
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+        <div class="caja2">
+            <div id="ancla32"></div>
+            <div id="ancla22"></div>
+            <h3>Ejercicio 3.2</h3>
+            <p class="left">Calcula el cuadrado de un número introducido por teclado.</p>
+            <input type="text" id="entrada-raiz" class="input-entrada">
+            <a href="#ancla22"><button onclick="ejercicio3_2()" class="input-entrada">Calcular</button></a>
+            <br><br>
+            <div class="salida">
+                <p id="salida-raiz"></p>
+            </div>
+            <a href="#ancla322"><button class="input-entrada">Siguiente</button></a>
+        </div>
+
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+        <div id="ancla322"></div>
+        <div class="caja2">
+            <h3>Ejercicio 4</h3>
+            <p class="left">Introduce dos números por teclado y calcula la suma, la resta, el producto y el
+                resto imprimiéndolos en la web.</p>
+            <label for="">Número 1</label>
+            <input type="text" id="entrada-op1" size="4" class="input-entrada">
+            <label for="">Numero 2</label>
+            <input type="text" id="entrada-op2" size="4" class="input-entrada">
+            <div id="ancla4"></div>
+            <br>
+            <a href="#ancla4"><button onclick="ejercicio4()" class="input-entrada">Calcular</button></a>
+            <hr><br>
+            <div class="salida">
+                <p id="salida-operaciones"></p>
+            </div>
+            <a href="#ancla42"><button class="input-entrada">Siguiente</button></a>
+            <br>
+        </div>
+
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+
+        <!-- Calculadora sueldo IRPF -->
+        <div class="caja2">
+            <div id="ancla42"></div>
+            <h3>Ejercicio 5</h3>
+            <p class="left">Calcula el sueldo del mes de un empleado a partir del número de horas trabajadas
+                y el precio por hora. Tendremos que descontar el % de IRPF que se indique.</p>
+            <label for="">Horas</label>
+            <input type="text" id="precioH" size="4" class="input-entrada">
+            <br>
+            <label for="">Precio</label>
+            <input type="text" id="horasH" size="4" class="input-entrada">
+            <br> <br>
+            <label for="">Tipo de tributo</label>
+            <select name="irpf" id="irpf" class="input-entrada">
+                <option value="" selected default disabled>IRPF</option>
+                <option value="0.04">Tipo 4%</option>
+                <option value="0.08">Tipo 8%</option>
+                <option value="0.12">Tipo 12%</option>
+            </select>
+            <div id="ancla5"></div>
+            <br>
+            <a href="#ancla5"><button onclick="ejercicio5()" class="input-entrada">Calcular</button></a>
+            <hr>
+            <br>
+            <div class="salida">
+                <p id="salario"></p>
+            </div>
+            <a href="#ancla52"><Button class="input-entrada">Siguiente</Button></a>
+            <br>
+        </div>
+
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+        <!-- Calculadora normal  -->
+        <div id="ancla52"></div>
+        <div class="caja2">
+            <h3>Calculadora</h3>
+            <p class="justify">Lo vi interesante y lo añadí, no es mío.</p>
+            <form name="calc">
+                <input type="Text" class="input-entrada" name="operando1" value="0" size="12">
+                <br>
+                <input type="Text" class="input-entrada" name="operando2" value="0" size="12">
+                <br>
+                <input type="Button" class="input-entrada" name="" value=" + " onclick="calcula('+')">
+                <input type="Button" class="input-entrada" name="" value=" - " onclick="calcula('-')">
+                <input type="Button" class="input-entrada" name="" value=" X " onclick="calcula('*')">
+                <input type="Button" class="input-entrada" name="" value=" / " onclick="calcula('/')">
+                <br>
+                <input type="Text" class="input-entrada" name="resultado" value="0" size="12">
+            </form>
+            <a href="#ancla66"><Button class="input-entrada">Siguiente</Button></a>
+        </div>
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+        <!-- Fechas Horas Minutos Segundos  -->
+        <div id="ancla66"></div>
+        <div class="caja2">
+            <h2>Ejercicio 6</h2>
+            <p class="left">Introduce horas, minutos y segundos y calcula el total de segundos</p>
+            <div id="ancla6"></div>
+            <div class="">
+                <div id="ancla6"></div>
+                <div class="caja3">
+                    <input type="text" class="input-entrada" size="2" id="cHoras">
+                    <label for="">Horas</label><br>
+                    <input type="text" class="input-entrada" size="2" id="cMinutos">
+                    <label for="">Minutos</label> <br>
+                    <input type="text" class="input-entrada" size="2" id="cSegundos">
+                    <label for="">Segundos</label>
+
+                    <a href="#ancla6"><button onclick="ejercicio6()" class="input-entrada">Enviar</button></a>
+                    <hr>
+                </div>
+                <br>
+                <div class="salida">
+                    <p id="salidaSegungos"></p>
+                </div>
+                <a href="#ancla62" class="center"><button class="input-entrada">Siguiente</button></a>
+                <br>
+            </div>
+        </div>
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+        <!-- Ejercicio 7 -->
+        <div id="ancla62"></div>
+        <div class="caja2">
+            <h2>Ejercicio 7</h2>
+            <p class="left">Introduce el precio unitario de un producto, el número de unidades compradas, el
+                descuento aplicado y calcula el total con el IVA indicado.</p>
+            <div id="ancla7" class="caja3"></div>
+            <label for="">Precio</label>
+            <input type="text" size="4" id="pProducto" class="input-entrada">
+            <label for="">Cantidad</label>
+            <input type="text" size="4" id="pCantidad" class="input-entrada">
+            <label for="">Descuento</label>
+            <input type="text" size="4" id="pDescuento" value="0" class="input-entrada">
+            <select name="" id="tipoIva2" class="input-entrada">
+                <option value="0" disabled selected>IVA</option>
+                <option value="4"> IVA 4%</option>
+                <option value="8"> IVA 8%</option>
+                <option value="12"> IVA 12%</option>
+                <option value="21"> IVA 21%</option>
+            </select>
+
+            <a href="#ancla7"><button onclick="ejercicio7()" class="input-entrada">Calcular</button></a>
+            <hr>
+            <div class="salida">
+                <p id="salidaPrecios1"></p>
+            </div>
+            <a href="#ancla72"><button class="input-entrada">Siguiente</button></a>
+        </div>
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+        <div id="ancla72"></div>
+        <div class="caja2">
+            <h3>Ejercicio 8</h3>
+            <p class="justify">Calcula el precio bruto y el IVA a partir del precio total introducido por teclado.</p>
+            <div id="ancla8"></div>
+            <div class="caja3">
+                <label for="">Precio a desglosar</label>
+                <input type="text" id="entrada8" size="4" class="input-entrada">
+                <select name="" id="iva8" class="input-entrada">
+                    <option value="0" selected disabled>IVA </option>
+                    <option value="4">IVA 4%</option>
+                    <option value="8">IVA 8%</option>
+                    <option value="16">IVA 16%</option>
+                    <option value="21">IVA 21%</option>
+                </select>
+
+                <div class="center">
+                    <a href="#ancla8"><button class="input-entrada" onclick="ejercicio8()">Calcular</button></a>
+                </div>
+            </div>
+            <hr>
+            <div class="salida">
+                <p id="salida8"></p>
+            </div>
+            <a href="#ancla82"><button class="input-entrada">Siguiente</button></a>
+            <br>
+        </div>
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+
+        <div class="caja2">
+            <div id="ancla82"></div>
+            <h3>Ejercicio 9</h3>
+            <p class="left">Introducir número y exponente y calcular la potencia</p>
+            <div id="ancla9"></div>
+            <div class="caja3">
+                <input type="text" id="entrada9_1" size="4" class="input-entrada"> Base <br>
+                <input type="text" id="entrada9_2" size="4" class="input-entrada"> Exponente
+                <a href="#ancla9"><button onclick="ejercicio9()" class="input-entrada">Calcular</button></a>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="salida">
+                <p id="salida9"></p>
+            </div>
+            <a href="#ancla92" class="center"><Button class="input-entrada">Siguiente</Button></a>
+        </div>
+
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+
+
+        <div id="ancla92"></div>
+        <div class="caja2">
+            <h3>Ejercicio 10</h3>
+            <p class="left">Calcula el sueldo del mes de un empleado a partir del número de horas trabajadas.
+                El número de horas mensuales son 160. Todas las demás son extras. Se introduce
+                también el precio por hora normal y el precio por hora extra y el IRPF. </p>
+                <div id="ancla101"></div>
+            <div class="caja3">
+                <input type="text" id="entrada10_1" size="3" class="input-entrada">
+                <label for="">Horas</label>
+                <input type="text" id="entrada10_2" size="3" class="input-entrada">
+                <label for="">Normal</label>
+                <input type="text" id="entrada10_3" size="3" class="input-entrada">
+                <label for="">Extra</label>
+                <select name="" id="irpf19" class="input-entrada">
+                    <option value="0" selected disabled>IRPF </option>
+                    <option value="19">Tipo 19%</option>
+                    <option value="24">Tipo 24%</option>
+                    <option value="30">Tipo 12%</option>
+                    <option value="32">Tipo 21%</option>
+                </select>
+                <a href="#ancla101" class="center"><button  onclick="ejercicio10()" class="input-entrada">Calcular</button>
+                </a>                
+            </div>
+            <div class="salida">
+                <p id="salida10"></p>
+            </div>
+            <a href="#ancla102"><button class="input-entrada">Siguiente</button></a>
+        </div>
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+
+        <!-- NO TOCARR -->
+        <!-- Ejercicio 102 evil -->
+        <div class="caja2">
+            <h3>Ejercicio 102</h3>
+            <p class="left">Esto es una revisión del Ejercicio 10 con tipos de IRPF según cantidad</p>
+            <br>
+            <div class="caja3">
+                <input type="text" id="entrada10_1" class="input-entrada"> Número de horas
+                <input type="text" id="entrada10_2" class="input-entrada"> Precio por hora
+                <input type="text" id="entrada10_3" class="input-entrada"> Precio por hora extra
+                <select name="" id="irpf19" class="input-entrada">
+                    <option value="0" selected disabled>IRPF </option>
+                    <option value="19">Tipo 19%</option>
+                    <option value="24">Tipo 24%</option>
+                    <option value="30">Tipo 12%</option>
+                    <option value="32">Tipo 21%</option>
+                </select>
+                <button onclick="ejercicio102()" class="input-entrada">Calcular</button>
+            </div>
+            <hr>
+            <div class="salida">
+                <p id="salida102"></p>
+            </div>
+        </div>
+
+        
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+        <!-- Ejercicio 11 -->
+        <div id="ancla102"></div>
+        <div class="caja2">
+            <h3>Ejercicio 11</h3>
+            <p class="left">Diseña un algoritmo para pasar de grados Fahrenheit a ºC, sabiendo que
+                C = (F-32)*5/9
+            </p>
+            <div class="caja3">
+                <label for="">Farenheit</label>
+                <input type="text" id="entrada11_1" size="5">
+            </div>
+            <button onclick="ejercicio11()" class="input-entrada">Convertir</button> <br>
+            <br>
+            <div class="salida">
+                <p id="salida11"></p>
+            </div>
+            <a href="#ancla112"><button class="input-entrada">Siguiente</button></a>
+        </div>
+
+
+        <div class="caja2"><img src="img/divisor.png" alt="" height="30px" width="300px">        </div>
+
+
+
+
+        <!-- Ejercicio 12 -->
+        <div id="ancla112"></div>
+        <div class="caja2">
+            <h3>Ejercicio 12</h3>
+            <p class="left">Calcula la superficie de un triángulo a partir de la base y la altura sabiendo que
+                s=b*a/2</p>
+            <div class="caja3">
+                <input type="text" id="entrada12_1" size="4" class="input-entrada">
+                <label for="">Base</label>
+                <input type="text" id="entrada12_2" size="4" class="input-entrada">
+                <label for="">Altura</label>
+            </div>
+            <button onclick="ejercicio12()" class="input-entrada">Convertir</button> <br>
+            <div class="salida">
+                <p id="salida12"></p>
+            </div>
+        </div>
+
+        <img src="../img/divisor.png" alt="">
+
+
+        <div class="caja2">
+            <h3>Ejercicio 13</h3>
+            <p class="left">Introduce el radio de una circunferencia y halla la longitud y el área
+                sabiendo que L=2*PI*radio y A=PI*radio2</p>
+            <div class="caja3">
+                <label for="">Radio</label>
+                <input type="text" id="entrada13_1" size="4" class="input-entrada">
+            </div>
+            <button onclick="ejercicio13()" class="input-entrada">Calcular</button>
+
+            <div class="salida">
+                <p id="salida13"></p>
+            </div>
+        </div>
+
+        <img src="../img/divisor.png" alt="">
+
+
+
+        <div class="caja2">
+            <h3>Ejercicio 14</h3>
+            <p class="left">A partir de un número de días, determinar el número de años, meses y días.</p>
+            <div class="caja3">
+                <div class="caja3">
+                    <input type="text" id="entrada14" size="4" class="input-entrada">
+                    <label for="">Dias</label>
+                </div>
+                <button onclick="ejercicio14()" class="input-entrada">Calcular</button>
+            </div>
+            <div class="salida">
+                <p id="salida14"></p>
+            </div>
+        </div>
+
+        <img src="../img/divisor.png" alt="">
+
+        <div class="caja2">
+            <h3>Ejercicio 15</h3>
+            <p>Leer un número de cuatro cifras y descomponer en unidades, decenas, centenas y
+                millares.</p>
+            <div class="caja3">
+                <input type="text" id="entrada15_1" class="input-entrada">
+            </div>
+            <button onclick="ejercicio15()" class="input-entrada">Calcular</button>
+            <div class="salida">
+                <p id="salida15"></p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

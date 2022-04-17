@@ -82,6 +82,7 @@ body {
     position: fixed;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -104,22 +105,20 @@ body {
 
 #inicio {
   background-color: #04AA6D;
-  padding: 10%;
 }
 
 .navbar>* {
-    padding: 5px;
 }
 
 /*
 
 */
 .dropdown {
-    padding-right: 40px;
+    padding-right: 2%;
 
 }
 .dropdown .dropdown-menu {
-    position: fixed;
+  position: fixed;
   transition: all 0.5s;
   overflow: hidden;
   transform-origin: top center;
@@ -142,4 +141,13 @@ img {
 .dropdown:hover img {
     transition: 0.5s;
   transform: rotate(-180deg);
+}
+
+.toggle {
+	position: fixed;
+	top: 10%;
+	right: 5%;
+	width: 5vh;
+	height: 5vh;
+	background: white;
 }

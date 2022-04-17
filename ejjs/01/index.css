@@ -99,6 +99,9 @@ form {
 .cut-long {
   width: 150px;
 }
+.cut-extralong {
+  width: 240px;
+}
 
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
@@ -551,5 +554,19 @@ img {
 .dropdown:hover img {
     transition: 0.5s;
   transform: rotate(-180deg);
+}
+
+.fol {
+	position: relative;
+	width: 30%;
+	height: 120%;
+}
+#tooldesempleo {
+	width: 50%;
+}
+
+#magic {
+	transition: 1s;
+	display: none;
 }
 
