@@ -1,179 +1,89 @@
 var $rnd = function() {return (Math.random() * 50 + 25) | 0;};
+var boton_encendido = document.getElementById("boton");
 
-const TypeWriter = function(contenedor, texto) {
-    this.contenedor = contenedor;
+const TypeWriter = function(contenedor, texto, end_callback=undefined) {
+    this.contenedor = document.createElement('q');
+    contenedor.appendChild(this.contenedor);
     this.texto = texto;
     this.indice = 0;
+    this.end_callback = end_callback;
     this.type();
-        console.log(this.finish);
-    this.isDeleting = false;
 }
 // Type Method
 TypeWriter.prototype.type = function () {
-    console.log("ACTUAL: "+this.indice);
-    console.log("Total: "+this.finish);
-
     // Inserta texto en el HTML
-    if(this.indice<this.texto.length) {
+    if(this.contenedor === undefined) return;
+    if(this.indice <= this.texto.length) {
         this.contenedor.innerHTML = this.texto.substring(0, this.indice);
         this.indice++;
-        // Velocidad
         setTimeout(() => this.type(), $rnd());
-    }
-
-
-
-
-/*    if(this.isDeleting) {
-        typeSpeed /= 2;
-    }
-
-    // Comprobar que ha terminado el texto
-    if(!this.isDeleting && this.txt === fullTxt) {
-        // Hace una pausa al final
-        typeSpeed = this.wait;
-        // Cambiar isDeleting a True
-        this.isDeleting = true;
-    } else if(this.isDeleting && this.txt === "") {
-        this.isDeleting = false;
-        // Pausa antes de escribir
-        typeSpeed *= 4;
-    }*/
-
-}
-
-// Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
-
-// Init App
-function init() {
-    const contenedor = document.getElementById("consola");
-    const texto = "Bienvenido al examen de comandos de Linux Rosalía \"Dark Souls Distrb.\". Introduce un comando que pare la guerra en Ucrania, que busque en el mundo solo las bolas de dragón comprendidas entre 2-5 estrellas ordenado de forma inversa y envía el documento sin machacar su contenido al correo de Joe-Biden con el asunto \"Que te jodan Biden\". Ovbiamente todo en una sola línea.";
-
-
-    new TypeWriter(contenedor, texto);
-}
-
-/*
-// const TypeWriter = function(txtElement, words, wait = 3000) {
-//   this.txtElement = txtElement;
-//   this.words = words;
-//   this.txt = '';
-//   this.wordIndex = 0;
-//   this.wait = parseInt(wait, 10);
-//   this.type();
-//   this.isDeleting = false;
-// }
-
-// // Type Method
-// TypeWriter.prototype.type = function() {
-//   // Current index of word
-//   const current = this.wordIndex % this.words.length;
-//   // Get full text of current word
-//   const fullTxt = this.words[current];
-
-//   // Check if deleting
-//   if(this.isDeleting) {
-//     // Remove char
-//     this.txt = fullTxt.substring(0, this.txt.length - 1);
-//   } else {
-//     // Add char
-//     this.txt = fullTxt.substring(0, this.txt.length + 1);
-//   }
-
-//   // Insert txt into element
-//   this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-//   // Initial Type Speed
-//   let typeSpeed = 300;
-
-//   if(this.isDeleting) {
-//     typeSpeed /= 2;
-//   }
-
-//   // If word is complete
-//   if(!this.isDeleting && this.txt === fullTxt) {
-//     // Make pause at end
-//     typeSpeed = this.wait;
-//     // Set delete to true
-//     this.isDeleting = true;
-//   } else if(this.isDeleting && this.txt === '') {
-//     this.isDeleting = false;
-//     // Move to next word
-//     this.wordIndex++;
-//     // Pause before start typing
-//     typeSpeed = 500;
-//   }
-
-//   setTimeout(() => this.type(), typeSpeed);
-// }
-
-
-// ES6 Class
-class TypeWriter {
-  constructor(txtElement, words, wait = 3000) {
-    this.txtElement = txtElement;
-    this.words = words;
-    this.txt = '';
-    this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
-    this.type();
-    this.isDeleting = false;
-  }
-
-  type() {
-    // Current index of word
-    const current = this.wordIndex % this.words.length;
-    // Get full text of current word
-    const fullTxt = this.words[current];
-
-    // Check if deleting
-    if(this.isDeleting) {
-      // Remove char
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
-      // Add char
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
+        this.contenedor.appendChild(document.createElement('br'));
+        if(typeof(this.end_callback) === 'function') {
+            this.end_callback();
+        };
     }
-
-    // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-    // Initial Type Speed
-    let typeSpeed = 300;
-
-    if(this.isDeleting) {
-      typeSpeed /= 2;
-    }
-
-    // If word is complete
-    if(!this.isDeleting && this.txt === fullTxt) {
-      // Make pause at end
-      typeSpeed = this.wait;
-      // Set delete to true
-      this.isDeleting = true;
-    } else if(this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      // Move to next word
-      this.wordIndex++;
-      // Pause before start typing
-      typeSpeed = 500;
-    }
-
-    setTimeout(() => this.type(), typeSpeed);
-  }
+}
+TypeWriter.prototype.clear = function () {
+    this.contenedor.remove();
 }
 
 
 // Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
+var input, only_number=true, require_input=true;
+document.addEventListener('keydown', logKey);
 
-// Init App
-function init() {
-  const txtElement = document.querySelector('.txt-type');
-  const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const wait = txtElement.getAttribute('data-wait');
-  // Init TypeWriter
-  new TypeWriter(txtElement, words, wait);
+function nextStep(input_text){
+    console.log(input_text);
 }
-*/
+
+function logKey(e){
+    if (input === undefined) return;
+    e = e || window.event;
+    // use e.keyCode
+    let input_text = input.textContent;
+    if(e.code === 'Delete' || e.code === 'Backspace') {
+        input.textContent = input_text.substring(0, input_text.length - 1);
+    }else if(e.code === 'Enter') {
+        if(require_input && input.textContent.length === 0){
+            return;
+        }
+        input.innerHTML += '<br>';
+        input = undefined;
+        nextStep(input_text);
+    }else if(e.key === ' ' && input.textContent.endsWith(' ')) {
+        // Only one space is allowed
+    } else if (e.key.length === 1){
+        if(!only_number || /\d/.test(e.key)){
+            input.textContent += e.key;
+        }
+    }
+}
+
+//document.addEventListener('DOMContentLoaded', init);
+// Init App
+//function init() {
+//    only_number = false;
+//    const texto = "Bienvenido al examen de comandos de Linux Rosalía \"Dark Souls Distrb.\".";
+//    new TypeWriter(contenedor, texto, function (){
+//        input = document.createElement('q');
+//        contenedor.appendChild(input);
+//    });
+//}
+
+
+function encender() {
+        chk_screen = salida.style.display;
+        if (chk_screen!="block"){
+            salida.style.display = "block";
+            only_number = true;
+            const texto = "Bienvenido a la consola de comandos definitiva. Inserte cualquier texto por teclado, no servirá para nada.";
+            var contenedor = document.getElementById("salida");
+            new TypeWriter(contenedor, texto, function (){
+                input = document.createElement('q');
+                console.log(input);
+                contenedor.appendChild(input);
+            });
+        }
+
+}
