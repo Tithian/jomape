@@ -56,11 +56,13 @@ var type = function (text, promise) {
   return promise;
 };
 
+
 type("Bienvenido.")
-  .wait(500)
-  .then("Introduzca su nombre de usuario.")
-  .then("Solo será utilizado para dirigirme a ti durante una serie de pruebas.")
-  .wait(1500)
-  .then(
-    "Puede no introducir un nombre de usuario pero entonces le será asignado uno de forma aleatoria."
-  );
+.wait(500)
+.then("Introduzca su nombre de usuario.")
+.then("Solo será utilizado para dirigirme a ti durante una serie de pruebas.")
+.wait(1500)
+.then(
+"Puede no introducir un nombre de usuario pero entonces le será asignado uno de forma aleatoria."
+);
+

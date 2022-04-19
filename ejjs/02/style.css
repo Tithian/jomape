@@ -25,7 +25,7 @@ output {
   background-color: #131;
   background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
   background-position: center;
-  display: block;
+  display: none;
   padding: 3em;
   padding-top: 5em;
   padding-left: 5em;
@@ -177,6 +177,19 @@ body {
     background-size: cover;
 }
 
+.abajo:active {
+	outline: none;
+	box-shadow: 25px 0 15px -4px rgba(128, 255, 128, 0.5), -25px 0 8px -4px rgba(128, 255, 128, 0.5);
+	transition: 0.5s;
+    position: absolute;
+    top: 79.44%;
+    left: 27.34%;
+    right: 54.69%;
+    width: 45.31%;
+    height: 20.56%;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
 .brc {
     position: absolute;
     left: 72.66%;
