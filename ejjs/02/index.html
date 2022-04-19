@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-  <meta charset="UTF-8" user-scalable=no>
-  <title>CodePen - Fallout 3 Terminal</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
+<head>
+  <meta charset="UTF-8">
+  <title>Relación JS 02</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script  src="script.js"></script>
 </head>
+
 <body>
+<div id="app"></div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.9.0/umd/react.production.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.9.0/umd/react-dom.production.min.js'></script><script  src="./app.js"></script>
 <div class="master">
   <div class="ter tlc"></div>
   <div class="ter arriba"></div>
@@ -17,9 +22,11 @@
   <output id="salida"><q id="consola"></q></output>
   <div class="ter derecha"></div>
   <div class="ter blc"></div>
-  <div class="ter abajo"></div>
+  <div class="ter abajo" tabindex="0"></div>
   <div class="ter brc"></div>
 </div>
-<script  src="script.js"></script>
+
+
 </body>
+
 </html>
