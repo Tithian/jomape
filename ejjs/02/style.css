@@ -74,13 +74,9 @@ output q {
   margin-bottom: 1em;
   line-height: 150%;
 }
-output q::before {
-  content: "> ";
-}
+
 output q:last-child {
   border-right-width: 1ch;
-}
-body {
 }
 
 .tlc {
@@ -180,7 +176,7 @@ body {
 .abajo:active {
 	outline: none;
 	box-shadow: 25px 0 15px -4px rgba(128, 255, 128, 0.5), -25px 0 8px -4px rgba(128, 255, 128, 0.5);
-	transition: 0.5s;
+	transition: 0.25s;
     position: absolute;
     top: 79.44%;
     left: 27.34%;

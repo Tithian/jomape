@@ -1,8 +1,14 @@
+// Esta variable genera un número aleatorio entre 50 y 75 que usaremos como delay en la escritura.
 var $rnd = function() {return (Math.random() * 50 + 25) | 0;};
-var boton_encendido = document.getElementById("boton");
+// El nombre de usuario
+var username = "";
+var ejercicio = 0;
+
 
 const TypeWriter = function(contenedor, texto, end_callback=undefined) {
     this.contenedor = document.createElement('q');
+    this.contenedor.setAttribute("id", "ia");
+    console.log(this.contenedor);
     contenedor.appendChild(this.contenedor);
     this.texto = texto;
     this.indice = 0;
@@ -14,7 +20,8 @@ TypeWriter.prototype.type = function () {
     // Inserta texto en el HTML
     if(this.contenedor === undefined) return;
     if(this.indice <= this.texto.length) {
-        this.contenedor.innerHTML = this.texto.substring(0, this.indice);
+        this.contenedor.innerHTML = "TR011TERM> "
+        this.contenedor.innerHTML += this.texto.substring(0, this.indice);
         this.indice++;
         setTimeout(() => this.type(), $rnd());
     } else {
@@ -31,18 +38,40 @@ TypeWriter.prototype.clear = function () {
 
 // Init On DOM Load
 var input, only_number=true, require_input=true;
-document.addEventListener('keydown', logKey);
+
 
 function nextStep(input_text){
-    console.log(input_text);
-}
+	username = String(input_text).substring(2, input_text.length);
+    let regex = /^[A-Za-z]+$/;
+    if (username.match(regex) && ejercicio===0) {
+        ejercicio+=1;
+        ejercicio01();
+		} else if (ejercicio===0 && username==="") {
+			username = "Insignificus";
+			ejercicio01();
+		} else if (ejercicio===0) {
+			clear();
+			var texto = "Inserte un nombre sin espacios.";
+            var contenedor = output;
+            new TypeWriter(contenedor, texto, function (){
+                only_number = false;
+                input = document.createElement('q');
+                input.innerHTML = "> ";
+                contenedor.appendChild(input);
+                input.setAttribute("id", "user");
+            });
+		} else if (ejercicio===1) {
+			console.log("Resultado 1: "+input_text);
+		}
+    }
+
 
 function logKey(e){
     if (input === undefined) return;
     e = e || window.event;
     // use e.keyCode
     let input_text = input.textContent;
-    if(e.code === 'Delete' || e.code === 'Backspace') {
+    if((e.code === 'Delete' || e.code === 'Backspace') && input_text!=username+">") {
         input.textContent = input_text.substring(0, input_text.length - 1);
     }else if(e.code === 'Enter') {
         if(require_input && input.textContent.length === 0){
@@ -71,19 +100,41 @@ function logKey(e){
 //    });
 //}
 
+function clear() {
+	output.innerHTML = "";
+}
 
 function encender() {
-        chk_screen = salida.style.display;
-        if (chk_screen!="block"){
-            salida.style.display = "block";
+		document.addEventListener('keydown', logKey);
+        if (output.style.display!="block"){
+            output.style.display = "block";
+            button_term.style.backgroundImage="url('./src/bottom.png')"
             only_number = true;
-            const texto = "Bienvenido a la consola de comandos definitiva. Inserte cualquier texto por teclado, no servirá para nada.";
-            var contenedor = document.getElementById("salida");
+            var texto = "Iniciando terminal.......<br> Cargando diálogo de besugos......... <br> ¿Sabes cuantos son 8 hobbits?....... <br> .................................... <br> 1 Hobbyte.<br> Por favor, ingrese su nombre de usuario (No puede contener espacios).";
+            var contenedor = output;
             new TypeWriter(contenedor, texto, function (){
+                only_number = false;
                 input = document.createElement('q');
-                console.log(input);
+                input.innerHTML = "> ";
                 contenedor.appendChild(input);
+                input.setAttribute("id", "user");
             });
         }
 
 }
+
+function ejercicio01 () {
+	console.log("EJER: "+ejercicio);
+	clear();
+	texto2 = "Introducir un número y determinar si está comprendido entre 1 y 10.";
+	var contenedor = output;
+	new TypeWriter(contenedor, texto2, function () {
+        only_number = false;
+        input = document.createElement('q');
+        input.innerHTML = username+"> ";
+        contenedor.appendChild(input);
+        input.setAttribute("id", "user");
+	});
+
+}
+

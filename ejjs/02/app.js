@@ -1,8 +1,8 @@
 const { useState, useRef, useEffect, useLayoutEffect, createContext } = React;
 
-/**
+/*
  * Globals
- */
+*/
 
 const CONSTANTS = {
   assetPath: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/184729" };
