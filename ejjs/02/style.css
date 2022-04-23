@@ -74,6 +74,36 @@ output q {
   margin-bottom: 1em;
   line-height: 150%;
 }
+output span {
+  border-right: 0 solid currentColor;
+  animation: blink 500ms linear 0s infinite;
+  text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  margin-right: 1em;
+  line-height: 150%;
+}
+
+output p {
+  border-right: 0 solid currentColor;
+  animation: blink 500ms linear 0s infinite;
+  text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  margin-right: 1em;
+  line-height: 150%;
+}
+
+output #numarray {
+	font-size: 3em;
+	width: 100%;
+	text-align: center;
+  border-right: 0 solid currentColor;
+  animation: blink 500ms linear 0s infinite;
+  text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 150%;
+}
 
 output q:last-child {
   border-right-width: 1ch;
