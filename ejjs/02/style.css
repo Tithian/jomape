@@ -21,6 +21,10 @@ html {
   background-color: black;
 }
 output {
+
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
   border-radius: 5em;
   background-color: #131;
   background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
@@ -40,8 +44,11 @@ output {
   left: 19%;
   width: 53%;
   height: 64.81%;
-  overflow: auto;
 }
+output::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
 output::before {
   position: absolute;
   content: "";
@@ -79,7 +86,6 @@ output span {
   animation: blink 500ms linear 0s infinite;
   text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
   margin-bottom: 1em;
-  margin-right: 1em;
   line-height: 150%;
 }
 
@@ -94,6 +100,31 @@ output p {
 
 output #numarray {
 	font-size: 3em;
+	width: 100%;
+	text-align: center;
+  border-right: 0 solid currentColor;
+  animation: blink 500ms linear 0s infinite;
+  text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 150%;
+}
+
+output #mini {
+	font-size: 0.75em;
+	width: 100%;
+	text-align: center;
+  border-right: 0 solid currentColor;
+  animation: blink 500ms linear 0s infinite;
+  text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 150%;
+}
+output #mid {
+	font-size: 1.5em;
 	width: 100%;
 	text-align: center;
   border-right: 0 solid currentColor;
