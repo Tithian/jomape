@@ -400,32 +400,31 @@ function multiplosDe(l, r, m) {
 }
 var demostrar = "";
 function ejercicio07(input_text) {
-  if(input_text !== undefined) {
-    input_text = input_text.toLowerCase();
-    if(input_text === 'continuar'){
-      ejercicio08();
-      return;
-    } else if (input_text === "demostrar") {
-        var dem_count = 0;
-        demostrar = "No necesito demostrarte nada "+username+". ";
-        ejercicio08();
-    }
-    ejercicio07;
-    }
-    else{
+    if(input_text !== undefined) {
+        input_text = input_text.toLowerCase();
+        if(input_text === 'continuar'){
+            ejercicio08();
+            return;
+        } else if (input_text === "demostrar") {
+            var dem_count = 0;
+            demostrar = "No necesito demostrarte nada "+username+". ";
+            ejercicio08();
+        } else {
+            clear();
+            ejercicio07();
+        }
+    } else {
         mul = multiplosDe(1,100,3);
-	    texto = "Observa sin poder escribir continuar, como imprimo los múltiplos de tres comprendidos entre 1 y 100.\n\n";
-	    comentario = "\nSi no da crédito a lo que está pasando, introduzca: demostrar."
-	    for (let i = 0; i < mul.length; i++) {
-		  texto+=mul[i]+" // ";
-		};
-	    new TypeWriter(output, texto+"\n"+CONTINUAR+comentario, function () {
-	    new ConsoleInput(output, ejercicio07, false, true);
+        texto = "Observa sin poder escribir continuar, como imprimo los múltiplos de tres comprendidos entre 1 y 100.\n\n";
+        comentario = "\nSi no da crédito a lo que está pasando, introduzca: demostrar."
+        for (let i = 0; i < mul.length; i++) {
+            texto+=mul[i]+" // ";
+        };
+        new TypeWriter(output, texto+"\n"+CONTINUAR+comentario, function () {
+            new ConsoleInput(output, ejercicio07, false, true);
         });
-
+    }
 }
-}
-
 function sumaMultiplosDe(l, r, m) {
     let sum = 0;
     for(let i=l; i<r; i++) {
@@ -441,7 +440,8 @@ function ejercicio08(input_text) {
 		if(input_text === 'continuar'){
 			ejercicio09();
 			return;
-		} else if (input_text === "demostrar" && demostrar === "") {
+        }
+		if (input_text === "demostrar" && demostrar === "") {
 			dem_count += 1;
 			demostrar = "No necesito demostrar nada"
 			ejercicio08();
@@ -449,7 +449,8 @@ function ejercicio08(input_text) {
 			demostrar = "otra cosa"
 			ejercicio09();
 		}
-	} else{
+    ejercicio08();
+    } else{
 		mul = sumaMultiplosDe(1,100,5);
 		output.innerHTML="<p id='numarray'>"+mul+"</p>";
 		texto = demostrar+"Este programa calcula la suma de todos los múltiplos de 5 comprendidos entre 1 y 100.\n\n";
@@ -559,7 +560,7 @@ if(input_text !== undefined) {
 		}
 	}
 	ejercicio11();
-	} else {
+} else {
 	new TypeWriter(output, "Introduzca un número, para mostrar si es PAR o IMPAR."+CONTINUAR, function () {
 	new ConsoleInput(output, ejercicio11, false, true);
 	});
@@ -805,7 +806,6 @@ function ejercicio18(input_text) {
 			for (let i=num1; i<=num2; i++) {
 				let n = i*i;
 				cuad+= n+" // ";
-				console.log(n);
 			}
 		} else if (num2<num1){
 			cuad = "Fin debe ser mayor que Inicio.";
@@ -825,12 +825,21 @@ function ejercicio18(input_text) {
 }
 
 function multiply(n1, n2) {
+	var min, max;
 	let result = 0
-	for (let i = n1; i <=n2; i++) {
-		result += i;
+	if (n1>n2) {
+	    min = n2;
+	    max = n1;
+	} else {
+	    min = n1;
+	    max = n2;
+	}
+	for (let i = 0; i <max; i++) {
+		result += min;
 	}
 	return result;
 }
+
 function ejercicio19(input_text) {
 	if(input_text !== undefined) {
 		input_text = input_text.toLowerCase();
@@ -860,6 +869,173 @@ function ejercicio19(input_text) {
 				"num2 - seguido de un número cambia el valor de Factor 2. (Ejemplo: num2 105)";
 		new TypeWriter(output, texto+"\n"+CONTINUAR, function () {
 		new ConsoleInput(output, ejercicio19, false, true);
+		});
+	}
+}
+
+function ejercicio20(input_text) {
+	if(input_text !== undefined) {
+		input_text = input_text.toLowerCase();
+		if (input_text === "continuar") {
+		ejercicio21();
+		return;
+		}
+	ejercicio20();
+	} else {
+	    res = "";
+		for (let i = 1; i<=5; i++) {
+            res +="<br>";
+            for(let i = 1; i<=20; i++) {
+            res += i+" ";
+            }
+        }
+		output.innerHTML="<p id='norm'>"+res+"</p>";
+		output.innerHTML+="<p>He tenido que generar un código para enseñarte a contar hasta 20.</p>"
+		new TypeWriter(output, "\n"+CONTINUAR, function () {
+		new ConsoleInput(output, ejercicio20, false, true);
+		});
+	}
+}
+
+const isPrime = num => {
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++)
+        if(num % i === 0) return false;
+    return num > 1;
+}
+
+function ejercicio21(input_text) {
+	if(input_text !== undefined) {
+		input_text = input_text.toLowerCase();
+		if (input_text === "continuar") {
+		    ejercicio22();
+		    return;
+		}
+        if (input_text.search("num1") === 0) {
+            let num = parseFloat(input_text.replace("num1", ""));
+            if(!isNaN(num)){
+                num1 = num;
+            }
+        }
+	ejercicio21();
+	} else {
+	    let res = "";
+	    if (isPrime(num1)===true) {
+	        res = "ES PRIMO";
+	    } else {
+	        res = "NO ES PRIMO"
+	    }
+		output.innerHTML="<p id='numarray'>"+res+"</p>";
+		output.innerHTMLñklj+="<p>Número: "+num1+"</p><p>Este programa determina si un número es primo.</p>";
+		texto = "num1 - seguido de un número cambia el valor de Factor 1. (Ejemplo: num1 22)";
+		new TypeWriter(output, texto+"\n"+CONTINUAR, function () {
+		new ConsoleInput(output, ejercicio21, false, true);
+		});
+	}
+}
+function multTabla(n) {
+    var result = [];
+    var step = 0;
+    for (let i = 0;i<=10;i++) {
+        step = n*i
+        result.push(n + " * "+i+" = "+step)
+    }
+    return result;
+}
+function ejercicio22(input_text) {
+	if(input_text !== undefined) {
+		input_text = input_text.toLowerCase();
+		if (input_text === "continuar") {
+		    ejercicio23();
+		    return;
+		}
+        if (input_text.search("num1") === 0) {
+            let num = parseFloat(input_text.replace("num1", ""));
+            if(!isNaN(num)){
+                num1 = num;
+            }
+        }
+	ejercicio22();
+	} else {
+	    var res = "";
+	    if (num1 === undefined) {
+            num1 = 0;
+        }
+        let tabla = multTabla(num1);
+        for (let i=0;i<tabla.length;i++) {
+            res += tabla[i]+"<br>";
+        }
+		output.innerHTML="<p id='mini'>"+res+"</p>";
+		output.innerHTML+="<p>Número: "+num1+"</p><p>Este programa muestra la tabla de multiplicar del número indicado.</p>";
+		texto = "num1 - seguido de un número cambia el valor de Factor 1. (Ejemplo: num1 22)";
+		new TypeWriter(output, texto+"\n"+CONTINUAR, function () {
+		new ConsoleInput(output, ejercicio22, false, true);
+		});
+	}
+}
+
+var phr = "";
+function ejercicio23(input_text) {
+	if(input_text !== undefined) {
+		lower = input_text.toLowerCase();
+		if (lower === "continuar") {
+		    ejercicio24();
+		    return;
+		}
+        if (input_text.search("num1") === 0) {
+            let num = parseFloat(lower.replace("num1", ""));
+            if(!isNaN(num)){
+                num1 = num;
+            }
+        }if (lower.indexOf("$") === 0) {
+            phr = input_text.replace("$", "");
+        }
+	ejercicio23();
+	} else {
+	    let res = "";
+	    if (num1 === undefined) {
+            num1 = 0;
+        }
+        for (let i=0;i<num1;i++) {
+            res += phr+"<br>";
+        }
+		output.innerHTML="<p id='mini'>"+res+"</p>";
+		output.innerHTML+="<p>Número: "+num1+"</p><p>Frase: "+phr+"<p>Este programa muestra la tabla de multiplicar del número indicado.</p>";
+		texto = "num1 - seguido de un número cambia el valor de Número. (Ejemplo: num1 22)\n$ - seguido de un número cambia el valor de Frase";
+		new TypeWriter(output, texto+"\n"+CONTINUAR, function () {
+		new ConsoleInput(output, ejercicio23, false, true);
+		});
+	}
+}
+
+function ejercicio24(input_text) {
+	if(input_text !== undefined) {
+		lower = input_text.toLowerCase();
+		if (lower === "continuar") {
+		    ejercicio24();
+		    return;
+		}
+        if (input_text.search("num1") === 0) {
+            let num = parseFloat(lower.replace("num1", ""));
+            if(!isNaN(num)){
+                num1 = num;
+            }
+        }if (lower.indexOf("$") === 0) {
+            phr = input_text.replace("$", "");
+        }
+	ejercicio23();
+	} else {
+	    let res = "";
+	    if (num1 === undefined) {
+            num1 = 0;
+        }
+        for (let i=0;i<num1;i++) {
+            res += phr+"<br>";
+        }
+		output.innerHTML="<p id='mini'>"+res+"</p>";
+		output.innerHTML+="<p>Número: "+num1+"</p><p>Frase: "+phr+"<p>Este programa muestra la tabla de multiplicar del número indicado.</p>";
+		texto = "num1 - seguido de un número cambia el valor de Número. (Ejemplo: num1 22)\n$ - seguido de un número cambia el valor de Frase";
+		new TypeWriter(output, texto+"\n"+CONTINUAR, function () {
+		new ConsoleInput(output, ejercicio23, false, true);
 		});
 	}
 }

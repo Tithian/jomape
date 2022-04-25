@@ -124,7 +124,19 @@ output #mini {
   line-height: 150%;
 }
 output #mid {
-	font-size: 1.5em;
+	font-size: 1.75em;
+	width: 100%;
+	text-align: center;
+  border-right: 0 solid currentColor;
+  animation: blink 500ms linear 0s infinite;
+  text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 150%;
+}
+output #norm {
+    font-size: 1.5em;
 	width: 100%;
 	text-align: center;
   border-right: 0 solid currentColor;
