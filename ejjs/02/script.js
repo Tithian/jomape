@@ -219,17 +219,17 @@ function ejercicio03(input_text) {
 		ejercicio04();
 		return;
 		}
-	if (input_text.search("num1") === 0) {
+	if (input_text.indexOf("num1") === 0) {
 		let num = parseFloat(input_text.replace("num1", ""));
 		if(!isNaN(num)){
 		num1 = num;
 		}
-	} else if (input_text.search("num2") === 0) {
+	} else if (input_text.indexOf("num2") === 0) {
 		let num = parseFloat(input_text.replace("num2", ""));
 		if(!isNaN(num)){
 		num2 = num;
 	}
-	} else if (input_text.search("num3") === 0) {
+	} else if (input_text.indexOf("num3") === 0) {
 		let num = parseFloat(input_text.replace("num3", ""));
 		if(!isNaN(num)){
 		num3 = num;
@@ -260,17 +260,17 @@ function ejercicio04(input_text) {
 			ejercicio05();
       return;
 		}
-    if (input_text.search("num1") === 0) {
+    if (input_text.indexOf("num1") === 0) {
 			let num = parseFloat(input_text.replace("num1", ""));
       if(!isNaN(num)){
         num1 = num;
       }
-		} else if (input_text.search("num2") === 0) {
+		} else if (input_text.indexOf("num2") === 0) {
 			let num = parseFloat(input_text.replace("num2", ""));
       if(!isNaN(num)){
         num2 = num;
       }
-		} else if (input_text.search("num3") === 0) {
+		} else if (input_text.indexOf("num3") === 0) {
 			let num = parseFloat(input_text.replace("num3", ""));
       if(!isNaN(num)){
         num3 = num;
@@ -489,17 +489,17 @@ function ejercicio10(input_text) {
 		ejercicio11();
 		return;
 		}
-	if (input_text.search("x") === 0) {
+	if (input_text.indexOf("x") === 0) {
 		let num = parseFloat(input_text.replace("x", ""));
 		if(!isNaN(num)){
 		num1 = num;
 		}
-	} else if (input_text.search("num1") === 0) {
+	} else if (input_text.indexOf("num1") === 0) {
 		let num = parseFloat(input_text.replace("num1", ""));
 		if(!isNaN(num)){
 		num2 = num;
 	}
-	} else if (input_text.search("num2") === 0) {
+	} else if (input_text.indexOf("num2") === 0) {
 		let num = parseFloat(input_text.replace("num2", ""));
 		if(!isNaN(num)){
 		num3 = num;
@@ -582,12 +582,12 @@ function ejercicio12(input_text) {
 		ejercicio13();
 		return;
 		}
-	if (input_text.search("bas") === 0) {
+	if (input_text.indexOf("bas") === 0) {
 		let num = parseFloat(input_text.replace("bas", ""));
 		if(!isNaN(num)){
 			num1 = num;
 		}
-	} else if (input_text.search("exp") === 0) {
+	} else if (input_text.indexOf("exp") === 0) {
 		let num = parseFloat(input_text.replace("exp", ""));
 		if(!isNaN(num)){
 			num2 = num;
@@ -716,12 +716,12 @@ function ejercicio16(input_text) {
 		ejercicio17();
 		return;
 		}
-	if (input_text.search("/") === 0) {
+	if (input_text.indexOf("/") === 0) {
 		let num = parseFloat(input_text.replace("/", ""));
 		if(!isNaN(num)){
 			num1 = num;
 		}
-	} else if (input_text.search("ç") === 0) {
+	} else if (input_text.indexOf("ç") === 0) {
 		let num = parseFloat(input_text.replace("ç", ""));
 		if(!isNaN(num)){
 			num2 = num;
@@ -788,12 +788,12 @@ function ejercicio18(input_text) {
 		ejercicio19();
 		return;
 		}
-	if (input_text.search("ini") === 0) {
+	if (input_text.indexOf("ini") === 0) {
 		let num = parseFloat(input_text.replace("ini", ""));
 		if(!isNaN(num)){
 			num1 = num;
 		}
-	} else if (input_text.search("fin") === 0) {
+	} else if (input_text.indexOf("fin") === 0) {
 		let num = parseFloat(input_text.replace("fin", ""));
 		if(!isNaN(num)){
 			num2 = num;
@@ -847,12 +847,12 @@ function ejercicio19(input_text) {
 		ejercicio20();
 		return;
 		}
-	if (input_text.search("num1") === 0) {
+	if (input_text.indexOf("num1") === 0) {
 		let num = parseFloat(input_text.replace("num1", ""));
 		if(!isNaN(num)){
 			num1 = num;
 		}
-	} else if (input_text.search("num2") === 0) {
+	} else if (input_text.indexOf("num2") === 0) {
 		let num = parseFloat(input_text.replace("num2", ""));
 		if(!isNaN(num)){
 			num2 = num;
@@ -910,7 +910,7 @@ function ejercicio21(input_text) {
 		    ejercicio22();
 		    return;
 		}
-        if (input_text.search("num1") === 0) {
+        if (input_text.indexOf("num1") === 0) {
             let num = parseFloat(input_text.replace("num1", ""));
             if(!isNaN(num)){
                 num1 = num;
@@ -948,7 +948,7 @@ function ejercicio22(input_text) {
 		    ejercicio23();
 		    return;
 		}
-        if (input_text.search("num1") === 0) {
+        if (input_text.indexOf("num1") === 0) {
             let num = parseFloat(input_text.replace("num1", ""));
             if(!isNaN(num)){
                 num1 = num;
@@ -981,7 +981,7 @@ function ejercicio23(input_text) {
 		    ejercicio24();
 		    return;
 		}
-        if (input_text.search("num1") === 0) {
+        if (input_text.indexOf("num1") === 0) {
             let num = parseFloat(lower.replace("num1", ""));
             if(!isNaN(num)){
                 num1 = num;
@@ -999,7 +999,7 @@ function ejercicio23(input_text) {
             res += phr+"<br>";
         }
 		output.innerHTML="<p id='mini'>"+res+"</p>";
-		output.innerHTML+="<p>Número: "+num1+"</p><p>Frase: "+phr+"<p>Este programa muestra la tabla de multiplicar del número indicado.</p>";
+		output.innerHTML+="<p>Número: "+num1+"</p><p>Frase: "+phr+"<p>Este programa muestra una frase tantas veces como el número indicado.</p>";
 		texto = "num1 - seguido de un número cambia el valor de Número. (Ejemplo: num1 22)\n$ - seguido de un número cambia el valor de Frase";
 		new TypeWriter(output, texto+"\n"+CONTINUAR, function () {
 		new ConsoleInput(output, ejercicio23, false, true);
@@ -1007,35 +1007,84 @@ function ejercicio23(input_text) {
 	}
 }
 
+function factorial(n) {
+    if(n==1 || n==0) {
+        return 1;
+    } else if (n<0) {
+        return -1;
+    } else {
+        return n*factorial(n-1);
+    }
+
+}
+
 function ejercicio24(input_text) {
 	if(input_text !== undefined) {
 		lower = input_text.toLowerCase();
 		if (lower === "continuar") {
-		    ejercicio24();
+		    ejercicio25();
 		    return;
 		}
-        if (input_text.search("num1") === 0) {
+        if (lower.indexOf("num1") === 0) {
             let num = parseFloat(lower.replace("num1", ""));
             if(!isNaN(num)){
                 num1 = num;
             }
-        }if (lower.indexOf("$") === 0) {
-            phr = input_text.replace("$", "");
         }
-	ejercicio23();
+	ejercicio24();
 	} else {
-	    let res = "";
-	    if (num1 === undefined) {
-            num1 = 0;
-        }
-        for (let i=0;i<num1;i++) {
-            res += phr+"<br>";
-        }
+	    let res = factorial(num1);
 		output.innerHTML="<p id='mini'>"+res+"</p>";
-		output.innerHTML+="<p>Número: "+num1+"</p><p>Frase: "+phr+"<p>Este programa muestra la tabla de multiplicar del número indicado.</p>";
-		texto = "num1 - seguido de un número cambia el valor de Número. (Ejemplo: num1 22)\n$ - seguido de un número cambia el valor de Frase";
+		output.innerHTML+="<p>Número: "+num1+"</p><p>Este programa muestra el factorial del número introducido.</p>";
+		texto = "num1 - seguido de un número cambia el valor de Número. (Ejemplo: num1 22)";
 		new TypeWriter(output, texto+"\n"+CONTINUAR, function () {
-		new ConsoleInput(output, ejercicio23, false, true);
+		new ConsoleInput(output, ejercicio24, false, true);
+		});
+	}
+}
+
+function ejercicio25(input_text) {
+	if(input_text !== undefined) {
+		lower = input_text.toLowerCase();
+		if (lower === "0") {
+		    ejercicio26();
+		    return;
+		}
+        let num = parseFloat(lower.replace("num1", ""));
+        if(!isNaN(num)){
+            num1 = num;
+        }
+
+	ejercicio25();
+	} else {
+		output.innerHTML="<p id='prodlist'></p>"
+		var prod_price = num1
+		var prod_list = []
+		var total = 0
+		for(let i=1;i<=100;i++) {
+			if (i<=15) {
+				total+=prod_price;
+				prod_list.push("U:"+i+" P:"+total.toFixed(2)+"€")
+			} else if(i>15 && i<=30) {
+				let unit = prod_price-(prod_price*0.10)
+				total+=unit
+				prod_list.push("U:"+i+" P:"+total.toFixed(2)+"€")
+			} else if(i>30 && i<=50) {
+				let unit = prod_price-(prod_price*0.15)
+				total+=unit
+				prod_list.push("U:"+i+" P:"+total.toFixed(2)+"€")
+			} else {
+				let unit = prod_price-(prod_price*0.2)
+				total+=unit
+				prod_list.push("U:"+i+" P:"+total.toFixed(2)+"€")
+			}
+		}
+		for (let i=1;i<prod_list.length;i++) {
+			prodlist.innerHTML+="<p>"+prod_list[i]+"</p>";
+		}
+		texto = "Introduce un precio numérico para calcular descuentos. Introduzca 0 para continuar";
+		new TypeWriter(output, texto, function () {
+		new ConsoleInput(output, ejercicio25, true, true);
 		});
 	}
 }
@@ -1046,17 +1095,17 @@ function ejercicio24(input_text) {
 //		ejercicio04();
 //		return;
 //		}
-//	if (input_text.search("num1") === 0) {
+//	if (input_text.indexOf("num1") === 0) {
 //		let num = parseFloat(input_text.replace("num1", ""));
 //		if(!isNaN(num)){
 //		num1 = num;
 //		}
-//	} else if (input_text.search("num2") === 0) {
+//	} else if (input_text.indexOf("num2") === 0) {
 //		let num = parseFloat(input_text.replace("num2", ""));
 //		if(!isNaN(num)){
 //		num2 = num;
 //	}
-//	} else if (input_text.search("num3") === 0) {
+//	} else if (input_text.indexOf("num3") === 0) {
 //		let num = parseFloat(input_text.replace("num3", ""));
 //		if(!isNaN(num)){
 //		num3 = num;

@@ -123,6 +123,13 @@ output #mini {
   margin-left: auto;
   line-height: 150%;
 }
+
+#prodlist {
+    font-size: 0.55em;
+    display: grid;
+    grid-template-columns: repeat(9, 10em);
+}
+
 output #mid {
 	font-size: 1.75em;
 	width: 100%;
