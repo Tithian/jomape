@@ -1015,7 +1015,6 @@ function factorial(n) {
     } else {
         return n*factorial(n-1);
     }
-
 }
 
 function ejercicio24(input_text) {
