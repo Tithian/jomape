@@ -27,3 +27,13 @@ input[type="checkbox"]:checked {
 #correct[type="checkbox"]:checked {
 	background-color: green;
 }
+
+span {
+	display: none;
+}
+.box success {
+	display: none;
+}
+.box-inner-block {
+	display: none;
+}
