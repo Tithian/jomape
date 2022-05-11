@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="index2.js"></script>
+    <link rel="stylesheet" href="index2.css">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <div>
+        <h1>Ejercicio1</h1>
+        <h3>Escribe tres números y el programa te dice cuál es el mayor</h3>
+        <form name="ejercicio1" method="post">
+        
+            <label>Primer Número: <br></label><input type="number" id="n1"><br>
+    
+            <label>Segundo Número: <br></label><input type="number" id="n2"><br>
+    
+            <label>Tercer Número: <br></label><input type="number" id="n3"><br><br>
+        
+        <p id="ej1" class="button" onclick="mayor()">Enter</p>
+        </form>
+    </div>    
+    
+    
+    <div>
+        <h1>Ejercicio2</h1>
+        <h3>Introducir un número y determinar si está comprendido entre 1 y 10</h3>
+        <form name="ejercicio2" method="post">
+                <label>Introduce un número: <br></label><input type="number" id="entre1"><br><br>
+                <button class="button" value="enter"  onclick="entre()">Enter</button>
+        </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio3</h1>
+        <h3>Introduce tres números y muéstralos ordenados de menor a mayor</h3>
+        <form name="ejercicio2" method="post">
+        
+            <label>Primer Número: <br></label><input type="number" id="nm1"><br>
+    
+            <label>Segundo Número: <br></label><input type="number" id="nm2"><br>
+    
+            <label>Tercer Número: <br></label><input type="number" id="nm3"><br><br>
+        
+        <button class="button" value="Enter" onclick="menmay()">Enter</button>
+
+        </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio4</h1>
+        <h3> Introduce un número y calcula si es positivo o negativo.</h3>
+        <form name="ej4" method="post">
+            <label>Introduce un número: </label><input type="number" id="posneg"><br>
+            <button type="button" class="button" value="enter" onclick="posneg()">Enter</button>
+            
+        </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio5</h1>
+        <h3>Programa que imprima los números impares comprendidos entre 100 y 120.</h3>
+        <form name="ej5" method="post">
+            <button class="button" id="ej5" onclick="impar()">Enter</button>
+        </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio6</h1>
+        <h3>Programa que muestre todos los múltiplos de 3 comprendidos entre 1 y 50</h3>
+        <p id="respuesta6"></p>
+        <form name="ej6" method="post">
+            <div class="button" id="ej6"  onclick="multiplos()">Enter</div>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio7</h1>
+        <h3>Lee todos los números hasta introducir el cero y súmalos (prompt)</h3>
+        <form name="ejercicio7" method="post" onsubmit="producto()">
+            <label>Introduce el precio unitario del producto: </label><input type="text" id="unit"><br>
+            <label>Número de unidades compradas: </label><input type="text" id="unidad"><br>
+            <label>Introduce el porcentaje del descuento que tenga: </label>
+            <select id="descuentos" name=" so">
+                <option value="desc" selected=" selected">- selecciona -</option>
+                <option value="7" id="">7%</option>
+                <option value="10" id="">10%</option>
+                <option value="15"id="">15%</option>
+                <option value="20" id="">20%</option>
+            </select><br>
+            <label>El Iva aplicado es un 15% en todos los casos. </label><br>
+            <input type="submit" value="Calcular precio"><br>
+
+        </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio8</h1>
+        <h3>Imprime el cuadrado de todos los números comprendidos entre 1 y 10</h3>
+        
+        <button class="button" name="ej8" method="post" onclick="tabla()">Enter</button>
+            <label></label>
+        
+        </form>
+
+    </div>
+
+    <div>
+        <h1>Ejercicio9</h1>
+        <h3>Número y exponente</h3>
+        <form name="ejercicio9" method="post" onsubmit="expon()">
+            <label>Introduce un número: </label><input type="text" id="exp1">
+            <label>Introduce el exponente: </label><input type="text" id="exp2">
+            <input type="submit" value="Obtener el total">
+
+        </form>
+    </div>
+    <div>
+        <h1>Ejercicio10</h1>
+        <h3>Calcula la suma de todos los pares comprendidos entre 1 y 1000 y muéstralo</h3>
+        <p id="ej10"></p>
+        <form name="ej10" method="post">
+            <input type="submit" class="button" id="ej10"  onclick="sumas()">Enter</input>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio11</h1>
+        <h3>Calcula la suma de todos los números comprendidos entre dos números 
+            introducidos por teclado.</h3>
+            <form name="ej11" method="post" >
+        
+                <label>Primer Número: <br></label><input type="number" id="p1"><br>
+        
+                <label>Segundo Número: <br></label><input type="number" id="p2"><br>
+            <p id="ej11"></p>
+
+                <input type ="submit" class="button" id="ej10"  onclick="sumaNumeros()"></input>
+           </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio12</h1>
+        <h3> Introduce un número y calcula si es par o impar con bucles.
+        </h3>
+        <p id="respuesta10"></p>
+        <form name="ej10" method="post">
+            <label>Número: <br></label><input type="number" id="nm1"><br>
+            <div class="button" id="ej10"  onclick="parImpar()">Enter</div>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio13</h1>
+        <h3>Introducir número y exponente y calcular la potencia usando bucles.</h3>
+        <p id="respuesta10"></p>
+        <form name="ej10" method="post">
+            <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio14</h1>
+        <h3>Lee todos los números hasta introducir el cero y súmalos (prompt).
+        </h3>
+        <p id="respuesta10"></p>
+        <form name="ej10" method="post">
+            <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio15</h1>
+        <h3>Lee todos los números hasta introducir el cero y calcula la media (prompt).</h3>
+        <p id="respuesta10"></p>
+        <form name="ej10" method="post">
+            <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio16</h1>
+        <h3>Lee todos los números hasta introducir el cero y calcula el máximo y el mínimo.</h3>
+        <p id="respuesta10"></p>
+        <form name="ej10" method="post">
+            <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio17</h1>
+        <h3>Calcula la división de dos números introducidos utilizando restas sucesivas.
+        </h3>
+        <p id="respuesta10"></p>
+        <form name="ej10" method="post">
+            <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio18</h1>
+        <h3>Introducir números por teclado y contar los positivos y los negativos. El programa 
+            termina cuando se introduce un cero y muestra los resultados</h3>
+            <p id="respuesta10"></p>
+            <form name="ej10" method="post">
+                <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+           </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio19</h1>
+        <h3>Calcula el cuadrado de todos los números comprendidos entre dos números 
+            introducidos por teclado.
+            </h3>
+            <p id="respuesta10"></p>
+            <form name="ej10" method="post">
+                <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+           </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio20</h1>
+        <h3>Escribe un programa que calcule la multiplicación de dos números introducidos por 
+            teclado sin utilizar el operador * (usando sumas sucesivas).</h3>
+            <p id="respuesta10"></p>
+            <form name="ej10" method="post">
+                <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+           </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio21</h1>
+        <h3>Realizar el programa que imprima 5 veces en la pantalla los números 
+            comprendidos entre 1 y 20 usando dos bucles.</h3>
+            <p id="respuesta10"></p>
+            <form name="ej10" method="post">
+                <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+           </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio22</h1>
+        <h3>Determinar si un número introducido por teclado es primo.
+        </h3>
+        <p id="respuesta10"></p>
+        <form name="ej10" method="post">
+            <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+       </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio23</h1>
+        <h3>Realizar el programa que muestre por pantalla la tabla de multiplicar de un número
+            dado. La salida del programa deberá ser de la siguiente forma:
+            5 * 1 = 5 
+            5 * 2 = 10 
+            5 * 3 = 15 
+            5 * 4 = 20 
+            5 * 5 = 25 
+            5 * 6 = 30 
+            5 * 7 = 35 
+            5 * 8 = 40 
+            5 * 9 = 45 
+            5 * 10 = 50</h3>
+            <p id="respuesta10"></p>
+            <form name="ej10" method="post">
+                <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+           </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio24</h1>
+        <h3>Escribe un programa que reciba un número por teclado y una frase. El programa 
+            deberá mostrar esa frase por pantalla tantas veces como se le indique en el 
+            número.</h3>
+            <p id="respuesta10"></p>
+            <form name="ej10" method="post">
+                <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+           </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio25</h1>
+        <h3>Programa que calcule el factorial de un número introducido por teclado, sabiendo 
+            que la fórmula del factorial el factorial (n) = n * factorial (n-1).</h3>
+            <p id="respuesta10"></p>
+            <form name="ej10" method="post">
+                <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+           </form>
+    </div>
+
+    <div>
+        <h1>Ejercicio26</h1>
+        <h3>Tomando del teclado el precio por unidad de un determinado producto, se 
+            pretende imprimir un listado con los precios para unidades desde 1 a 100. Se 
+            deben aplicar una serie de descuentos, a saber: 10% a partir de 15 unidades, 15% a 
+            partir de 30 unidades, 20% a partir de 50 unidades.</h3>
+            <p id="respuesta10"></p>
+            <form name="ej10" method="post">
+                <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+           </form>
+    </div>
+
+    <div>
+       <h1>Ejercicio27</h1>
+       <h3>Programa que pida dos números por teclado y calcule si el segundo es múltiplo del 
+        primero.</h3>
+        <p id="respuesta10"></p>
+        <form name="ej10" method="post">
+            <div class="button" id="ej10"  onclick="sumas()">Enter</div>
+       </form>
+    </div>
+    
+    </body>
+    
+</html>

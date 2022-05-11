@@ -427,7 +427,7 @@ function ejercicio07(input_text) {
 }
 function sumaMultiplosDe(l, r, m) {
     let sum = 0;
-    for(let i=l; i<r; i++) {
+    for(let i=l; i<=r; i++) {
         if(i % m === 0){
             sum+=i;
         }

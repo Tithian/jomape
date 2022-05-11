@@ -1,0 +1,14 @@
+1¿Cómo se llama el primer modelo de Impresora 3D en el mercado?
+SLA-1
+
+2¿Es el plástico el único material imprimible en 3D?
+NO
+
+3¿Qué modo de impresión compacta materiales por fusión laser?
+Sinterización láser
+
+4¿Puede una impresora 3D funcionar sin computación asistida?
+NO
+
+5¿Qué impresora 3D nos permite desayunar tortitas con estilo?
+PancakeBot
