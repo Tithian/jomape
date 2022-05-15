@@ -7,7 +7,7 @@ function ejercicio01() {
 function subirNota01 () {
 	let entrada = ent2.value;
 	arr = []
-	for(let i=1;i<=entrada;i++) {
+	for(let i=2;i<=entrada;i++) {
 		if(perfecto(i)===true) {
 			arr.push(i);
 		}
@@ -21,7 +21,7 @@ function ejercicio02() {
 	texto1 = "Precio por alumno: "
 	texto2 = "Total: "
 	total = operacion*entrada
-	dos.innerHTML = texto1+operacion.toFixed(2)+" €<br><br>"+texto2+total.toFixed(2)+" €"
+	dos.innerHTML = texto1+"<br>"operacion.toFixed(2)+" €<br><br>"+texto2+total.toFixed(2)+" €"
 }
 
 function enviar() {
@@ -57,7 +57,6 @@ function cancelar() {
 	}
 }
 
-
 function deViaje(n) {
 	switch(true) {
 		case(n>=100):
@@ -70,8 +69,6 @@ function deViaje(n) {
 			return 4000/n
 	}
 }
-
-
 
 function sumaDivisores(n) {
 	let total = 0;

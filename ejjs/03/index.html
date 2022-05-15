@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examen</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="funciones.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <form class="formulario" id="ej01">
+        <div class="titulo">Ejercicio 01</div>
+        <div class="enunciado">
+			Escribe una función llamada potencia que reciba dos argumentos y devuelva como
+			resultado la potencia del primer número elevado al segundo.
+		</div>
+        <div class="input-container">
+            <input id="i1" class="input" type="number" placeholder=" " />
+            <div class="cut"></div>
+            <label for="i1" class="placeholder">Base</label>
+        </div>
+		<div class="input-container">
+            <input id="i2" class="input" type="number" placeholder=" " />
+            <div class="cut"></div>
+            <label for="i2" class="placeholder">Exponente</label>
+        </div>
+		<div class="container">
+			<q onclick="ejercicio01()"><span>Calcular Potencia</span></q>
+			<div class="respuesta" id="uno"></div>
+		</div>
+    </form>
+
+    <form class="formulario" id="ej02">
+        <div class="titulo">Ejercicio 02</div>
+        <div class="enunciado">
+			Escribe una función llamada par que devuelva true si el número recibido es par y
+			false si es impar.
+		</div>
+        <div class="input-container">
+            <input id="i3" class="input" type="number" placeholder=" " />
+            <div class="cut"></div>
+            <label for="i3" class="placeholder">Número</label>
+        </div>
+		<div class="container">
+		<q onclick="ejercicio02()"><span>¿es par?</span></q>
+		<div class="respuesta" id="dos"></div>
+	</div>
+    </form>
+
+	<form class="formulario" id="ej03">
+        <div class="titulo">Ejercicio 03</div>
+        <div class="enunciado">
+			Inserta la cantidad media de horas MENSUALES trabajadas y el precio por hora. Se calculará el IRPF
+		</div>
+        <div class="input-container">
+            <input id="i4" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="i4" class="placeholder">Horas trabajadas</label>
+        </div>
+		<div class="input-container">
+            <input id="i5" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="i5" class="placeholder">Precio Hora</label>
+        </div>
+		<div class="container">
+			<q onclick="ejercicio03()"><span>calcular sueldo</span></q>
+			<div class="respuesta" id="tres"></div>
+		</div>
+	</form>
+
+	<form class="formulario" id="ej04">
+        <div class="titulo">Ejercicio 04</div>
+        <div class="enunciado">
+			Función llamada factura que recibe el precio unitario de un producto, el número de
+			unidades compradas, el descuento aplicado y el IVA y devuelva el total.
+		</div>
+        <div class="input-container">
+            <input id="i6" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="i6" class="placeholder">Precio Unidad</label>
+        </div>
+		<div class="input-container">
+            <input id="i7" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="i7" class="placeholder">Cantidad Unidades</label>
+        </div>
+		<div class="input-container">
+            <input id="i8" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="i8" class="placeholder">Descuento</label>
+        </div>
+		<div class="input-container">
+            <input id="i9" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="i9" class="placeholder">IVA</label>
+        </div>
+		<div class="container">
+			<q onclick="ejercicio04()"><span>calcular</span></q>
+			<div class="respuesta" id="cuatro"></div>
+		</div>
+    </form>
+<!--	<form class="formulario" id="ej03">-->
+<!--        <div class="titulo">Ejercicio 03</div>-->
+		<div class="enunciado">
+
+		</div>
+
+<!--        <div class="input-container">-->
+<!--            <input id="grupo" class="input" type="text" placeholder=" ">-->
+<!--            <div class="cut cut-long"></div>-->
+<!--            <label for="grupo" class="placeholder">Grupo</label>-->
+<!--        </div>-->
+<!--		<div class="input-container">-->
+<!--			<input list="bands" name="mbands" id="mbands" class="input" placeholder=" ">-->
+<!--			<div class="cut"></div>-->
+<!--			<label for="mbands" class="placeholder">&#45;&#45;Selecciona&#45;&#45;</label>-->
+<!--			<datalist id="bands">-->
+<!--				<option value="Guns N'Roses">-->
+<!--				<option value="Queen">-->
+<!--				<option value="AC/DC">-->
+<!--			</datalist>-->
+<!--        </div>-->
+<!--		<div class="input-container">-->
+<!--            <input id="alb" class="input" type="text" placeholder=" ">-->
+<!--            <div class="cut cut-long"></div>-->
+<!--            <label for="alb" class="placeholder">Album</label>-->
+<!--        </div>-->
+<!--		<div class="input-container">-->
+<!--            <input id="bnum" class="input" type="number" placeholder=" ">-->
+<!--            <div class="cut cut-long"></div>-->
+<!--            <label for="bnum" class="placeholder">Borrar Número...</label>-->
+<!--        </div>-->
+
+<!--		<div class="container">-->
+<!--			<q onclick="enviar()"><span>enviar</span></q>-->
+<!--			<q onclick="cancelar()"><span>cancelar</span></q>-->
+<!--			<q onclick="borrar()"><span>borrar</span></q>-->
+<!--		</div>-->
+
+<!--    </form>-->
+<!--	<div class="formulario" id="playlist">-->
+<!--		<div class="titulo2">GRUPAZOS</div>-->
+<!--		<ol id="grupazos"></ol>-->
+<!--	</div>-->
+<canvas id="c"></canvas>
+<script src="matrix.js"></script>
+</body>
+</html>
+
+<!--
+0.
+1.
+2.
+3.
+4.
+5. Escribe una función llamada convertir que pase de grados Celsius a Fahrenheit. (F =
+(9/5)*C+32)
+6. Escribe una función llamada mayor que reciba como parámetros dos números
+enteros y devuelva el mayor.
+7. Escribe una función llamada primo que reciba un número entero y devuelva si es
+primo o no.
+8. Función que calcule el área de un círculo, siendo esta A = PI * r2
+.
+9. Escribe una función que reciba como argumento un número y muestre por pantalla
+todos sus divisores.
+10. Diseña una función llamada factorial que devuelva el factorial de un número
+recibido como parámetro.
+11. Realiza una función llamada contar que reciba un número y devuelva la suma de sus
+dígitos. Ejemplos: 25 (devuelve 7). 126 (devuelve 9).
+12. Escribe una función llamada binario que reciba un número decimal y devuelva una
+cadena de caracteres con el valor binario del número recibido.-->
