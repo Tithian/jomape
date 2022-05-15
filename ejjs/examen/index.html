@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<titulo>Examen</titulo>
+	<link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <form class="formulario" id="ej01">
+        <div class="titulo">Ejercicio 01</div>
+        <div class="enunciado">
+			Introduzca un número y saldrá la suma de todos sus divisores. Ejemplo: (8) -> 1 + 2 + 4 = 7
+		</div>
+        <div class="input-container">
+            <input id="ent1" class="input" type="number" placeholder=" " />
+            <div class="cut"></div>
+            <label for="ent1" class="placeholder">Número Entero</label>
+        </div>
+		<div class="container">
+			<q onclick="ejercicio01()"><span>Sumar Divisores</span></q>
+			<div class="respuesta" id="uno"></div>
+		</div>
+
+    </form>
+    <form class="formulario" id="ej01nota">
+        <div class="titulo">Subir Nota</div>
+        <div class="enunciado">
+			Introduzca un número para saber cuantos números curiosos hay desde el 2 hasta su número.
+		</div>
+        <div class="input-container">
+            <input id="ent2" class="input" type="number" placeholder=" " />
+            <div class="cut"></div>
+            <label for="ent2" class="placeholder">Número Entero</label>
+        </div>
+		<div class="container">
+		<q onclick="subirNota01()"><span>¿Es Curioso?</span></q>
+		<div class="respuesta" id="nota"></div>
+
+	</div>
+
+    </form>
+	<form class="formulario" id="ej02">
+        <div class="titulo">Ejercicio 02</div>
+        <div class="enunciado">
+			Calcular el coste del viaje de estudios
+		</div>
+        <div class="input-container">
+            <input id="ent3" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="ent3" class="placeholder">Número de Alumnos</label>
+        </div>
+		<div class="container">
+			<q onclick="ejercicio02()"><span>calcular viaje</span></q>
+			<div class="respuesta" id="dos"></div>
+		</div>
+
+    </form>
+	<form class="formulario" id="ej03">
+        <div class="titulo">Ejercicio 03</div>
+        <div class="input-container">
+            <input id="grupo" class="input" type="text" placeholder=" ">
+            <div class="cut cut-long"></div>
+            <label for="grupo" class="placeholder">Grupo</label>
+        </div>
+		<div class="input-container">
+			<input list="bands" name="mbands" id="mbands" class="input" placeholder=" ">
+			<div class="cut"></div>
+			<label for="mbands" class="placeholder">--Selecciona--</label>
+			<datalist id="bands">
+				<option value="Guns N'Roses">
+				<option value="Queen">
+				<option value="AC/DC">
+			</datalist>
+        </div>
+		<div class="input-container">
+            <input id="alb" class="input" type="text" placeholder=" ">
+            <div class="cut cut-long"></div>
+            <label for="alb" class="placeholder">Album</label>
+        </div>
+		<div class="input-container">
+            <input id="bnum" class="input" type="number" placeholder=" ">
+            <div class="cut cut-long"></div>
+            <label for="bnum" class="placeholder">Borrar Número...</label>
+        </div>
+
+		<div class="container">
+			<q onclick="enviar()"><span>enviar</span></q>
+			<q onclick="cancelar()"><span>cancelar</span></q>
+			<q onclick="borrar()"><span>borrar</span></q>
+		</div>
+
+    </form>
+	<div class="formulario" id="playlist">
+		<div class="titulo2">GRUPAZOS</div>
+		<ol id="grupazos"></ol>
+	</div>
+</body>
+</html>
