@@ -367,7 +367,6 @@ function circunDe() {
     let area = Math.PI*radio;
 
     alert("Longitud: "+longitud.toFixed(2)+".\n\n"+"Área: "+area.toFixed(2));
-
 }
 
 function circunDeTool() {

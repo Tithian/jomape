@@ -46,3 +46,67 @@ function factura(u,c,d,i) {
     let coniva = descontado+(descontado*i)/100;
 	return coniva;
 }
+
+function convertir(temp,fc) {
+	let res;
+    if (fc === true) {
+        res = (temp-32)*5/9;
+    } else {
+        res = (temp*9/5)+32;
+    }
+    return parseFloat(res.toFixed(5))
+}
+
+function mayor(a,b) {
+	if (a>b) {
+		return a
+	} else {
+		return b
+	}
+}
+
+function primo(n) {
+    for(let i = 2, s = Math.sqrt(n); i <= s; i++)
+        if(n % i === 0) return false;
+    return n > 1;
+}
+
+function area(r) {
+    return Math.PI*(r**2);
+}
+
+function sumaDivisores(n) {
+	let total = 0;
+	for(let i=0;i<n;i++) {
+		if(n%i === 0) {
+			total += i;
+		}
+	}
+	return total
+}
+
+function factorial(num) {
+	num = BigInt(num)
+    if(num==1n || num==0n) {
+        return 1n;
+    } else if (num<0n) {
+        return -1;
+    } else {
+        return num*factorial(num-1n);
+    }
+}
+
+function contar(n) {
+	sum = 0;
+	arr = String(n).split("")
+	for(let i=0; i<arr.length;i++) {
+		num = parseInt(arr[i])
+		console.log(num)
+		sum += num
+	}
+	return sum;
+}
+
+function binario(n) {
+	return (n >>> 0).toString(2);
+}

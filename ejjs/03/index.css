@@ -10,6 +10,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Arial, sans-serif;
+	font-size: 1em;
 }
 
 body {
@@ -196,7 +197,7 @@ body {
 }
 
 .cut {
-  background-color: #211;
+  background-color: rgba(10, 10, 10, 0.9);
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -241,6 +242,7 @@ body {
 
 	transition: 1s;
 	text-align: center;
+	overflow-wrap: anywhere;
 }
 
 #playlist {
@@ -266,4 +268,61 @@ ol {
 				 0 0 20px #222,
 				 0 0 40px #222,
 				 0 0 80px #222;
+}
+
+.inrad {
+    padding-bottom: 30px;
+    border-radius: 50px;
+    margin-bottom: 80px;
+}
+.inrad:focus-within {
+  transition: 0.5s;
+  box-shadow: 0 0  5px #0f0,
+    0 0  10px #0f0,
+    0 0  15px #0f0,
+    0 0  20px #0f0,
+    0 0  35px #0f0,
+    0 0  40px #0f0,
+    0 0  60px #0f0,
+    0 0  90px #0f0;
+}
+
+.radiobutt input[type="radio"] {
+  opacity: 0.011;
+  z-index: 100;
+}
+
+.radiobutt input[type="radio"]:checked + label {
+    transition: 0.5s;
+    color: #0f0;
+    text-shadow: 0 0  5px #0f0,
+        0 0  10px #0f0,
+        0 0  20px #0f0,
+        0 0  40px #0f0;
+}
+
+.radiobutt label {
+  cursor: pointer;
+  z-index: 90;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 2em;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.radiobutt label,
+.radiobutt input {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
