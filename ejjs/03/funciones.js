@@ -76,10 +76,10 @@ function area(r) {
 }
 
 function sumaDivisores(n) {
-	let total = 0;
+	let total = [];
 	for(let i=0;i<n;i++) {
 		if(n%i === 0) {
-			total += i;
+			total.push(i);
 		}
 	}
 	return total

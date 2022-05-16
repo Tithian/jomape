@@ -74,7 +74,7 @@ function ejercicio08() {
 
 function ejercicio09() {
 	let ent1 = e9i1.value;
-	r9.innerHTML = sumaDivisores(ent1);
+	r9.innerHTML = sumaDivisores(ent1).join(', ');
 }
 
 function ejercicio10() {
