@@ -21,7 +21,7 @@ function ejercicio02() {
 	texto1 = "Precio por alumno: "
 	texto2 = "Total: "
 	total = operacion*entrada
-	dos.innerHTML = texto1+"<br>"operacion.toFixed(2)+" €<br><br>"+texto2+total.toFixed(2)+" €"
+	dos.innerHTML = texto1+"<br>"+operacion.toFixed(2)+" €<br><br>"+texto2+total.toFixed(2)+" €"
 }
 
 function enviar() {
