@@ -130,6 +130,7 @@ body {
   text-align: center;
   padding-bottom: 10%;
   letter-spacing: 3px;
+  overflow-wrap: anywhere;
   text-shadow: 0 0 5px #0f0,
 				 0 0 10px #0f0,
 				 0 0 20px #0f0;
@@ -148,6 +149,7 @@ body {
   margin-top: 30px;
   text-align: center;
   padding-bottom: 10%;
+  overflow-wrap: anywhere;
 }
 
 .enunciado {
