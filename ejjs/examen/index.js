@@ -24,15 +24,24 @@ function ejercicio02() {
 	dos.innerHTML = texto1+"<br>"+operacion.toFixed(2)+" €<br><br>"+texto2+total.toFixed(2)+" €"
 }
 
+// ver el HTML para entender que está pasando.
 function enviar() {
 	let album = alb.value;
 	if(album !=="") {
 		album = ' - '+album
 	}
-	let input_group = grupo.value;
+	if(typeof grupo === "undefined"){
+
+	} else {
+		var input_group = grupo.value;
+	}
 	let input_dispo = mbands.value;
 	let entry = document.createElement('li');
 	entry.setAttribute("class", "grouplist");
+	if(typeof input_group === "undefined"){
+		var input_group = ""
+	}
+	console.log(input_group);
 	if(input_group !== "") {
 		entry.textContent = input_group+album;
 		grupazos.appendChild(entry);
@@ -51,7 +60,8 @@ function borrar() {
 }
 
 function cancelar() {
-	let grupos = document.getElementsByClassName('grouplist');
+	bnum.value = ""
+
 	while(grupos[0]) {
 		grupazos.removeChild(grupos[0])
 	}

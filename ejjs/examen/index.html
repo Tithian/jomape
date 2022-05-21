@@ -7,22 +7,27 @@
     <script src="index.js"></script>
 </head>
 <body>
+
     <form class="formulario" id="ej01">
         <div class="titulo">Ejercicio 01</div>
+
         <div class="enunciado">
 			Introduzca un número y saldrá la suma de todos sus divisores. Ejemplo: (8) -> 1 + 2 + 4 = 7
 		</div>
-        <div class="input-container">
+
+		<div class="input-container">
             <input id="ent1" class="input" type="number" placeholder=" " />
             <div class="cut"></div>
             <label for="ent1" class="placeholder">Número Entero</label>
         </div>
+
 		<div class="container">
 			<q onclick="ejercicio01()"><span>Sumar Divisores</span></q>
 			<div class="respuesta" id="uno"></div>
 		</div>
-
     </form>
+
+
     <form class="formulario" id="ej01nota">
         <div class="titulo">Subir Nota</div>
         <div class="enunciado">
@@ -40,6 +45,8 @@
 	</div>
 
     </form>
+
+
 	<form class="formulario" id="ej02">
         <div class="titulo">Ejercicio 02</div>
         <div class="enunciado">
@@ -56,13 +63,29 @@
 		</div>
 
     </form>
+
+
 	<form class="formulario" id="ej03">
         <div class="titulo">Ejercicio 03</div>
-        <div class="input-container">
+<!-- DESCOMENTAR LO SIGUIENTE PARA LO QUE PIDE REALMENTE EL EJERCICIO -->
+
+<!--        <div class="input-container">
             <input id="grupo" class="input" type="text" placeholder=" ">
             <div class="cut cut-long"></div>
             <label for="grupo" class="placeholder">Grupo</label>
         </div>
+
+		<div class="input-container">
+			<select name="mbands" id="mbands" class="select">
+				<option value="">&#45;&#45;Selecciona&#45;&#45;</option>
+			    <option value="Guns N'Roses">Guns N'Roses</option>
+			    <option value="Queen">Queen</option>
+			    <option value="AC/DC">AC/DC</option>
+			</select>
+        </div>-->
+<!-- HASTA AQUI -->
+
+<!-- DE ESTE MODO NOS AHORRAMOS DOS CAMPOS EN UNO, SUGIRIENDO UNA LISTA DESPLEGABLE QUE ADEMÁS SE PUEDE EDITAR -->
 		<div class="input-container">
 			<input list="bands" name="mbands" id="mbands" class="input" placeholder=" ">
 			<div class="cut"></div>
@@ -73,11 +96,13 @@
 				<option value="AC/DC">
 			</datalist>
         </div>
+<!-- HASTA AQUI -->
 		<div class="input-container">
             <input id="alb" class="input" type="text" placeholder=" ">
             <div class="cut cut-long"></div>
             <label for="alb" class="placeholder">Album</label>
         </div>
+
 		<div class="input-container">
             <input id="bnum" class="input" type="number" placeholder=" ">
             <div class="cut cut-long"></div>
@@ -91,9 +116,15 @@
 		</div>
 
     </form>
+
+
 	<div class="formulario" id="playlist">
 		<div class="titulo2">GRUPAZOS</div>
 		<ol id="grupazos"></ol>
 	</div>
+
+
+<canvas id="c"></canvas>
+<script src="../../scripts/matrix.js"></script>
 </body>
 </html>

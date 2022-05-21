@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <fieldset>
+        <h1>Viaje</h1>
+        <h3>Viaje fin de curso</h3>
+        <form name="almn" method="post">
+            <label>Introduce el numero de alumnos: <br></label><input type="number" id="unit"><br>
+            <button class="button" id="alumno"  onclick="alumnos()">Enter</button>
+            <p id="alm"></p>
+       </form>
+       </fieldset>
+
+    </div>
+
+   <div>
+        <fieldset>
+        <h1>Divisores</h1>
+        <h3>La suma de los divisores de un número</h3>
+        <form name="divi" method="post">
+            <label>Introduce un número: <br></label><input type="number" id="num"><br>
+            <button class="button" id="num"  onclick="divisores()">Enter</button>
+            <p id="divi"></p>
+       </form>
+       </fieldset>
+       
+    </div>
+
+    <div id="form3">
+        <form name="ejercicio3">
+            <fieldset>
+                <h1>Colección de discos</h1>
+                <label>Grupo</label>
+                <input type="text" name="grupo" value="" size="20" maxlength="20">
+                <input type="button" value="?" size="1" onclick="alert(document.getElementsByName('grupo')[0].value);">
+        
+                <br>
+
+              <!-- <label>Grupos disponibles</label>
+                <select id="grupos" name="grupos">
+                
+                    <option value="" selected=" selected">- selecciona Grupo -</option>
+                    <option value="grupos" >Guns N'Roses</option>
+                    <option value="grupos">Queen</option>>
+                    <option value="grupos">AC/DC</option>
+                    <input type="submit" value="?" size="1" onclick="alert(document.getElementById('grupos').value);">
+                    </select>-->
+                <br>
+        
+                <label>Titulo del Album</label>
+                <textarea name="titulo" id="titulo" cols="40" rows="5"></textarea>
+                <input type="button" value="?" size="1" onclick="alert(document.getElementById('titulo').value);">
+                
+                <br>
+                <br>
+                
+                <input type="button" value="Enviar" onclick="crearnodo(ejercicio3.grupo.value,ejercicio3.titulo.value);">
+                <input type="reset" value="Cancelar">
+                <!--<input type="submit" value="Borrar">-->
+            </fieldset>
+        </form>
+        </div>
+</body>
+<script src="alumnos2.js"></script>
+</html>
