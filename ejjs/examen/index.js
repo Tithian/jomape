@@ -60,8 +60,10 @@ function borrar() {
 }
 
 function cancelar() {
+	mbands.value = ""
+	alb.value = ""
 	bnum.value = ""
-
+	let grupos = document.getElementsByClassName('grouplist');
 	while(grupos[0]) {
 		grupazos.removeChild(grupos[0])
 	}

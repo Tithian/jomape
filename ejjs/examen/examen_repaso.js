@@ -20,7 +20,7 @@ function desbordado(n) {
 }
 
 function desglose(kg,fruta,total) {
-	texto = kg+" Kg de "+fruta+": "+total+" €."
+	texto = kg+" Kg de "+fruta+": "+total+" €"
 	return texto+"<br>"
 }
 
@@ -83,10 +83,11 @@ function ejercicio02() {
 		total += GASTOS_ENVIO
 		r2.innerHTML += "<br>Gastos de envío: "+GASTOS_ENVIO+ " €<br>"
 	}
+	total = total.toFixed(2)
 	r2.innerHTML += "El total es "+total+" €"
 }
 
-i = 1
+let i = 1
 function enviar() {
 	let album = alb.value;
 	let input_group = grupo.value;
@@ -117,5 +118,5 @@ function cancelar() {
 
 function bandTip(ent,sal) {
 	ent.innerHTML = sal.value;
-
 }
+

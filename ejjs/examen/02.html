@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Ex&aacute;men repaso</title>
-    <link rel="stylesheet" href="index.css">
+    <link href="index.css" rel="stylesheet">
     <script src="examen_repaso.js"></script>
 </head>
 <body>
@@ -33,9 +33,9 @@
             </p>
 		</div>
         <div class="input-container">
-            <input id="e1i1" class="input" type="number" placeholder=" ">
+            <input class="input" id="e1i1" placeholder=" " type="number">
             <div class="cut"></div>
-            <label for="e1i1" class="placeholder">Número Entero</label>
+            <label class="placeholder" for="e1i1">Número Entero</label>
         </div>
 		<div class="container">
 			<q onclick="ejercicio01()"><span>Calcular Suma</span></q>
@@ -68,24 +68,24 @@
             </p>
 		</div>
         <div class="input-container">
-            <input id="e2per" class="input" type="number" placeholder=" ">
+            <input class="input" id="e2per" placeholder=" " type="number">
             <div class="cut"></div>
-            <label for="e2per" class="placeholder">Peras 3€/Kg</label>
+            <label class="placeholder" for="e2per">Peras 3€/Kg</label>
         </div>
         <div class="input-container">
-            <input id="e2man" class="input" type="number" placeholder=" ">
+            <input class="input" id="e2man" placeholder=" " type="number">
             <div class="cut"></div>
-            <label for="e2man" class="placeholder">Manzanas 2,5€/Kg</label>
+            <label class="placeholder" for="e2man">Manzanas 2,5€/Kg</label>
         </div>
         <div class="input-container">
-            <input id="e2fre" class="input" type="number" placeholder=" ">
+            <input class="input" id="e2fre" placeholder=" " type="number">
             <div class="cut"></div>
-            <label for="e2fre" class="placeholder">Fresas 4€/Kg</label>
+            <label class="placeholder" for="e2fre">Fresas 4€/Kg</label>
         </div>
         <div class="input-container">
-            <input id="e2san" class="input" type="number" placeholder=" ">
+            <input class="input" id="e2san" placeholder=" " type="number">
             <div class="cut"></div>
-            <label for="e2san" class="placeholder">Sandías 1€/Kg</label>
+            <label class="placeholder" for="e2san">Sandías 1€/Kg</label>
         </div>
 
 		<div class="container">
@@ -108,9 +108,9 @@
         </div>
 
         <div class="input-container">
-            <input id="grupo" class="input" type="text" placeholder=" ">
+            <input class="input" id="grupo" placeholder=" " type="text">
             <div class="cut cut-long"></div>
-            <label for="grupo" class="placeholder">Grupo</label>
+            <label class="placeholder" for="grupo">Grupo</label>
         </div>
 		<span class="tooltip-container" onclick="alert(grupo.value)" onmouseover="bandTip(ttband,grupo)">
 			?
@@ -118,9 +118,9 @@
 		</span>
 
 		<div class="input-container">
-            <input id="alb" class="input" type="text" placeholder=" ">
+            <input class="input" id="alb" placeholder=" " type="text">
             <div class="cut cut-long"></div>
-            <label for="alb" class="placeholder">Album</label>
+            <label class="placeholder" for="alb">Album</label>
         </div>
 		<span class="tooltip-container" onclick="alert(alb.value)" onmouseover="bandTip(ttalb,alb)">
 			?
@@ -129,9 +129,9 @@
 
 		<div class="container">
 			<q onclick="enviar()"><span>enviar</span></q>
-			<q onclick="cancelar()" id="magiaborras"><span>cancelar</span></q>
+			<q id="magiaborras" onclick="cancelar()"><span>cancelar</span></q>
 		</div>
-		<div class="formulario" style="width:100%;margin-left:-2px" id="playlist">
+		<div class="formulario" id="playlist" style="width:100%;margin-left:-2px">
 			<div class="titulo2">GRUPAZOS</div>
 			<ol id="grupazos"></ol>
 		</div>

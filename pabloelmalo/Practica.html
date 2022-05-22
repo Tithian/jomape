@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>A aprobar</h1>
+    
+    <form name="f1">
+        <fieldset>
+            <legend>Escribe una función llamada potencia que reciba dos argumentos y devuelva como 
+                resultado la potencia del primer número elevado al segundo.</legend>
+            <input type="submit" value="calcular" onclick="
+                 nu1 = prompt('La base');
+        nu2 = prompt('El exponente');
+
+        potencia(parseInt(nu1), parseInt(nu2))
+        
+        
+            ">
+        </fieldset>
+    </form>
+
+    <form name="f2">
+        <fieldset>
+            <legend> Escribe una función llamada par que devuelva true si el número recibido es par y 
+                false si es impar.</legend>
+            <input type="submit" value="calcular" onclick="
+                
+        n = prompt('¿PAR?');
+
+        par(parseInt(n))
+        
+        
+            ">
+        </fieldset>
+    </form>
+
+    <form name="f3">
+        <fieldset>
+            <legend>  Escribe una función llamada sueldo que reciba tres argumentos y calcule el sueldo 
+                del mes de un empleado a partir del número de horas trabajadas, el precio por hora
+                y el IRPF</legend>
+            <input type="submit" value="calcular" onclick="
+                
+        Salario = prompt('sueldo por horas');
+        horas = prompt('horas trabajadas');
+        IRPF = prompt('IRPF');
+        
+       var resultado = sal(parseInt(Salario),parseInt(horas),parseInt(IRPF));
+       
+       alert(resultado);
+
+            ">
+        </fieldset>
+    </form>
+
+    <form name="f3">
+        <fieldset>
+            <legend>Función llamada factura que recibe el precio unitario de un producto, el número de 
+                unidades compradas, el descuento aplicado y el IVA y devuelva el total.</legend>
+            <input type="submit" value="calcular" onclick="
+
+                n1= prompt('Introduce el precio unitario');
+                n2= prompt('La cantidad de unidades compradas');
+                n3= prompt('El descuento que quiere que se le aplique.')
+                n4= prompt('El IVA aplicado');
+
+                factura(parseInt(n1),
+                parseInt(n2),parseInt(n3),parseInt(n4))
+
+            ">
+        </fieldset>
+    </form>
+    
+</body>
+<script src="funcion.js"></script>
+</html>
