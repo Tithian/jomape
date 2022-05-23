@@ -1,0 +1,442 @@
+#c {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: -100;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+}
+
+body {
+	display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: #000;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.container q {
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	border: 2px solid #0f0;
+	margin: 40px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: #fff;
+	-webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+	transition: 0.5s;
+	transition-delay: 0s;
+	background: transparent;
+}
+.container q:hover {
+	transition-delay: 1.5s;
+	color: #000;
+	cursor: pointer;
+	box-shadow: 0 0 10px #0f0,
+				0 0 20px #0f0,
+				0 0 40px #0f0,
+				0 0 80px #0f0,
+				0 0 160px #0f0;
+}
+.container q span {
+	position: relative;
+	z-index: 100;
+}
+/*.container q:nth-child(2) {
+	filter: hue-rotate(80deg);
+}
+.container q:nth-child(3) {
+	filter: hue-rotate(45deg);
+}*/
+.container q::before {
+	content: '';
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background: #0f0;
+	box-shadow: 5px -8px 0 #0f0,
+				5px 8px 0 #0f0;
+	transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+	transition-delay: 1s, 0.5s, 0s, 0s;
+}
+.container q:hover::before {
+	width: 60%;
+	height: 100%;
+	left: -2px;
+	box-shadow: 5px 0 0 #0f0,
+				5px 0 0 #0f0;
+	transition-delay: 0s, 0.5s, 1s, 1s;
+}
+.container q::after {
+	content: '';
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background: #0f0;
+	box-shadow: -5px -8px 0 #0f0,
+				-5px 8px 0 #0f0;
+	transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+	transition-delay: 1s, 0.5s, 0s, 0s;
+}
+.container q:hover::after {
+	width: 60%;
+	height: 100%;
+	right: -2px;
+	box-shadow: -5px 0 0 #0f0,
+				-5px 0 0 #0f0;
+	transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+.formulario {
+	background: rgba(10, 10, 10, 0.9);
+	border: 10px solid #0f0;
+	border-radius: 20px;
+	height: auto;
+	margin: 2%;
+	padding: 1%;
+	width: 25%;
+	box-shadow: 0 0 10px #0f0,
+				0 0 20px #0f0,
+				0 0 40px #0f0;
+}
+
+.titulo {
+  color: #0f0;
+  font-family: sans-serif;
+  font-size: 3em;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 10%;
+  letter-spacing: 3px;
+  overflow-wrap: anywhere;
+  text-shadow: 0 0 5px #0f0,
+				 0 0 10px #0f0,
+				 0 0 20px #0f0;
+}
+
+.titulo2 {
+  color: #222;
+  text-shadow: 0 0 5px #222,
+				 0 0 10px #0f0,
+				 0 0 20px #222,
+				 0 0 30px #0f0,
+				 0 0 40px #222;
+  font-family: sans-serif;
+  font-size: 3em;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 10%;
+  overflow-wrap: anywhere;
+}
+
+.enunciado {
+
+}
+
+.input {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #121;
+  font-size: 1.5em;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #0f0;
+  letter-spacing: 2px;
+	text-shadow: 0 0 10px #0f0,
+				 0 0 20px #0f0,
+				 0 0 40px #0f0,
+				 0 0 80px #0f0,
+				 0 0 160px #0f0;
+}
+
+.select {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #121;
+  font-size: 1.5em;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+.select:focus ~ .cut,
+.select:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+.select:focus ~ .placeholder,
+.select:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.select:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.select:focus ~ .placeholder {
+  color: #0f0;
+  letter-spacing: 2px;
+	text-shadow: 0 0 10px #0f0,
+				 0 0 20px #0f0,
+				 0 0 40px #0f0,
+				 0 0 80px #0f0,
+				 0 0 160px #0f0;
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.cut {
+  background-color: rgba(10, 10, 10, 0.9);
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 120px;
+}
+
+.cut-long {
+  width: 150px;
+}
+.cut-extralong {
+  width: 240px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: auto;
+}
+
+.enunciado {
+	color: white;
+}
+
+.respuesta {
+	font-size: 2em;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 100%;
+	height: auto;
+	color: #0f0;
+	text-shadow: 0 0 10px #0f0,
+				 0 0 20px #0f0,
+				 0 0 40px #0f0,
+				 0 0 80px #0f0,
+				 0 0 160px #0f0;
+
+	transition: 1s;
+	text-align: center;
+	overflow-wrap: anywhere;
+}
+
+#playlist {
+	background: #0A0;
+	color: black;
+	border: 10px solid black;
+	border-style: inset;
+	box-shadow: 0 0 10px #0f0,
+			0 0 20px #0f0,
+			0 0 40px #0f0,
+			0 0 80px #0f0,
+			0 0 160px #0f0;
+}
+
+ol {
+	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	list-style-position: inside;
+	color: #222;
+	text-shadow: 0 0 5px #222,
+				 0 0 10px #222,
+				 0 0 20px #222,
+				 0 0 40px #222,
+				 0 0 80px #222;
+}
+
+.inrad {
+    padding-bottom: 30px;
+    border-radius: 50px;
+    margin-bottom: 80px;
+}
+.inrad:focus-within {
+  transition: 0.5s;
+  box-shadow: 0 0  5px #0f0,
+    0 0  10px #0f0,
+    0 0  15px #0f0,
+    0 0  20px #0f0,
+    0 0  35px #0f0,
+    0 0  40px #0f0,
+    0 0  60px #0f0,
+    0 0  90px #0f0;
+}
+
+.radiobutt input[type="radio"] {
+  opacity: 0.011;
+  z-index: 100;
+}
+
+.radiobutt input[type="radio"]:checked + label {
+    transition: 0.5s;
+    color: #0f0;
+    text-shadow: 0 0  5px #0f0,
+        0 0  10px #0f0,
+        0 0  20px #0f0,
+        0 0  40px #0f0;
+}
+
+.radiobutt label {
+  cursor: pointer;
+  z-index: 90;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 2em;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.radiobutt label,
+.radiobutt input {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* */
+
+.tooltip-container {
+	position: relative;
+	left: -75px;
+	top: -40px;
+	background: #0A0;
+	box-shadow: 0 0  5px #0A0,
+    0 0  10px #0A0,
+    0 0  15px #0A0,
+    0 0  20px #0A0,
+    0 0  35px #0A0,
+    0 0  40px #0A0,
+    0 0  60px #0A0,
+    0 0  90px #0A0;
+	border-radius: 50%;
+	padding: 10px 18px;
+   color: black;
+   font-size: 2em;
+   white-space: nowrap;
+   cursor: help;
+}
+.tooltip {
+    opacity: 0;
+    z-index: 99;
+    display: block;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-shadow: 0 0  5px #0f0,
+    0 0  10px #0f0,
+    0 0  15px #0f0,
+    0 0  20px #0f0,
+    0 0  35px #0f0,
+    0 0  40px #0f0,
+    0 0  60px #0f0,
+    0 0  90px #0f0;
+    background: black;
+    box-shadow: 0 0  5px #0f0,
+    0 0  10px #0f0,
+    0 0  15px #0f0,
+    0 0  20px #0f0,
+    0 0  35px #0f0,
+    0 0  40px #0f0,
+    0 0  60px #0f0,
+    0 0  90px #0f0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.tooltip-container:hover .tooltip {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}

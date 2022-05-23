@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examen</title>
+	<link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <form class="formulario" id="ej01">
+        <div class="titulo">Ejercicio 01</div>
+
+        <div class="enunciado">
+			Introduzca un número y saldrá la suma de todos sus divisores. Ejemplo: (8) -> 1 + 2 + 4 = 7
+		</div>
+
+		<div class="input-container">
+            <input id="e1i1" class="input" type="number" placeholder=" " />
+            <div class="cut"></div>
+            <label for="e1i1" class="placeholder">Número Entero</label>
+        </div>
+
+		<div class="container">
+			<q onclick="ejercicio01()"><span>Sumar Divisores</span></q>
+			<div class="respuesta" id="r1"></div>
+		</div>
+    </form>
+
+
+    <form class="formulario" id="ej01nota">
+        <div class="titulo">Subir Nota</div>
+        <div class="enunciado">
+			Introduzca un número para saber cuantos números curiosos hay dentro del rango.
+		</div>
+		<div class="input-container">
+            <input id="eNi1" class="input" type="number" placeholder=" " />
+            <div class="cut"></div>
+            <label for="eNi1" class="placeholder">Número Inicial</label>
+        </div>
+        <div class="input-container">
+            <input id="eNi2" class="input" type="number" placeholder=" " />
+            <div class="cut"></div>
+            <label for="eNi2" class="placeholder">Número Final</label>
+        </div>
+		<div class="container">
+		<q onclick="subirNota01()"><span>¿Es Curioso?</span></q>
+		<div class="respuesta" id="nota"></div>
+
+	</div>
+
+    </form>
+
+
+	<form class="formulario" id="ej02">
+        <div class="titulo">Ejercicio 02</div>
+        <div class="enunciado">
+			Introducir el sueldo y el número de años de antigüedad del empleado.
+		</div>
+        <div class="input-container">
+            <input id="e2i1" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="e2i1" class="placeholder">Sueldo</label>
+        </div>
+		<div class="input-container">
+            <input id="e2i2" class="input" type="number" placeholder=" " />
+            <div class="cut cut-long"></div>
+            <label for="e2i2" class="placeholder">Años</label>
+        </div>
+		<div class="container">
+			<q onclick="ejercicio02()"><span>calcular aumento</span></q>
+			<div class="respuesta" id="dos"></div>
+		</div>
+
+    </form>
+
+
+	<form class="formulario" id="ej03" onchange="changeColor()">
+        <div class="titulo">Ejercicio 03</div>
+		<div class="enunciado">
+			Selecciona un color de la lista y cambiará el color de fondo.
+		</div>
+
+		<div class="input-container">
+			<select name="ecolors" id="ecolors" class="select">
+				<option value="">--Selecciona--</option>
+			    <option value="red">rojo</option>
+			    <option value="green">verde</option>
+			    <option value="blue">azul</option>
+				<option value="white">blanco</option>
+				<option value="black">negro</option>
+			</select>
+        </div>
+
+    </form>
+
+
+
+
+<canvas id="c"></canvas>
+<script src="matrix.js"></script>
+</body>
+</html>
