@@ -319,6 +319,14 @@ function sumaDivisores(n) {
 	return total
 }
 
+function perfecto(n) {
+	chk = sumaDivisores(n)
+	if(chk == n) {
+		return true
+	} else
+		return false
+}
+
 function areaCirculo(r) {
 
     return Math.PI*(r**2);
