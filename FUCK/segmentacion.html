@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<h1 class="c0" id="h.pb3pux2znwab"><span class="c16">Segmentaci&oacute;n: concepto y riesgos </span></h1>
+<h2 class="c0" id="h.3dgkngtlfi0x"><span class="c10">Concepto </span></h2>
+<p class="c3"><span
+		class="c1">Un programa sigue una secuencia ordenada de varias etapas al ejecutarse (suelen ser 4):</span></p>
+<ol class="c4 lst-kix_1lw6b69iuwfc-0 start" start="1">
+	<li class="c3 c12 li-bullet-0"><span
+			class="c8">B&uacute;squeda de la instrucci&oacute;n</span><span>&nbsp;(</span><span
+			class="c8">IF</span><span>). El </span><span class="c8">PC</span><span>&nbsp;guarda la direcci&oacute;n de la instrucci&oacute;n que se va a ejecutar. Esta es usada para leer en memoria la instrucci&oacute;n y depositarla en el </span><span
+			class="c8">RI</span><span>. Mientras, el </span><span class="c8">PC </span><span class="c1">se va incrementando para apuntar a la siguiente instrucci&oacute;n. </span>
+	</li>
+	<li class="c2 li-bullet-0"><span class="c8">Decodificaci&oacute;n </span><span>(</span><span
+			class="c8">ID</span><span class="c1">). </span></li>
+</ol>
+<ul class="c4 lst-kix_1lw6b69iuwfc-1 start">
+	<li class="c6 c14 li-bullet-0"><span>La </span><span
+			class="c8">Unidad de Control</span><span>&nbsp;usa el </span><span class="c8">CO</span><span class="c1">&nbsp;de la instrucci&oacute;n para generar las se&ntilde;ales de sincronismo oportunas. </span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span>El campo </span><span class="c8">OPS</span><span class="c1">&nbsp;se usa para elegir los registros que intervienen. </span>
+	</li>
+</ul>
+<ol class="c4 lst-kix_1lw6b69iuwfc-0" start="3">
+	<li class="c2 li-bullet-0"><span class="c8">Ejecuci&oacute;n </span><span>(</span><span class="c8">EX</span><span>). El </span><span
+			class="c8">CO</span><span class="c1">&nbsp;y los registros seleccionados en la etapa anterior eligen operaciones para que la ALU las realice. </span>
+	</li>
+	<li class="c3 c12 li-bullet-0"><span class="c8">Postescritura </span><span>(</span><span class="c8">WB</span><span
+			class="c1">). El resultado obtenido por la ALU debe escribirse en el registro adecuado.</span></li>
+</ol>
+<h2 class="c0" id="h.houmn2hhydqq"><span class="c10">Riesgos</span></h2>
+<p class="c3"><span class="c1">La segmentaci&oacute;n es una t&eacute;cnica que reduce el n&uacute;mero de ciclos por instrucci&oacute;n ejecutada porque aumenta el rendimiento de un microprocesador. Pero existen riesgos de la segmentaci&oacute;n como una ruptura del cauce, obligandonos a detener y a veces a limpiarlo para empezar de nuevo. Existen dos tipos de riesgos de segmentaci&oacute;n: </span>
+</p>
+<ul class="c4 lst-kix_ofiorxikg8u1-0 start">
+	<li class="c3 c12 li-bullet-0"><span class="c8">Riesgo por dependencia de datos</span><span class="c1">. Se produce cuando una instrucci&oacute;n utiliza como entrada el resultado de la operaci&oacute;n de la instrucci&oacute;n anterior. Habr&iacute;a que esperar a que se ejecute la primera.</span>
+	</li>
+</ul>
+<p class="c3 c19"><span class="c1">Para resolver este problema existen varias soluciones: </span></p>
+<ul class="c4 lst-kix_1lw6b69iuwfc-1">
+	<li class="c3 c6 li-bullet-0"><span class="c8">Detenci&oacute;n del cauce</span><span class="c1">. Es la soluci&oacute;n m&aacute;s com&uacute;n. Consiste en detener la ejecuci&oacute;n de una instrucci&oacute;n hasta que termine otra. Esta soluci&oacute;n es la m&aacute;s f&aacute;cil de implementar pero disminuye mucho el rendimiento del cauce. </span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span class="c8">Ejecuci&oacute;n fuera de orden</span><span class="c1">. Consiste en aplazar la ejecuci&oacute;n de una instrucci&oacute;n hasta que termine otra y mientras ejecutar otras instrucciones posteriores que no utilicen el registro que origina la dependencia de datos.</span>
+	</li>
+</ul>
+<ul class="c4 lst-kix_si9nyzd7a5u3-0 start">
+	<li class="c3 c12 li-bullet-0"><span class="c8">Riesgos por salto</span><span class="c1">. Ocurren cuando aparece una instrucci&oacute;n de salto condicional. Dependiendo de si la condici&oacute;n es cierta o falsa, se ejecutar&aacute; un grupo u otro de instrucciones. No sabremos la instrucci&oacute;n siguiente ya que el resultado de la condici&oacute;n no se sabe hasta finalizar la instrucci&oacute;n de salto. </span>
+	</li>
+</ul>
+<p class="c3 c18"><span class="c1">Para solucionar este problema tenemos dos alternativas: </span></p>
+<ul class="c4 lst-kix_ck3ota8j4xgl-0 start">
+	<li class="c3 c6 li-bullet-0"><span class="c8">Detenci&oacute;n del cauce</span><span class="c1">. Hay que esperar hasta que sepamos el resultado de la condici&oacute;n y seguir luego con la instrucci&oacute;n correspondiente. Este m&eacute;todo implica detener el cauce disminuyendo el rendimiento de la segmentaci&oacute;n. </span>
+	</li>
+	<li class="c3 c6 li-bullet-0"><span class="c8">Ejecuci&oacute;n especulativa</span><span>&nbsp;o </span><span
+			class="c8">Predicci&oacute;n de salto</span><span class="c1">. Consiste en suponer que se va a seguir ejecutando la siguiente instrucci&oacute;n sin detener el cauce. </span>
+	</li>
+</ul>
+<ul class="c4 lst-kix_ck3ota8j4xgl-1 start">
+	<li class="c14 c15 li-bullet-0"><span class="c1">Si el resultado de una condici&oacute;n es correcta, no se producir&aacute; un salto haciendo que el cauce siga.</span>
+	</li>
+	<li class="c3 c15 li-bullet-0"><span class="c1">Si no, habr&aacute; que limpiar el cauce y empezar por la instrucci&oacute;n correspondiente. </span>
+	</li>
+</ul>
+</body>
+</html>

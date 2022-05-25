@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registros</title>
+</head>
+<body>
+<h1 class="c0" id="h.7gp5n9r1xzph"><span class="c16">Registros: visibles al usuario, control y estado </span></h1>
+<p class="c3"><span class="c1">Los registros de la CPU se pueden dividir en dos tipos: </span></p>
+<ul class="c4 lst-kix_34u7ovei5y0o-0 start">
+	<li class="c3 c12 li-bullet-0"><span class="c8">Registros visibles al usuario</span><span class="c1">. Aquellos que se pueden referenciar por lenguaje programado, para optimizar el uso de los recursos. Se distinguen 3:</span>
+	</li>
+</ul>
+<ol class="c4 lst-kix_34u7ovei5y0o-1 start" start="1">
+	<li class="c14 c6 li-bullet-0"><span class="c8">Registros de direcci&oacute;n</span><span class="c1">. Contienen las direcciones de memoria donde est&aacute;n los datos. (&iacute;ndice / punteros de pila). </span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span class="c8">Registros de datos</span><span class="c1">. Se usan para contener datos aumentando la velocidad de proceso.</span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span class="c8">Registros de condici&oacute;n</span><span>. Son bits </span><span
+			class="c9">fijados </span><span class="c1">mediante el hardware, que indican el resultado de una operaci&oacute;n, si hay overflow, etc.</span>
+	</li>
+</ol>
+<ul class="c4 lst-kix_34u7ovei5y0o-0">
+	<li class="c2 li-bullet-0"><span class="c8">Registros de control y de estado</span><span class="c1">. Intervienen en la ejecuci&oacute;n de las instrucciones. Distinguimos 4:</span>
+	</li>
+</ul>
+<ol class="c4 lst-kix_34u7ovei5y0o-1 start" start="1">
+	<li class="c14 c6 li-bullet-0"><span class="c8">PC</span><span class="c1">. Contiene la direcci&oacute;n de la siguiente instrucci&oacute;n a ejecutar; la CPU actualiza su valor despu&eacute;s de capturar una instrucci&oacute;n.</span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span class="c8">RI</span><span class="c1">. Contiene el c&oacute;digo de la instrucci&oacute;n actual y los operandos.</span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span
+			class="c8">Registro de Direcci&oacute;n de memoria</span><span>&nbsp;(</span><span class="c8">RDM &ndash; MAR</span><span
+			class="c1">). Indica d&oacute;nde est&aacute;n los datos o d&oacute;nde se van a almacenar (lo realiza el bus de direcciones).</span>
+	</li>
+	<li class="c3 c6 li-bullet-0"><span class="c8">Registro de Intercambio de memoria</span><span>&nbsp;(</span><span
+			class="c8">RIM &ndash; MBR</span><span class="c1">). Recibe/Env&iacute;a la informaci&oacute;n o el dato contenido en la posici&oacute;n seleccionada por el RDM (lo realiza el bus de datos). </span>
+	</li>
+</ol>
+<p class="c3 c19"><span class="c1">Estos 4 registros funcionan de la siguiente forma: </span></p>
+<ol class="c4 lst-kix_om0uqlravcz0-0 start" start="1">
+	<li class="c3 c6 li-bullet-0"><span>El </span><span class="c8">PC</span><span class="c1">&nbsp;tiene la direcci&oacute;n de la pr&oacute;xima instrucci&oacute;n a ejecutar. </span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span>Para buscarla, el contenido de esa posici&oacute;n es pasada al </span><span
+			class="c8">RDM</span><span class="c1">. </span></li>
+	<li class="c14 c6 li-bullet-0"><span>La instrucci&oacute;n apuntada por el </span><span class="c8">RDM </span><span>se carga en el </span><span
+			class="c8">RIM</span><span>, y desde aqu&iacute; al </span><span class="c8">RI</span><span
+			class="c1">.</span></li>
+	<li class="c3 c6 li-bullet-0"><span>El </span><span class="c8">PC </span><span class="c1">apunta a la siguiente instrucci&oacute;n a ejecutar. </span>
+	</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructura de la RAM</title>
+</head>
+<body>
+<h1 class="c0" id="h.xd0h48onf6z2"><span class="c16">Estructura de la memoria RAM </span></h1>
+<p class="c3"><span>La RAM es un dispositivo destinado a almacenar 2 tipos de informaci&oacute;n: el programa y los datos que lo manejan. La </span><span
+		class="c8">Unidad de Control</span><span class="c1">&nbsp;los manipula.</span></p>
+<p class="c3"><span class="c1">El esquema general de una RAM:</span></p>
+<p class="c11"><span
+		style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 408.65px; height: 317.84px;"><img
+		alt="" src="images/image3.png"
+		style="width: 408.65px; height: 317.84px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+		title=""></span></p>
+<p class="c3"><span>El </span><span class="c8">&aacute;rea de control</span><span>&nbsp;localiza la posici&oacute;n de memoria que se corresponde con la direcci&oacute;n que se env&iacute;a por el bus de direcciones. Consiste en un</span><span
+		class="c8">&nbsp;RDM</span><span>&nbsp;y un </span><span class="c8">Decodificador</span><span
+		class="c1">. </span></p>
+<p class="c3"><span>El</span><span class="c8">&nbsp;&aacute;rea de almacenamiento</span><span>&nbsp;est&aacute; formada por una matriz de celdas con valores binarios modificables cuyo valor se transmitir&aacute; al</span><span
+		class="c8">&nbsp;RIM</span><span class="c1">&nbsp;cuando la fila se activa para una operaci&oacute;n de lectura. Cuando la operaci&oacute;n es de escritura, el proceso es al rev&eacute;s. </span>
+</p>
+<p class="c3"><span>Todas las operaciones de lectura y de escritura est&aacute;n dirigidas por la </span><span
+		class="c8">Unidad de Control</span><span class="c1">.</span></p>
+<ul class="c4 lst-kix_m5vd7bjf651i-0 start">
+	<li class="c3 c12 li-bullet-0"><span>En una </span><span class="c8">operaci&oacute;n de lectura</span><span
+			class="c1">&nbsp;se efect&uacute;an los siguientes pasos: </span></li>
+</ul>
+<ul class="c4 lst-kix_m5vd7bjf651i-1 start">
+	<li class="c14 c6 li-bullet-0"><span>En el </span><span class="c8">RDM </span><span class="c1">se almacena la direcci&oacute;n de memoria de la celda que contiene la informaci&oacute;n.</span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span>El </span><span class="c8">Decodificador</span><span>&nbsp;selecciona la direcci&oacute;n contenida en el </span><span
+			class="c8">RDM </span><span>y carga en el </span><span class="c8">RIM </span><span class="c1">la informaci&oacute;n contenida en esa celda.</span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span>Transfiere el contenido del </span><span class="c8">RIM </span><span
+			class="c1">al registro de la CPU para su proceso. </span></li>
+</ul>
+<ul class="c4 lst-kix_m5vd7bjf651i-0">
+	<li class="c2 li-bullet-0"><span>En una </span><span class="c8">operaci&oacute;n de escritura</span><span
+			class="c1">, se efect&uacute;an los siguientes pasos: </span></li>
+</ul>
+<ul class="c4 lst-kix_m5vd7bjf651i-1 start">
+	<li class="c14 c6 li-bullet-0">
+		<span>Los datos a escribir en la memoria, procesados por la CPU, llegan al </span><span
+			class="c8 c17">RIM</span></li>
+	<li class="c14 c6 li-bullet-0"><span>En el </span><span class="c8">RDM </span><span class="c1">est&aacute; la direcci&oacute;n de la celda destino de la informaci&oacute;n </span>
+	</li>
+	<li class="c3 c6 li-bullet-0"><span>El </span><span class="c8">Decodificador </span><span>selecciona la celda destino y carga el contenido de </span><span
+			class="c8">RIM </span><span>a la celda apuntada por el </span><span class="c8">RDM</span><span
+			class="c1">.</span></li>
+</ul>
+<p class="c3"><span class="c1">En la memoria principal cada celda se implementa mediante un min&uacute;sculo condensador. </span>
+</p>
+<p class="c3"><span class="c1">El par&aacute;metro que describe la funcionalidad de la memoria es su tama&ntilde;o y los par&aacute;metros que mejor miden el rendimiento son: </span>
+</p>
+<ol class="c4 lst-kix_183dsvsgotfh-0 start" start="1">
+	<li class="c3 c12 li-bullet-0"><span>La </span><span class="c8">latencia</span><span>: mide el tiempo que pasa desde que el chip recibe la direcci&oacute;n de una celda hasta que devuelve el dato contenido. Se puede medir como </span><span
+			class="c8">tiempo de ciclo</span><span class="c1">.</span></li>
+	<li class="c2 li-bullet-0"><span class="c8">Ancho de Banda</span><span class="c1">: cantidad de informaci&oacute;n, expresada en bytes, que se puede enviar entre la Memoria Principal y la CPU por unidad de tiempo. </span>
+	</li>
+	<li class="c2 li-bullet-0"><span class="c8">Ancho de banda del bus</span><span>: ancho de bus </span><span
+			class="c8">*</span><span class="c1">&nbsp;frecuencia del funcionamiento.</span></li>
+	<li class="c2 li-bullet-0"><span class="c8">Fiabilidad</span><span>: son bits de informaci&oacute;n adicionales que permiten detectar errores producidos durante el proceso de L/E de la memoria. Se denominan </span><span
+			class="c8">bits de paridad</span><span>&nbsp;y hay 2 tipos:</span></li>
+</ol>
+<ul class="c4 lst-kix_183dsvsgotfh-1 start">
+	<li class="c14 c6 li-bullet-0"><span class="c8">Par</span><span class="c1">. Se asocia normalmente con un byte de datos, y se complementar&aacute; en la pantalla de datos con un 0 o un 1 de manera que la informaci&oacute;n tenga siempre un n&uacute;mero par de 1s.</span>
+	</li>
+	<li class="c3 c6 li-bullet-0"><span class="c8">Impar</span><span class="c1">. Todas las palabras resultar&aacute;n con un n&uacute;mero impar de 1s. </span>
+	</li>
+</ul>
+<p class="c3 c18"><span class="c1">Cuando se encuentra con una palabra que no cumpla con la convenci&oacute;n utilizada, se detecta un error y se pide una nueva lectura del dato de la memoria. </span>
+</p>
+<p class="c3 c18"><span class="c1">Con este sistema solo puede detectarse un n&uacute;mero impar de errores, ya que cuando se produce un n&uacute;mero par de errores, el dato err&oacute;neo se camufla como correcto.</span>
+</p>
+<ol class="c4 lst-kix_183dsvsgotfh-0" start="5">
+	<li class="c3 c12 li-bullet-0"><span class="c8">Memoria ECC</span><span class="c1">. (C&oacute;digo de Correcci&oacute;n de Errores). Las memorias que poseen esta caracter&iacute;stica son capaces de reconocer y corregir errores internos. En casos muy graves, el PC puede detenerse por completo. Estas memorias suelen emplearse en servidores por su fiabilidad.</span>
+	</li>
+</ol>
+</body>
+</html>

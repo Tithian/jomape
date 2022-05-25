@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructura general de un microprocesador</title>
+</head>
+<body>
+<a href="index.html">Atras</a>
+<h1 class="c0" id="h.n3oj54isfjc5"><span class="c16">Estructura general de un microprocesador </span></h1>
+<p class="c11"><span
+		style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 300.00px;"><img
+		alt="" src="images/image2.png"
+		style="width: 601.70px; height: 300.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+		title=""></span></p>
+<p class="c3"><span>El </span><span class="c8">Contador de Programa</span><span>&nbsp;(</span><span class="c8">PC</span><span>) es un registro que indica donde se encuentra la pr&oacute;xima instrucci&oacute;n a ejecutar en la RAM. Una operaci&oacute;n de lectura carga la instrucci&oacute;n en el </span><span
+		class="c8">Registro de Instrucciones </span><span>(</span><span class="c8">Rl</span><span class="c1">). Cada instrucci&oacute;n tiene dos campos: </span>
+</p>
+<ul class="c4 lst-kix_o3g7994q44vz-0 start">
+	<li class="c3 c12 li-bullet-0"><span class="c8">C&oacute;digo de operaci&oacute;n</span><span>&nbsp;(</span><span
+			class="c8">CO</span><span>), expresa el tipo </span><span>de operaci&oacute;n</span><span>&nbsp;a realizar. Manda a la </span><span
+			class="c8">Unidad de Control</span><span class="c1">&nbsp;las se&ntilde;ales necesarias para ejecutar la instrucci&oacute;n.</span>
+	</li>
+	<li class="c3 c12 li-bullet-0"><span class="c8">Operandos</span><span>&nbsp;(</span><span class="c8">OPS</span><span
+			class="c1">) indica d&oacute;nde se encuentran los operandos y activa los registros de esa operaci&oacute;n.</span>
+	</li>
+</ul>
+<p class="c11"><span
+		style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 269.33px;"><img
+		alt="" src="images/image1.png"
+		style="width: 601.70px; height: 269.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+		title=""></span></p>
+<p class="c3"><span>El </span><span class="c8">Banco de Registros </span><span>(</span><span
+		class="c8">BR</span><span>)</span><span class="c1">&nbsp;sirve para almacenar los operandos.</span></p>
+<p class="c3"><span>El </span><span class="c8">Registro de Estado </span><span>es un conjunto de Biestables que indican condiciones del </span><span
+		class="c9">resultado</span><span class="c1">.</span></p>
+<p class="c3"><span>El </span><span class="c8">Registro Acumulador</span><span>&nbsp;almacena el resultado de las operaciones. Puede reenviarlo al </span><span
+		class="c8">Banco de Registros</span><span>&nbsp;para encadenar </span><span>operaciones</span><span>&nbsp;o enviarlo al </span><span
+		class="c8">Bus de Datos</span><span class="c1">. </span></p>
+<p class="c3"><span>La </span><span class="c8">ALU </span><span class="c1">est&aacute; formada por: </span></p>
+<ul class="c4 lst-kix_mtv6fgk5yytq-0 start">
+	<li class="c3 c12 li-bullet-0"><span class="c8">Unidad aritm&eacute;tica</span><span class="c1">. Realiza las operaciones aritm&eacute;ticas b&aacute;sicas y suele estar formada por un sumador en C2 y, en algunos casos, por un multiplicador.</span>
+	</li>
+	<li class="c3 c12 li-bullet-0"><span class="c8">Unidad l&oacute;gica</span><span>. Realiza las operaciones booleanas de desplazamiento </span><span
+			class="c9">y/o rotaci&oacute;n</span><span class="c1">. </span></li>
+</ul>
+<p class="c3">
+	<span>Ambas unidades trabajan en punto fijo. Para realizar las operaciones en punto flotante se utiliza un </span><span
+		class="c9">coprocesador aritm&eacute;tico</span><span class="c1">. </span></p>
+</body>
+</html>

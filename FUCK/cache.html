@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cach&eacute;</title>
+</head>
+<body>
+<h1 class="c0" id="h.wcavurywkl0g"><span class="c16">Cach&eacute;: estructura, organizaci&oacute;n y caracter&iacute;sticas </span>
+</h1>
+<h2 class="c0" id="h.enpvv7kkedk0"><span class="c10">Estructura </span></h2>
+<p class="c3"><span class="c1">Una cach&eacute; es una memoria r&aacute;pida situada entre la <strong>CPU</strong> y la <strong>RAM</strong>. Esta rapidez se consigue a partir de la tecnolog&iacute;a que utiliza y del principio de localidad:</span>
+</p>
+<p class="c3"><span class="c7">&ldquo;La pr&oacute;xima referencia a la <strong>RAM</strong> que haga la <strong>CPU</strong> se encuentra localmente muy pr&oacute;xima a la referencia actual&quot;.</span>
+</p>
+<p class="c3"><span class="c1">Una cach&eacute; est&aacute; constituida por dos bloques: </span></p>
+<ul class="c4 lst-kix_a0tkc0w0uh2w-0 start">
+	<li class="c3 c12 li-bullet-0"><span>El </span><span class="c8"><strong>directorio</strong> </span><span>contiene informaci&oacute;n sobre las direcciones de memoria que tienen datos en la cach&eacute;. Est&aacute; </span><span
+			class="c9">construido con memorias asociativas</span><span class="c1">. </span></li>
+	<li class="c3 c12 li-bullet-0"><span>La </span><span class="c8"><strong>zona de almacenamiento</strong></span><span>&nbsp;contiene los datos de las direcciones incluidas en el directorio. Est&aacute; </span><span
+			class="c9">construida con memoria SRAM</span><span class="c1">. </span></li>
+</ul>
+<p class="c3"><span class="c1">Cuando la <strong>CPU</strong> solicita un dato, el controlador de cach&eacute; comprueba si esa direcci&oacute;n est&aacute; en el directorio. </span>
+</p>
+<ul class="c4 lst-kix_jl4q0851zbz-0 start">
+	<li class="c3 c12 li-bullet-0"><span class="c1">Si est&aacute;, lee el dato de la zona de almacenamiento y lo env&iacute;a a la <strong>CPU</strong>. </span>
+	</li>
+	<li class="c3 c12 li-bullet-0"><span class="c1">Si no est&aacute;, lee el dato de la <strong>RAM</strong> y lo guarda en la cach&eacute; con las direcciones siguientes y env&iacute;a una copia a la <strong>CPU</strong>. </span>
+	</li>
+</ul>
+<h2 class="c0" id="h.jk6ivlxevmgi"><span class="c10">Organizaci&oacute;n </span></h2>
+<p class="c3"><span class="c1">Estrategia de colocaci&oacute;n de los datos en la zona de almacenamiento de forma optimizada.</span><p class="c9">Cuando se transfiere informaci&oacute;n entre la cach&eacute; y la <strong>RAM</strong> se env&iacute;a un bloque completo.</p><p
+			class="c1">Este se guarda en la zona de almacenamiento y su id se escribe en la entrada del directorio correspondiente. </p>
+</p>
+<ul class="c4 lst-kix_rl931j9i8tmj-0 start">
+	<li class="c2 li-bullet-0"><span>El </span><span class="c8">directorio </span><span class="c1">de cach&eacute; se divide en entradas. Cada entrada se refiere a un marco de bloque y guarda informaci&oacute;n en &eacute;l.</span>
+	</li>
+	<li class="c2 li-bullet-0"><span>La </span><span class="c8">zona de almacenamiento</span><span class="c1">&nbsp;de la cach&eacute; se divide en marcos de bloque. Cada marco puede guardar un bloque de memoria.</span>
+	</li>
+	<li class="c3 c12 li-bullet-0"><span>La </span><span class="c8">memoria principal</span><span class="c1">&nbsp;se divide en bloques de memoria de tama&ntilde;o fijo. Cada uno est&aacute; formado por varias palabras que se encuentran en posiciones cercanas.</span>
+	</li>
+
+
+</ul>
+<p class="c3"><span class="c1">Existen varias formas de organizar los datos en la cach&eacute;:</span></p>
+<ul class="c4 lst-kix_rsu9rt245vtg-0 start">
+	<li class="c3 c12 li-bullet-0"><span>La </span><span class="c8">organizaci&oacute;n directa</span><span class="c1">&nbsp;es la m&aacute;s simple de implementar pero la menos eficiente</span>
+	</li>
+	<li class="c2 li-bullet-0"><span>La </span><span class="c8">organizaci&oacute;n asociativa</span><span class="c1">&nbsp;es la m&aacute;s eficiente pero la m&aacute;s costosa.</span>
+	</li>
+	<li class="c3 c12 li-bullet-0"><span>La </span><span
+			class="c8">organizaci&oacute;n asociativa por conjuntos</span><span class="c1">&nbsp;es la uni&oacute;n entre ambas. </span>
+	</li>
+</ul>
+<h2 class="c0" id="h.r1j8x0w520ew"><span class="c10">Caracter&iacute;sticas </span></h2>
+<p class="c3"><span class="c1">Se pueden agrupar en: </span></p>
+<ul class="c4 lst-kix_szqnirn1tm2p-0 start">
+	<li class="c3 c12 li-bullet-0"><span class="c8">Ancho de banda</span><span class="c1">. Velocidad de transferencia de datos entre la cach&eacute; y la <strong>RAM</strong>.</span>
+	</li>
+	<li class="c2 li-bullet-0"><span class="c8">Actualizaci&oacute;n de datos</span><span class="c1">. La <strong>CPU</strong> realiza operaciones con datos en la cach&eacute; para que cada modificaci&oacute;n del contenido de una direcci&oacute;n de memoria se actualice en la <strong>RAM</strong></span>
+	</li>
+	<li class="c2 li-bullet-0"><span class="c8">Pol&iacute;tica de Reemplazo</span><span class="c1">. Cuando hay un fallo de cach&eacute;, hay que coger un bloque nuevo de la memoria principal; si hay que sustituir uno antiguo, el problema es decidir cu&aacute;l cambiar. Existen 3 estrategias: </span>
+	</li>
+</ul>
+<ul class="c4 lst-kix_szqnirn1tm2p-1 start">
+	<li class="c14 c6 li-bullet-0"><span class="c8">Algoritmo menos reciente</span><span>&nbsp;(</span><span class="c8">LRU</span><span>)</span><span
+			class="c1">. Sustituir el bloque que lleva m&aacute;s tiempo sin usarse. </span></li>
+	<li class="c14 c6 li-bullet-0"><span class="c8">Algoritmo m&aacute;s antiguo</span><span>&nbsp;(</span><span
+			class="c8">FIFO</span><span class="c1">). Sustituir el bloque que lleva m&aacute;s tiempo en la cach&eacute;. </span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span class="c8">Algoritmo de azar</span><span class="c1">. Elegimos un bloque de forma aleatoria </span>
+	</li>
+</ul>
+<ul class="c4 lst-kix_szqnirn1tm2p-0">
+	<li class="c2 li-bullet-0"><span class="c8">Anticipaci&oacute;n</span><span>. </span><span class="c9">La cach&eacute; adelanta los datos que puede pedir la <strong>CPU</strong></span><span
+			class="c1">&nbsp;seg&uacute;n el principio de localidad. Para ello, cada vez que se trae un bloque de memoria principal, se anticipa tambi&eacute;n el siguiente bloque. Existen dos formas de anticipaci&oacute;n:</span>
+	</li>
+</ul>
+<ul class="c4 lst-kix_szqnirn1tm2p-1 start">
+	<li class="c14 c6 li-bullet-0"><span class="c8">Preextracci&oacute;n siempre</span><span class="c1">. Siempre que se menciona un bloque, la cach&eacute; se trae el siguiente de la memoria principal. Lo malo es que podemos tener varias copias.</span>
+	</li>
+	<li class="c14 c6 li-bullet-0"><span class="c8">Preextracci&oacute;n marcada</span><span>. S&oacute;lo traemos el siguiente bloque cuando un bloque se referencia por primera vez, activando entonces el </span><span
+			class="c8">Bit de marcado</span><span class="c1">.</span></li>
+</ul>
+<ul class="c4 lst-kix_szqnirn1tm2p-0">
+	<li class="c3 c12 li-bullet-0"><span class="c8">Rendimiento</span><span class="c1">. Divisi&oacute;n entre el n&uacute;mero de aciertos y el n&uacute;mero de referencias.</span>
+	</li>
+</ul>
+</body>
+</html>
