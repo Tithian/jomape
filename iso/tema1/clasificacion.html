@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clasificación</title>
+</head>
+<body>
+
+<h1>4. CLASIFICACIÓN DE LOS SISTEMAS OPERATIVOS</h1>
+
+<h2>Por su estructura interna</h2>
+
+<p>Esta clasificación tiene en cuenta cómo se diseñan los sistemas:</p>
+<ul>
+	<li>
+		<strong>Monolítica.</strong> Se daba en los primeros sistemas operativos en la que todas las funciones se
+		implementaban en el Kernel. No tenía una estructura como tal.
+		<p>
+			El sistema operativo está constituido por un único programa compuesto de multitud de rutinas
+			interrelacionadas entre sí. Resultaban imposibles de modificar para mejorar, luego se sacaba una nueva
+			versión.
+		</p>
+	</li>
+	<li>
+		<strong>Por Capas.</strong> A medida que los SO fueron creciendo, se hizo necesaria una mayor estructuración.
+		<p>
+			Este diseño se corresponde con una estructura jerárquica que se divide en distintos niveles.
+		</p>
+	</li>
+	<li>
+		<strong>Máquina Virtual.</strong> Son SO que presentan una interfaz a cada proceso, mostrando una máquina que
+		parece idéntica a la máquina real subyacente.
+		<p>
+			El núcleo de estos SO se denomina monitor virtual y lleva a cabo la multiprogramación, presentando a los
+			niveles superiores tantas máquinas virtuales como se soliciten.
+		</p>
+		<p>
+			Las máquinas virtuales son como archivos y cada uno representa una copia exacta del hardware básico que
+			gestiona el SO.
+		</p>
+		<p>
+			La principal ventaja de esta estructura reside en que permite implementar varios tipos de SO sobre cada
+			máquina virtual. No obstante, presentan el problema de que los SO implementados son disjuntos.
+		</p>
+		<p>
+			Ejemplo: el sistema VM370, CMS
+		</p>
+	</li>
+	<li>
+		<strong>Cliente-Servidor (Kernel Approach).</strong> Se basa en dos elementos: el núcleo y los procesos. El
+		núcleo es muy pequeño (Kernel Approach) y sólo realiza:
+		<ul>
+			<p>
+			<li>Críticas en tiempo, respuesta rápida ante eventos externos.</li>
+			</p>			<p>
+			<li>Indispensables para la correcta administración del procesador.</li>
+			</p>			<p>
+			<li>De uso común y general de todas las aplicaciones.</li>
+			</p>
+		</ul>
+		<p>
+			No establece políticas de gestión de los recursos, sino que sólo suministra los mecanismos adecuados para la
+			gestión de procesos, memoria y comunicación entre programas.
+		</p>
+		<p>
+			Los procesos pueden ser tanto servidores como clientes. Un programa de aplicación normal es un cliente que
+			llama al servidor correspondiente para acceder a un fichero o realizar una operación de E/S sobre un
+			dispositivo concreto. A su vez, un programa cliente, puede actuar como servidor para otro.
+		</p>
+		<p>
+			El núcleo tiene como misión establecer la comunicación entre los clientes y los servidores.
+		</p>
+	</li>
+	<li>
+		<strong>Orientada a Objeto.</strong> En lugar de ver el sistema operativo como una colección de funciones que se
+		pueden ejecutar, la concepción de los sistemas operativos modernos se basa en una colección de objetos. Cada
+		objeto pone a disposición de los otros un determinado número de operaciones para poder utilizarlo.
+		<p>
+			El núcleo del sistema operativo será el responsable del mantenimiento de las definiciones de los tipos de
+			objetos soportados y del control de los privilegios de acceso a los mismos. Cuando un programa desee
+			realizar alguna operación sobre un objeto determinado, deberá ejecutar una llamada al sistema operativo,
+			indicando qué derechos tiene para poder utilizarlo y qué operación interna llevar a cabo. Como resultado de
+			dicha llamada, el sistema validará la petición y, si puede ser aceptada, permitirá la realización de dicha
+			operación.
+		</p>
+		<p>
+			Ejemplo: Windows NT.
+		</p>
+	</li>
+</ul>
+
+<h2>Por los modos de explotación</h2>
+<p>Aquí se tiene en cuenta el funcionamiento del SO:</p>
+<ul>
+	<li>
+		<strong>Procesamiento por lotes.</strong> Consiste en agrupar los trabajos similares en bloques.
+		<p>
+			El rasgo más característicos de este tipo de SO es la ausencia de interacción entre el usuario y el proceso
+			mientras éste se ejecuta.
+		</p>
+		<p>
+			Ejemplos: SCOPE, DC6600, EXECII, UNIVAC1107
+		</p>
+	</li>
+
+	<li>
+		<strong>Multiprogramación.</strong> Aquí el SO se encarga de distribuir la carga computacional entre los
+		procesadores existentes.
+		<p>Aquí podemos encontrar:</p>
+	</li>
+	<ul>
+		<li><strong>Tiempo compartido.</strong> Utilizan las distintas técnicas de planificación de CPU para que se
+			atiendan todos los procesos en espera de ser ejecutados. Este proceso ocurre tan rápidamente que el usuario
+			no lo percibe.
+			<p>Ejemplos: UNIX, LINUX, Windows 95, Windows 98, Windows Millenium, Windows XP, Windows NT, Windows 2000,
+				Windows 2003, MAC-OS y OS/2.</p>
+		</li>
+		<li><strong>Tiempo real.</strong> Sus resultados son correctos tanto cuando la computación como el tiempo en el
+			que se producen los resultados son correctos. <p>Ejemplos: Solaris, Spectra y VxWorks.</p>
+		</li>
+		<li><strong>Híbrido.</strong> Es una mezcla de los dos anteriores, pues busca combinar las ventajas de los dos.
+			No se han obtenido aún sistemas realmente eficientes.
+		</li>
+	</ul>
+</ul>
+
+<h2>Por los servicios ofrecidos</h2>
+<p>Aquí se tiene en cuenta la visión del usuario final:</p>
+<ul>
+	<li><strong>Por el número de usuarios:</strong></li>
+	<ul>
+		<p>
+		<li><strong>Monousuario.</strong> Soportan únicamente un usuario a la vez.
+		</li>
+		</p>		<p>
+		<li><strong>Multiusuario.</strong> Son capaces de dar servicio a más de un usuario a la vez.</li>
+		</p>
+	</ul>
+	<li><strong>Por el número de tareas:</strong></li>
+	<ul>
+		<p>
+		<li><strong>Monotarea.</strong> Sólo permiten una tarea a la vez por usuario. Pueden darse el caso de un sistema
+			multiusuario y monotarea.
+		</li>
+		</p>		<p>
+		<li><strong>Multitarea.</strong> Permite al usuario estar realizando varios trabajos al mismo tiempo.
+		</li>
+		</p>
+	</ul>
+	<li><strong>Por el número de procesadores:</strong></li>
+	<ul>
+		<p>
+		<li><strong>Monoproceso.</strong> Permiten realizar un solo proceso a la vez. Sin embargo, permiten simular la
+			multitarea haciendo que el sistema realice una tarea rotatoria con intercambio muy rápido.
+		</li>
+		</p>		<p>
+		<li><strong>Multiproceso.</strong> Permiten realizar varios procesos simultáneamente y, por tanto, son capaces
+			de ejecutar varias tareas al mismo tiempo. Pueden ser de varios tipos:
+		</li>
+		</p>
+		<ol>
+			<p>
+			<li>Según van llegando las tareas van ocupando la parte libre de los procesadores que necesite.</li>
+			</p>			<p>
+			<li>Los sistemas simétricos distribuyen la carga de procesamiento por igual entre todos los procesadores
+				existentes.
+			</li>
+			</p>			<p>
+			<li>Los sistemas asimétricos, como el Windows NT, asignan una tarea por procesador existente, según su
+				prioridad, y el resto de tareas (de baja prioridad) se ejecutan en un único procesador.
+			</li>
+			</p>
+		</ol>
+	</ul>
+
+
+</ul>
+
+<h2>Por la forma de ofrecer los servicios</h2>
+<ul>
+	<li>
+		<strong>Sistemas Centralizados.</strong> Al principio los computadores mainframe se encargaban de todo el procesamiento y los
+		usuarios manejaban únicamente terminales que no disponían de memoria ni de procesador.
+		<p>Actualmente los terminales en estos sistemas pueden realizar otras muchas tareas por sí mismos.</p>
+		<p>Ejemplos: z/OS, OS/390, Linux, TPF, VSE y ESA.</p>
+	</li>
+	<li>
+		<strong>Sistemas de Red.</strong> Mantienen a dos o más ordenadores unidos por algún medio de comunicación (físico o no), con el
+		objetivo de compartir los diferentes recursos y la información del sistema, luego cada ordenador tiene su propio
+		sistema operativo y su propio sistema de archivos local.
+		<p>Ejemplos: Novell, NetWare, Personal NetWare, LAN, Manager, Windows NT Server, Windows 2000 Server, UNIX,
+			LINUX, LANtastic.</p>
+	</li>
+	<li>
+		<strong>Sistemas distribuidos.</strong> Son sistemas cuasi-independientes que permiten distribuir los trabajos, tareas o procesos
+		entre un conjunto de procesadores. Existen dos esquemas básicos:
+		<ul>
+			<p>
+			<li><strong>Sistema fuertemente acoplado.</strong> Es aquel que comparte la memoria y un reloj global, cuyos tiempos de
+				acceso son similares para todos los procesadores.
+			</li>
+			</p><p>
+			<li><strong>Sistema débilmente acoplado.</strong> Es aquel en el que los procesadores no comparten ni memoria ni reloj, ya
+				que cada uno de ellos cuenta con su memoria local.
+			</li>
+			</p><p>Las principales ventajas son:</p>
+			<ul>
+				<p>
+				<li>Compartición de recursos.</li>
+				</p>			<p>
+				<li>Aceleración de los cálculos.</li>
+				</p>			<p>
+				<li>Fiabilidad.</li>
+				</p>			<p>
+				<li>Comunicación.</li>
+				</p>			<p>
+				<li>Sistemas no heterogéneos.</li>
+				</p>
+			</ul>
+		</ul>
+		Ejemplos: Sprite, Solaris-MC, Mach, Chorus, Spring, Amoeba, Taos.
+
+	</li>
+</ul>
+
+<h2>Por la disponibilidad</h2>
+<ul>
+	<p>
+	<li><strong>Sistemas operativos propietarios.</strong> Son aquellos que son propiedad intelectual de alguna empresa. Esto implica que
+		se necesiten licencias de uso para que el usuario ejecute el software, y no se dispone de acceso a su código
+		fuente o no se tiene derecho a modificarlo ni distribuirlo.
+	</li>
+	</p>
+	<li><strong>Sistemas operativos libres.</strong> Son aquellos que garantizan las cuatro libertades del software:
+		<ul>
+			<p>
+			<li>
+				La libertad de usar el programa con cualquier propósito.
+			</li>
+			</p><p>
+			<li>
+				La libertad de estudiar cómo funciona el programa y modificarlo adaptándolo a las necesidades que
+				tuviera el usuario.
+			</li>
+			</p><p>
+			<li>
+				La libertad de distribuir copias del programa, con lo que se puede ayudar a otros usuarios.
+			</li>
+			</p><p>
+			<li>
+				La libertad de mejorar el programa y hacer públicas dichas mejoras a otros usuarios.
+			</li>
+			</p>
+		</ul>
+	</li>
+	<p>
+		El software libre es también software de código abierto.
+	</p>
+		<p>El software libre no tiene porque ser software gratuito, ya
+	que, conservando su carácter de libre, podrá ser distribuido comercialmente (software comercial). </p>
+	<p>El software libre
+	tampoco debe confundirse como software de dominio público. Este último es aquel que no requiere licencia pues sus
+	derechos de explotación pertenecen a todos por igual y cualquiera puede hacer uso de él, siempre con fines legales y
+	consignando su autoría original.</p>
+</ul>
+</body>
+</html>

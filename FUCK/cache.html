@@ -17,7 +17,7 @@
 	<li class="c3 c12 li-bullet-0"><span>El </span><span class="c8"><strong>directorio</strong> </span><span>contiene informaci&oacute;n sobre las direcciones de memoria que tienen datos en la cach&eacute;. Est&aacute; </span><span
 			class="c9">construido con memorias asociativas</span><span class="c1">. </span></li>
 	<li class="c3 c12 li-bullet-0"><span>La </span><span class="c8"><strong>zona de almacenamiento</strong></span><span>&nbsp;contiene los datos de las direcciones incluidas en el directorio. Est&aacute; </span><span
-			class="c9">construida con memoria SRAM</span><span class="c1">. </span></li>
+			class="c9">construida con memoria SRAM (<strong>S</strong>tatic <strong>R</strong>andom <strong>A</strong>ccess <strong>M</strong>emory)</span><span class="c1">. </span></li>
 </ul>
 <p class="c3"><span class="c1">Cuando la <strong>CPU</strong> solicita un dato, el controlador de cach&eacute; comprueba si esa direcci&oacute;n est&aacute; en el directorio. </span>
 </p>
@@ -61,7 +61,7 @@
 	<li class="c2 li-bullet-0"><span class="c8">Pol&iacute;tica de Reemplazo</span><span class="c1">. Cuando hay un fallo de cach&eacute;, hay que coger un bloque nuevo de la memoria principal; si hay que sustituir uno antiguo, el problema es decidir cu&aacute;l cambiar. Existen 3 estrategias: </span>
 	</li>
 </ul>
-<ul class="c4 lst-kix_szqnirn1tm2p-1 start">
+<ul class="c4 lst-kix_szqnirn1tm2p-1 start" style="margin-left: 2%">
 	<li class="c14 c6 li-bullet-0"><span class="c8">Algoritmo menos reciente</span><span>&nbsp;(</span><span class="c8">LRU</span><span>)</span><span
 			class="c1">. Sustituir el bloque que lleva m&aacute;s tiempo sin usarse. </span></li>
 	<li class="c14 c6 li-bullet-0"><span class="c8">Algoritmo m&aacute;s antiguo</span><span>&nbsp;(</span><span
@@ -75,7 +75,7 @@
 			class="c1">&nbsp;seg&uacute;n el principio de localidad. Para ello, cada vez que se trae un bloque de memoria principal, se anticipa tambi&eacute;n el siguiente bloque. Existen dos formas de anticipaci&oacute;n:</span>
 	</li>
 </ul>
-<ul class="c4 lst-kix_szqnirn1tm2p-1 start">
+<ul class="c4 lst-kix_szqnirn1tm2p-1 start" style="margin-left: 2%">
 	<li class="c14 c6 li-bullet-0"><span class="c8">Preextracci&oacute;n siempre</span><span class="c1">. Siempre que se menciona un bloque, la cach&eacute; se trae el siguiente de la memoria principal. Lo malo es que podemos tener varias copias.</span>
 	</li>
 	<li class="c14 c6 li-bullet-0"><span class="c8">Preextracci&oacute;n marcada</span><span>. S&oacute;lo traemos el siguiente bloque cuando un bloque se referencia por primera vez, activando entonces el </span><span

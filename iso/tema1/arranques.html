@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gestores de Arranque</title>
+</head>
+<body>
+<h1>7. LOS GESTORES DE ARRANQUE</h1>
+<p>
+El gestor de arranque es un pequeño programa que se ejecuta una vez completado el
+inicio normal de la BIOS y que permite seleccionar el sistema operativo en caso de
+disponer de arranque múltiple.
+	</p>
+<p>
+Entre los gestores de arranque se encuentran los siguientes:
+	</p>
+<ul>
+	<li><p><strong>NTLDR.</strong> Es el archivo encargado del arranque de los sistemas operativos:
+Windows NT, Windows 2000, Windows XP y Windows Server 2003. Se
+encuentra, normalmente, en el directorio raíz del disco del sistema.
+</p><p>
+Requiere, como mínimo, que se encuentre en el directorio raíz: el archivo
+boot.ini, que contiene el menú de opciones de inicio, y el archivo
+NTDETECT.COM, que es el que se encarga de iniciar el sistema seleccionado.
+</p></li>
+<li><p>El Administrador de arranque de Windows (Bootmgr). Es el archivo
+encargado del arranque de los sistemas operativos: Windows Vista, Windows 7
+y Windows Server 2008.
+</p><p>
+Hace uso del archivo WinLoad.exe que es el cargador del sistema operativo
+Windows (\Windows\system32), y después del archivo ntoskrnl.exe, que se
+encargará del resto del arranque del sistema.
+	</p></li>
+<li><p>LILO. Es un gestor de arranque de Linux que permite iniciar este sistema
+operativo junto con otras plataformas que haya en el mismo ordenador.
+</p><p>
+El cargador de arranque de lilo es boot.b, y se encuentra en /boot. Con el
+comando liloconfig, se puede generar un ‘lilo.conf’ básico con el que poder
+trabajar añadiendo títulos y opciones adicionales.
+	</p></li>
+<li><p>GRUB. Es un gestor de arranque más moderno y flexible que LILO, ya que
+permite al administrador ejecutar cualquier comando desde la línea de comandos
+de GRUB.
+</p><p>
+En el directorio /boot/grub es donde se encuentran la mayoría de los ficheros del
+cargador de arranque del GRUB. El archivo /boot/grub/menu.lst contiene la
+información relativa a las particiones y a los sistemas operativos que pueden
+arrancarse con GRUB.
+	</p></li>
+</ul>
+</body>
+</html>
