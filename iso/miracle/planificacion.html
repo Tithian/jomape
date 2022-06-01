@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiprocesamiento</title>
+</head>
+<body>
+<h2>PLANIFICACIÓN DE CPU – MULTIPROCESAMIENTO</h2>
+<p>
+Existen ordenadores que disponen de varios procesadores, por lo que son capaces de
+ejecutar al mismo tiempo varias tareas, luego disponen de SO especiales denominados
+	<strong>Sistemas multiprocesador</strong>. En los ordenadores convencionales, normalmente solo dispone
+de un procesador por lo que en cada momento solo se estará procesando una tarea. No
+obstante, es posible crear la ilusión de multiprocesamiento por medio de interrupciones,
+cambiando el proceso activo cada cierto tiempo aunque no haya finalizado la tarea en
+ejecución.
+</p>
+<p>
+La <strong>Planificación de Procesos</strong> es un conjunto de mecanismos incorporados al
+sistema operativo que establecen el orden en el que se van a realizar los diferentes procesos,
+y se encargan de cargar y descargar un proceso de la memoria. Cada proceso es único e
+imprescindible. El objetivo de la planificación es dar un buen servicio a todos los procesos
+que compitan en un momento dado por un recurso del ordenador.
+</p>
+<p>
+Cuando hay más de un proceso que está en condiciones de ejecutar en la CPU, se
+debe escoger alguno. El encargado de tomar esa decisión es el planificador o scheduler, y el
+algoritmo que usa se llama <strong>algoritmo de planificación</strong>.
+</p>
+<p>
+Conforme los procesos entran en el sistema, se colocan en una <strong>cola de trabajos</strong>
+formada por todos los procesos que residen en almacenamiento secundario esperando la
+asignación de la memoria principal. Los procesos que residen en la memoria principal y
+que están listos y esperando su ejecución se mantienen en una <strong>cola de procesos listos</strong>. La
+lista de procesos que espera a un dispositivo de E/S determinado se denomina <strong>cola del
+dispositivo</strong>, y cada dispositivo tiene su propia cola.
+</p>
+<p>
+El SO se encarga de compartir la CPU entre los distintos procesos de la manera más
+eficiente posible, persiguiendo los siguientes objetivos:
+	</p>
+<ul>
+<li><p>
+	<strong>Justicia</strong>. Asegurarse que todos los procesos tengan su turno de CPU.
+</p></li>
+<li><p>
+	<strong>Máxima capacidad de ejecución</strong>: los trabajos se realicen los más
+rápidamente posible, para ello debemos reducir el número de cambios de
+proceso.
+</p></li>
+<li><p>
+	<strong>Máximo número de usuarios interactivos</strong>: para lo que se requiere mucha
+memoria y un procesador muy rápido, así como una gestión del procesador
+ágil.
+</p></li>
+<li><p>
+	<strong>Predecibilidad</strong>: una política de planificación debe concebirse de forma que
+se pueda saber en todo momento cómo se ejecutará.
+</p></li>
+<li><p>
+	<strong>Equilibrio del uso de recursos</strong>: para que de todos los procesos puedan
+ejecutarse lo más equitativamente posible, consiguiendo que los recursos del
+ordenador soporten una ocupación similar al mayor tiempo posible.
+</p></li>
+<li><p>
+	<strong>Seguridad de las prioridades</strong>: si un proceso se ejecuta con una prioridad, y
+es más alta que las del resto, éste se ejecute más rápidamente y sea más
+favorecido.
+</p></li>
+</ul>
+
+<p>
+Existen dos formas básicas de realizar esta conmutación entre tareas:
+</p>
+		<ul>
+<li><p>
+			<strong>Cooperative switching</strong>. Las tareas se suspenden voluntariamente (o por
+finalización de ésta o por cederle la CPU a otra tarea) cada cierto tiempo en
+puntos determinados de su ejecución. Ejemplo: Windows 3.1
+			</p></li>
+<li><p>
+			<strong>Pre-emptive switching</strong>. El SO interrumpe la tarea que se está ejecutando
+según cierto algoritmo de prioridades. Ejemplos: UNIX y Windows NT
+			</p></li>
+</ul>
+<p>
+Cuando un proceso se suspende temporalmente, deberá reiniciarse después,
+exactamente en el mismo estado en que se encontraba cuando se detuvo. El SO se encarga
+de guardar el estado en el que está la tarea al suspenderse, guardando el contenido de
+registros del procesador y reemplazándolos con valores de la próxima tarea a ejecutar.
+</p>
+<p>
+Este cambio de contenido de registros se denomina <strong>cambio de contexto</strong>. Este
+cambio requiere un tiempo muy pequeño en comparación al tiempo que se le asigna a cada
+tarea para su ejecución
+</p>
+</body>
+</html>

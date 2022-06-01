@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bloqueos</title>
+</head>
+<body>
+<h1>BLOQUEOS</h1>
+<p>
+La mayoría de los recursos que existen en cualquier ordenador sólo pueden ser
+utilizados por un proceso a la vez.
+	</p>
+<p>
+La apropiación de un dispositivo E/S para uso exclusivo puede provocar problemas
+graves que el SO también deberá encargarse de resolver.
+	</p>
+<p>
+Cuando varios procesos compiten por recursos, es posible que se dé una situación
+en la que ninguno de ellos pueda proseguir, debido a que los recursos que cada uno de ellos
+necesite, esté ocupado por los otros. Esta situación se conoce con el nombre de Deadlock o
+interbloqueo o abrazo mortal.
+	</p>
+<p>
+Para que haya bloqueo mutuo, deben darse simultáneamente las siguientes
+condiciones:
+	</p>
+<ol>
+	<li><p>
+<strong>Exclusión mutua.</strong> Existe al menos un recuso el cual sólo puede estar siendo
+utilizado por un proceso en un instante de tiempo determinado.
+	</p></li>
+	<li><p>
+<strong>No apropiación:</strong> Los recursos no pueden ser expropiados a los procesos, es decir,
+un recurso sólo podrá ser liberado voluntariamente por sus propietarios.
+	</p></li>
+	<li><p>
+<strong>Posesión y espera.</strong> Existe al menos un proceso que tienen recursos asignados y al
+mismo tiempo está esperando poder adquirir otros recursos.
+	</p></li>
+	<li><p>
+<strong>Espera circular:</strong> Existe un conjunto {P0, P1, ..., Pn} de procesos tales que el
+proceso Pi está esperando por un recurso retenido por Pi+1 para 0<= i < n, y Pn esté
+esperando recurso retenido por P0.
+	</p></li>
+	</ol>
+<p>
+Los SO emplean distintas técnicas para enfrentarse al problema de los bloqueos:
+	</p>
+<ul>
+<li><p>
+<strong>Algoritmo del avestruz.</strong> Consiste en ignorar el problema. Si después de
+estudiar la probabilidad de bloqueos en el sistema, se llega a la conclusión de
+que ésta es muy baja, es posible que los programadores decidan no perder el
+tiempo en implementar técnicas de detección y corrección de bloqueos.
+</p></li>
+	<li><p>
+<strong>Prevenir.</strong> Consiste en imponer restricciones a los procesos de manera que sea
+estructuralmente imposible la ocurrencia de un bloqueo mutuo. La idea es
+asegurar que no se dé al menos una de las cuatro condiciones necesarias para
+que haya bloqueo mutuo.
+		</p></li>
+	<li><p>
+<strong>Evitarlos.</strong> Mediante un estudio cuidadoso de la asignación de recursos, el SO
+puede conseguir que nunca se produzcan bloqueos, chequeando que sea seguro
+conceder un recurso, antes de otorgarlo.
+		</p></li>
+	<p><li>
+<strong>Detección y Recuperación.</strong> Los bloqueos se producen pero el SO se encarga de
+detectarlos y recuperarse de ellos.
+	</p></li>
+</ul>
+</body>
+</html>

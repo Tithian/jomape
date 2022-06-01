@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Componentes de un Sistema Operativo</title>
+</head>
+<body>
+<h1>COMPONENTES DE UN SISTEMA OPERATIVO</h1>
+<p>
+En un sistema operativo se distinguen los siguientes componentes:
+</p>
+<ul>
+	<li><p>
+	<strong>Kernel</strong>. Es el núcleo del sistema operativo. Cuando arranca el ordenador se
+carga en memoria y permanece allí, realizando funciones básicas como:
+	</p></li>
+	<ol>
+		<li><p>
+Manejo de la memoria
+			</p></li>
+		<li><p>
+Comunicación entre procesos
+		</p></li>
+		<li><p>
+Control de interrupciones
+		</p></li>
+		<li><p>
+Manejo de condiciones de error
+		</p></li>
+		<li><p>
+Traslado de control de un proceso a otro
+		</p></li>
+		<li><p>
+Control de periféricos
+		</p></li>
+		</ol>
+	<li><p>
+<strong>Programas y Procesos</strong>. Un proceso es un programa en ejecución que se
+compone de un código que se ejecuta y una estructura de datos.
+Los procesos son distintos que los archivos o los programas.
+		</p>
+		<p>
+El sistema operativo mantiene para cada proceso un bloque de control de
+proceso (PCB), donde se guarda para cada proceso la información necesaria
+para reanudarlo si es suspendido y otros datos. Consta de:
+	</p></li>
+</ul>
+<ul style="list-style-type:disclosure-closed">
+	<li><p>
+<strong>Estado actual del proceso</strong>. Situación en la que se encuentra un proceso en
+un instante dado. Puede estar en ejecución, preparado o bloqueado.
+Un estado está en <strong>ejecución</strong> cuando está en la CPU; <strong>preparado</strong> cuando está
+listo para ser ejecutado, es decir, está esperando el turno para poder usar su
+intervalo de tiempo; y <strong>bloqueado</strong> cuando está retenido, es decir, está
+bloqueado debido a causas múltiples.
+La transición de estos tres estados puede hacerse de la siguiente manera:
+		</p></li>
+<ol>
+<li><p>
+	<strong>Transición a</strong>. Ocurre cuando el programa que está en ejecución
+necesita algún elemento, señal, dato, etc., para poder continuar
+ejecutándose.
+	</p></li>
+<li><p>
+	<strong>Transición b</strong>. Cuando un programa o proceso ha utilizado el tiempo
+asignado por la CPU para su ejecución y tiene que dejar paso al
+siguiente proceso.
+	</p></li>
+<li><p>
+	<strong>Transición c</strong>. Cuando el proceso que está preparado pasa a ejecución
+	</p></li>
+<li><p>
+	<strong>Transición d</strong>. Cuando el proceso pasa de estar bloqueado a estar
+preparado, es decir, cuando el proceso recibe una orden o señal que
+estaba esperando para pasar al proceso de preparado y
+posteriormente pasar a ejecución.
+	</p></li>
+	</ol>
+	<img src="estados.png">
+	<li><p>
+<strong>Identificación unívoca del proceso</strong>. A cada proceso se le asigna un PID
+(código identificador de proceso) que se utilizará para identificarlo ante el
+SO.
+		</p></li>
+	<li><p>
+<strong>Prioridad del proceso</strong>. Cada proceso tiene asignada una prioridad, de forma
+que, el proceso de mayor prioridad entre los que están en estado de espera,
+se ejecutará.
+	</p></li>
+	<li><p>
+<strong>Contador de Programa (PC)</strong>: dirección de memoria de la siguiente
+instrucción que debe ejecutar el proceso.
+	</p></li>
+	<li><p>
+<strong>Zona de memoria asignada</strong>. Cada proceso debe tener una zona de memoria
+independiente que no puede ser interferida por otros procesos.
+	</p></li>
+	<li><p>
+<strong>Recursos asociados</strong> al proceso como ficheros, semáforos, etc.
+	</p></li>
+	<li><p>
+<strong>Estadísticas y otros</strong>: tiempo real y tiempo de CPU usado, identificador del
+proceso, identificador de dueño, proceso padre, procesos hijos, etc.
+	</p></li>
+</ul>
+	<p>
+El sistema mantiene una cola con los procesos que están en estado listo. Los
+procesos suspendidos se podrían poner todos en otra cola, pero suele ser más
+eficiente manejar colas distintas según cuál sea la condición por la cual están
+bloqueados. Así, se maneja una cola de procesos para cada dispositivo.
+	</p>
+</body>
+</html>

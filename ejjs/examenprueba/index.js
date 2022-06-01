@@ -76,10 +76,10 @@ function costeVuelo(n) {
 				case(i<=10):
 					total += 50
 					break;
-				case(i>10 && i<=40):
+				case(i>10 && i<=50):
 					total += 75
 					break;
-				case(i>40 && i<=100):
+				case(i>50 && i<=100):
 					total += 100
 					break;
 				case(i>100):
