@@ -37,11 +37,7 @@ Alguno de los algoritmos de planificación más importantes son:
 	<strong>Algoritmo de rueda</strong> o <strong>Round-Robin</strong>. Asigna rotativamente los mismos
 tiempos de ejecución a los diferentes procesos. A cada proceso se le asigna el
 mismo <strong>quantum</strong>, esto es, el mismo intervalo de tiempo de ejecución.
-	<p><i>
-Ejemplo: Supongamos que se están ejecutando tres procesos. Cada uno de ellos
-consume un número de tiempos o ciclos de CPU: A consume 7, B 5, y C 8. El
-primer proceso lanzado es A, el segundo B y el tercero C. El quantum es 1.
-	</i></p>
+
 <li><p>
 	<strong>Algoritmo por prioridades</strong> o <strong>multinivel</strong>. Son los más complejos y eficaces.
 Asigna los tiempos de ejecución de la CPU según una lista de prioridades. El
@@ -49,29 +45,18 @@ tiempo de ejecución del procesador se irá destinando, en primer lugar, de form
 secuencial a los procesos de mayor nivel. Terminados éstos, se ejecutarán los
 procesos del nivel inferior, y así sucesivamente, hasta llegar a los procesos del
 nivel más bajos.
-	<p><i>
-Ejemplo: Se lanzan tres procesos A, B y C, que consumen 7, 5 y 8 ciclos
-respectivamente. A y C son de prioridad alta, y B de prioridad baja. Se lanza
-primero A, en segundo lugar B y en tercero C.
-	</i></p>
+
 <li><p>
 	<strong>Algoritmo por intervalos de espera</strong>. Según se va ejecutando el proceso, el
 tiempo que la CPU le destina puede ir aumentando o disminuyendo, según la
 prioridad que le hayamos asignado. Si un proceso es prioritario, irá utilizando,
 según se vaya ejecutando, intervalos más largos de tiempo de ejecución de la
 CPU.
-	<p><i>
-Ejemplo: Se lanzan tres procesos al mismo tiempo. Los ciclos que consume
-cada uno son A 7, B 5 y C 8. Sea C el proceso más prioritario, B un poco menos
-prioritario y A el de más baja prioridad.
-	</i></p>
+
 <li><p>
 	<strong>FIFO</strong>. Primero en llegar, primero en ser servido. Es el más sencillo, pero el más
 ineficaz. Los procesos se ejecutan según el orden de llegada.
-	<p><i>
-Ejemplo: Se lanzan tres procesos. El primer proceso lanzado es A, el segundo B
-y el tercero C. Los ciclos que consumen respectivamente son 7, 5 y 8.
-	</i></p>
+
 <li><p>
 	<strong>Algoritmo Shortest Remaining Time</strong> o <strong>SRT</strong>. Permite asignar el tiempo de
 ejecución de forma prioritaria a procesos muy cortos para ejecutarlos en el
@@ -79,12 +64,11 @@ menor tiempo posible. Si se está ejecutando un proceso más largo, el SO le
 quitará la ejecución de la CPU para asignársela al proceso más corto. De esta
 forma, el usuario del proceso corto obtendrá resultados en un tiempo mínimo, y
 el usuario del proceso largo casi no notará esta circunstancia.
-	<p><i>
-Ejemplo: Se lanzan tres procesos. El primer proceso lanzado es A, el segundo B
-y el tercero C. Los ciclos que consumen respectivamente son 7, 5 y 8.
-	</i></p>
+
 <li><p>
-	<strong>SPN</strong>, <strong>HRRN</strong> y <strong>Feedback</strong>
+	<strong>SPN</strong> (<strong>S</strong>hortest <strong>P</strong>rocess <strong>N</strong>ext),
+	<strong>HRRN</strong> (<strong>H</strong>ighest <strong>R</strong>esponse <strong>R</strong>atio
+	<strong>N</strong>ext) y <strong>Feedback</strong>
 </ul>
 <p>
 También podemos encontrar:

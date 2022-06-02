@@ -5,85 +5,76 @@
 	<title>Clasificación de los Sistemas Operativos</title>
 </head>
 <body>
-<h1>CLASIFICACIÓN DE LOS SISTEMAS OPERATIVOS</h1>
+<h1>CLASIFICACIÓN DE LOS SISTEMAS OPERATIVOS (SO)</h1>
 <h2>
 	Por su estructura interna
 </h2>
 <p>Esta clasificación tiene en cuenta cómo se diseñan los sistemas:</p>
 <ul>
 	<li><p>
-		<strong>Monolítica</strong>. Se daba en los primeros sistemas operativos en la que todas las funciones se implementaban en el
-		Kernel. No tenía una estructura como tal.
-		</p>
-		<p>
-		El sistema operativo está constituido por un único programa compuesto
-		de multitud de rutinas interrelacionadas entre sí. Resultaban imposibles de modificar para mejorar, luego se
-		sacaba una nueva versión.
-	</p></li>
-	<li><p>
-		<strong>Por Capas</strong>. A medida que los SO fueron creciendo, se hizo necesaria una mayor estructuración. Este diseño se
-		corresponde con una estructura jerárquica que se divide en distintos niveles.
-	</p></li>
-	<li><p>
-		<strong>Máquina Virtual</strong>. Son SO que presentan una interfaz a cada proceso, mostrando una máquina que parece idéntica a
-		la máquina real subyacente.
+		<strong>Monolítica</strong>. Se daba en los primeros SO, todas las funciones se implementaban en el Kernel. No
+		tenía una estructura como tal.
 	</p>
-		<p>El núcleo de estos SO se denomina monitor virtual y lleva a cabo la
-		multiprogramación, presentando a los niveles superiores tantas máquinas virtuales como se soliciten.
-		</p>
-			<p>Las
-		máquinas virtuales son como archivos y cada uno representa una copia exacta del hardware básico que gestiona el
-		SO.
-			</p>
-				<p>La principal ventaja de esta estructura reside en que permite implementar varios tipos de SO sobre cada
-		máquina virtual. No obstante, presentan el problema de que los SO implementados son disjuntos.
-
-			</p>
-		<p><i>Ejemplo: el sistema VM370, CMS</i></p>
+		<p>
+			El sistema operativo está constituido por un único programa compuesto de multitud de rutinas
+			interrelacionadas entre sí. Resultaban imposibles de modificar para mejorar, luego se sacaba una nueva
+			versión.
+		</p></li>
+	<li><p>
+		<strong>Por Capas</strong>. A medida que los SO fueron creciendo, se hizo necesaria una mayor estructuración.
+		Este diseño se corresponde con una estructura jerárquica que se divide en distintos niveles.
 	</p></li>
 	<li><p>
-		<strong>Cliente-Servidor (Kernel Approach)</strong>. Se basa en dos elementos: el núcleo y los procesos. El núcleo es muy
-		pequeño (Kernel Approach) y sólo realiza:
+		<strong>Máquina Virtual</strong>. Son SO que presentan una interfaz a cada proceso, mostrando una máquina que
+		parece idéntica a la máquina real subyacente.
+	</p>
+		<p>El núcleo de estos SO se denomina monitor virtual y lleva a cabo la multiprogramación, presentando a los
+			niveles superiores tantas máquinas virtuales como se soliciten.
+		</p>
+		<p>Las máquinas virtuales son como archivos y cada uno representa una copia exacta del hardware básico que
+			gestiona el SO.
+		</p>
+		<p>La principal ventaja de esta estructura reside en que permite implementar varios tipos de SO sobre cada
+			máquina virtual. No obstante, presentan el problema de que los SO implementados son disjuntos.
+
+		</p>	</p></li>
+	<li><p>
+		<strong>Cliente-Servidor (Kernel Approach)</strong>. Se basa en dos elementos: el núcleo y los procesos. El
+		núcleo es muy pequeño (Kernel Approach) y sólo realiza:
 		<ul style="style-list-tipe:disclosure-closed">
-		<li><p>
-		Críticas en tiempo, respuesta rápida ante eventos externos.
+			<li><p>
+				Críticas en tiempo, respuesta rápida ante eventos externos.
 			</p></li>
-		<li><p>
-		Indispensables para la correcta administración del procesador.
-		</p></li>
-		<li><p>
-		De uso común y general de todas las aplicaciones.
-		</p></li>
+			<li><p>
+				Indispensables para la correcta administración del procesador.
+			</p></li>
+			<li><p>
+				De uso común y general de todas las aplicaciones.
+			</p></li>
 		</ul>
 		<p>
-		No establece políticas de gestión de los recursos, sino que
-		sólo suministra los mecanismos
-		adecuados para la gestión de procesos, memoria y comunicación entre programas.
+			No establece políticas de gestión de los recursos, sino que sólo suministra los mecanismos adecuados para la
+			gestión de procesos, memoria y comunicación entre programas.
 		</p>
 		<p>
-		Los procesos pueden ser tanto
-		servidores como clientes. Un programa de aplicación normal es un cliente que llama al servidor correspondiente
-		para acceder a un fichero o realizar una operación de E/S sobre un dispositivo concreto. A su vez, un programa
-		cliente, puede actuar como servidor para otro. El núcleo tiene como misión establecer la comunicación entre los
-		clientes y los servidores.
-			</p>
-	</p></li>
+			Los procesos pueden ser tanto servidores como clientes. Un programa de aplicación normal es un cliente que
+			llama al servidor correspondiente para acceder a un fichero o realizar una operación de E/S sobre un
+			dispositivo concreto. A su vez, un programa cliente, puede actuar como servidor para otro. El núcleo tiene
+			como misión establecer la comunicación entre los clientes y los servidores.
+		</p>	</p></li>
 	<li><p>
-		<strong>Orientada a Objeto</strong>. En lugar de ver el sistema operativo como una colección de funciones que se pueden
-		ejecutar, la concepción de los sistemas operativos modernos se basa en una colección de objetos. Cada objeto
-		pone a disposición de los otros un determinado número de operaciones para poder utilizarlo.
+		<strong>Orientada a Objeto</strong>. En lugar de ver el sistema operativo como una colección de funciones que se
+		pueden ejecutar, la concepción de los SO modernos se basa en una colección de objetos. Cada objeto pone a
+		disposición de los otros un determinado número de operaciones para poder utilizarlo.
 	</p>
 		<p>
-		El núcleo del
-		sistema operativo será el responsable del mantenimiento de las definiciones de los tipos de objetos soportados y
-		del control de los privilegios de acceso a los mismos. Cuando un programa desee realizar alguna operación sobre
-		un objeto determinado, deberá ejecutar una llamada al sistema operativo, indicando qué derechos tiene para poder
-		utilizarlo y qué operación interna llevar a cabo. Como resultado de dicha llamada, el sistema validará la
-		petición y, si puede ser aceptada, permitirá la realización de dicha operación.
+			El núcleo del sistema operativo será el responsable del mantenimiento de las definiciones de los tipos de
+			objetos soportados y del control de los privilegios de acceso a los mismos. Cuando un programa desee
+			realizar alguna operación sobre un objeto determinado, deberá ejecutar una llamada al sistema operativo,
+			indicando qué derechos tiene para poder utilizarlo y qué operación interna llevar a cabo. Como resultado de
+			dicha llamada, el sistema validará la petición y, si puede ser aceptada, permitirá la realización de dicha
+			operación.
 		</p>
-		<p><i>
-		Ejemplo: Windows NT.
-			</i></p>
 	</li>
 </ul>
 <h2>Por los servicios ofrecidos</h2>
@@ -109,8 +100,8 @@
 	</p></li>
 	<ul>
 		<li><p>
-			<strong>Monotarea</strong>. Sólo permiten una tarea a la vez por usuario. Pueden darse el caso de un sistema multiusuario y
-			monotarea.
+			<strong>Monotarea</strong>. Sólo permiten una tarea a la vez por usuario. Pueden darse el caso de un sistema
+			multiusuario y monotarea.
 		</p></li>
 		<li><p>
 			<strong>Multitarea</strong>. Permite al usuario estar realizando varios trabajos al mismo tiempo.
@@ -121,12 +112,12 @@
 	</p></li>
 	<ul>
 		<li><p>
-			<strong>Monoproceso</strong>. Permiten realizar un solo proceso a la vez. Sin embargo, permiten simular la multitarea
-			haciendo que el sistema realice una tarea rotatoria con intercambio muy rápido.
+			<strong>Monoproceso</strong>. Permiten realizar un solo proceso a la vez. Sin embargo, permiten simular la
+			multitarea haciendo que el sistema realice una tarea rotatoria con intercambio muy rápido.
 		</p></li>
 		<li><p>
-			<strong>Multiproceso</strong>. Permiten realizar varios procesos simultáneamente y, por tanto, son capaces de ejecutar varias
-			tareas al mismo tiempo. Pueden ser de varios tipos:
+			<strong>Multiproceso</strong>. Permiten realizar varios procesos simultáneamente y, por tanto, son capaces
+			de ejecutar varias tareas al mismo tiempo. Pueden ser de varios tipos:
 		</p></li>
 
 		<ol>
@@ -134,12 +125,13 @@
 				Según van llegando las tareas van ocupando la parte libre de los procesadores que necesite.
 			</p></li>
 			<li><p>
-				Los sistemas <strong>simétricos</strong> distribuyen la carga de procesamiento por igual entre todos los procesadores
-				existentes.
+				Los sistemas <strong>simétricos</strong> distribuyen la carga de procesamiento por igual entre todos los
+				procesadores existentes.
 			</p></li>
 			<li><p>
-				Los sistemas <strong>asimétricos</strong>, como el Windows NT, asignan una tarea por procesador existente, según su
-				prioridad, y el resto de tareas (de baja prioridad) se ejecutan en un único procesador.
+				Los sistemas <strong>asimétricos</strong>, como el Windows NT, asignan una tarea por procesador
+				existente, según su prioridad, y el resto de tareas (de baja prioridad) se ejecutan en un único
+				procesador.
 			</p></li>
 		</ol>
 	</ul>
@@ -148,12 +140,12 @@
 <h2>Por la disponibilidad</h2>
 <ul>
 	<li><p>
-		<strong>Sistemas operativos propietarios</strong>. Son aquellos que son propiedad intelectual de alguna empresa. Esto implica que
+		<strong>SO propietarios</strong>. Son aquellos que son propiedad intelectual de alguna empresa. Esto implica que
 		se necesiten licencias de uso para que el usuario ejecute el software, y no se dispone de acceso a su código
 		fuente o no se tiene derecho a modificarlo ni distribuirlo.
 	</p></li>
 	<li><p>
-		<strong>Sistemas operativos libres</strong>. Son aquellos que garantizan las cuatro libertades del software:
+		<strong>SO libres</strong>. Son aquellos que garantizan las cuatro libertades del software:
 	</p></li>
 	<ul>
 		<li><p>
@@ -185,12 +177,14 @@
 </ul>
 
 <h3>Tiempo real</h3>
-<p>Es un Modo de explotación. Sus resultados son correctos tanto cuando la computaciónm
-como el tiempo en el que se producen los resultados son correctos</p>
+<p>
+	Es un Modo de explotación. Sus resultados son correctos cuando tanto la computación como el tiempo en el que se
+	producen los resultados son correctos
+</p>
 <h3>Sistemas distribuidos</h3>
 <p>
-Son sistemas cuasi-independientes que permiten distribuir
-los trabajos, tareas o procesos entre un conjunto de procesadores.
+	Son sistemas cuasi-independientes que permiten distribuir los trabajos, tareas o procesos entre un conjunto de
+	procesadores.
 </p>
 </body>
 </html>

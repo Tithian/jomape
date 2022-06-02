@@ -8,53 +8,42 @@
 
 <h1>SINCRONIZACIÓN DE PROCESOS</h1>
 <p>
-	Cuando se ejecutan varios procesos a la vez, es posible que éstos compartan uno o varios recursos del sistema
-	(monitor, memoria, ...). El objetivo del SO es permitir que varios procesos compartan recursos sin que se produzcan
+	Cuando se ejecutan varios procesos a la vez, es posible que compartan uno o más recursos del sistema. El SO intenta que los puedan compartir sin que ello cause
 	problemas.
 </p>
 <p>
-	Los <strong>procesos independientes</strong> pueden ejecutarse a la vez, detenerse y rearrancarse sin ningún efecto
-	negativo, son procesos deterministas y reproducibles.
+	Los <strong>procesos independientes</strong> pueden ejecutarse a la vez, detenerse y reiniciarse normalmente, son <u>deterministas</u> y <u>reproducibles</u>.
 </p>
 <p>
-	Los <strong>procesos cooperantes</strong> comparten su estado, su funcionamiento no es determinista (pueden darse
-	situaciones inesperadas) y puede ser irreproducible. Es necesario que exista una forma de prohibir que en los
-	procesos que compartan recursos y donde no exista sincronización ente ellos, más de un proceso lea o escriba datos
-	compartidos a la vez.
+	Los <strong>procesos cooperantes</strong> comparten su estado, no son deterministas y puede ser irreproducibles. Debe existir un modo de prohibir que se lean o escriban datos a la vez, en los
+	procesos que compartan recursos y sean asíncronos.
 </p>
 <p>
 	Lo que hay que conseguir es:
 </p>
 <ul>
 	<li>
-		<strong>Exclusión mutua</strong>. Es un mecanismo por el que se asegura que sólo una persona o proceso estará accediendo a un
-		recurso no compartible. Para garantizar el acceso exclusivo a un recurso es necesario garantizar el acceso
-		exclusivo a las instrucciones que manejan dicho recurso.
+		<strong>Exclusión mutua</strong>. Mecanismo por el cual, solo una persona o proceso accede a un
+		recurso no compartible. Para garantizarlo, es necesario dar acceso exclusivo a las instrucciones que manejan dicho recurso.
 	</li>
 	<li>
-		<strong>Sección Crítica</strong>. Es la sección de código en la que se realizan operaciones que pueden dar lugar a interferencias
+		<strong>Sección Crítica</strong>. Es la sección de código donde se realizan operaciones que pueden dar lugar a interferencias
 		con otros procesos. Así cuando un proceso quiere acceder exclusivamente a un recurso debe: Solicitarlo, Ejecutar
-		la sección crítica y Liberarlo. Cuando un proceso esté ejecutando su Sección Crítica, ningún otro proceso puede
-		estar en ella. Un proceso no puede dormirse en su Sección Crítica porque estará bloqueando la Sección Crítica
-		para otros procesos en ejecución.
+		la sección crítica y Liberarlo. Solo puede haber un proceso a la vez en la sección crítica y no puede dormirse.
 	</li>
 </ul>
 <p>
-	Existen ocasiones en las que los procesos deben sincronizar sus actividades, de modo que un proceso no puede
-	continuar hasta que otro no haya completado algún tipo de actividad. <i>Es responsabilidad del sistema operativo
-	proveer mecanismos mediante los cuáles pueda llevarse a cabo esta sincronización</i>.
+	Hay ocasiones en las que los procesos no pueden	continuar hasta que otro haya completado algún tipo de actividad. <i>El SO
+	debe proveer mecanismos para llevar a cabo la sincronización entre estos.</i>.
 </p>
 <p>
 	Podemos clasificar los algoritmos de sincronización en tres grupos:
 </p>
 <ul style="disclosure-closed">
 	<li><p>
-		<strong>Espera activa</strong>: Son aquellos algoritmos que basan su funcionamiento en establecer la espera de entrada a la
-		sección crítica con un bucle que será “roto” en el momento en que se cumpla una determinada condición. Se llaman
-		de espera activa porque el proceso no queda en estado bloqueado durante su ejecución, sino que estará
-		compitiendo por el procesador constantemente. Esto hace que estos algoritmos sobrecarguen el sistema
-		innecesariamente, son los primeros mecanismos puestos en práctica para resolver el problema, y pueden ser
-		utilizados en el caso de no contar con otro tipo de mecanismos.
+		<strong>Espera activa</strong>: Aquellos que permiten la entrada a la sección crítica comprobando un bucle que termina al cumplirse una condición determinada. Se llaman
+		así porque el proceso no pasa a estado bloqueado durante su ejecución, sino que compite por el procesador constantemente.
+		Esto sobrecarga el sistema innecesariamente, son los primeros usados para resolver el problema, ahora se usan en última instancia.
 	</p></li>
 	<li><p>
 		<strong>Espera no activa</strong>: Son los algoritmos que establecen la espera para entrar en la sección crítica bloqueando el
