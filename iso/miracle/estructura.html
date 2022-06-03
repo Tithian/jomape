@@ -7,46 +7,45 @@
 <body>
 <h1>ELEMENTOS Y ESTRUCTURA DE UN SISTEMA OPERATIVO</h1>
 <p>
-	Cinco niveles. Los dos
-	primeros entrarían dentro de la parte del SO dependiente del hardware, el resto de los niveles
-	precedentes a la parte portable del mismo.
+	Cinco niveles. Los dos primeros entrarían dentro de la parte del SO dependiente del hardware, el resto de los
+	niveles precedentes a la parte portable del mismo.
 </p>
 <p>
 	Cada uno de los niveles se comunica con el inmediatamente inferior y superior coordinando sus funciones.
 </p>
 <ul>
 	<li><p>
-		<strong>Nivel 1: Gestión del Procesador</strong>. En este nivel se encuentra la parte del sistema operativo encargada de la
-		gestión de la CPU. En los sistemas operativos multiproceso, este nivel se encarga de compartir la CPU entre los
-		distintos procesos realizando funciones de sincronización y conmutación de la CPU, gestión de interrupciones y
-		manejo de condiciones de error.
+		<strong>Nivel 1: Gestión del Procesador</strong>. En este nivel se encuentra la parte del sistema operativo
+		encargada de la gestión de la CPU. En los sistemas operativos multiproceso, este nivel se encarga de compartir
+		la CPU entre los distintos procesos realizando funciones de sincronización y conmutación de la CPU, gestión de
+		interrupciones y manejo de condiciones de error.
 	</p></li>
 	<li><p>
-		<strong>Nivel 2: Gestión de Memoria</strong>. Este nivel es el encargado de repartir la memoria disponible entre los procesos.
-		Se realizan funciones de asignación y liberación de memoria, y el control de violación de acceso a zonas de
-		memoria no permitidas.
+		<strong>Nivel 2: Gestión de Memoria</strong>. Este nivel es el encargado de repartir la memoria disponible entre
+		los procesos. Se realizan funciones de asignación y liberación de memoria, y el control de violación de acceso a
+		zonas de memoria no permitidas.
 	</p></li>
 	<li><p>
-		<strong>Nivel 3: Gestión de Procesos</strong>. Este nivel es el encargado de la creación y destrucción de los procesos,
-		intercambio de mensajes y detección y arranque de los mismos.
+		<strong>Nivel 3: Gestión de Procesos</strong>. Este nivel es el encargado de la creación y destrucción de los
+		procesos, intercambio de mensajes y detección y arranque de los mismos.
 	</p></li>
 	<li><p>
-		<strong>Nivel 4: Gestión de Dispositivos</strong>. En este nivel se realiza la gestión de las entradas/salidas (E/S) en función
-		de los dispositivos existentes. Entre otras, se encarga de las funciones de creación de procesos de E/S,
-		asignación y liberación de dispositivos E/S, y planificación de la E/S.
+		<strong>Nivel 4: Gestión de Dispositivos</strong>. En este nivel se realiza la gestión de las entradas/salidas
+		(E/S) de los dispositivos. Entre otras, se encarga de la creación de procesos, asignación y liberación de
+		dispositivos, y planificación.
 	</p></li>
 	<li><p>
-		<strong>Nivel 5: Gestión de la Información</strong>. El objetivo de este nivel es el de gestionar el espacio de nombres
-		lógicos, utilizados para simplificar el acceso a los recursos, ya que mediante estos se sustituyen rutas de
-		acceso que pueden ser muy largas y difíciles de recordar por un solo nombre, encargándose el sistema operativo,
-		de forma totalmente transparente para el usuario, de realizar esa búsqueda de ruta. Otro de sus cometidos es la
-		protección de la información realizando funciones de creación y destrucción de ficheros y directorios, apertura
-		y cierre de ficheros, lectura y escritura de ficheros, y protección de acceso.
+		<strong>Nivel 5: Gestión de la Información</strong>. El objetivo de este nivel es el de gestionar el espacio de
+		nombres lógicos, utilizados para simplificar el acceso a los recursos, ya que mediante estos se sustituyen rutas
+		de acceso que pueden ser muy largas y difíciles de recordar por un solo nombre, encargándose el sistema
+		operativo, de forma totalmente transparente para el usuario, de realizar esa búsqueda de ruta. Otro de sus
+		cometidos es la protección de la información realizando funciones de creación y destrucción de ficheros y
+		directorios, apertura, cierre, lectura, escritura, y protección de acceso de los ficheros.
 	</p></li>
 </ul>
 <p>
-Es importante destacar que un mismo sistema operativo puede trabajar en múltiples plataformas <i>hardware</i>, por lo
-que debe poder adaptarse a las peculiaridades de cada una de ellas.
+	Es importante destacar que un mismo sistema operativo puede trabajar en múltiples plataformas <i>hardware</i>, por
+	lo que debe poder adaptarse a las peculiaridades de cada una de ellas.
 </p>
 
 </body>
