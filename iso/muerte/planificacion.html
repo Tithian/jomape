@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Planificaci&oacute;n de Colas</title>
+</head>
+<body>
+<h1>Planificación</h1>
+<p>
+	En los sistemas basados en multiprogramación se producen peticiones de leer o escribir mucho más rápidas de lo que
+	pueden atender los discos. Así, es frecuente encontrar colas de espera en los dispositivos de disco. Cuando se
+	completa una solicitud debe seleccionarse otro proceso de la cola. Es decir, debe planificarse qué solicitud es la
+	próxima que debe servirse.
+</p>
+<p>
+	Existen muchos algoritmos de planificación de colas:
+</p>
+<ul>
+	<li><p>
+		<strong>FCFS</strong> (<strong>F</strong>irst-<strong>C</strong>ome-<strong>F</strong>irst-<strong>S</strong>erved):
+		la primera petición que llega es la primera que se atiende.
+	</p></li>
+	<li><p>
+		<strong>SSTF</strong> (<strong>S</strong>hortest-<strong>S</strong>eek-<strong>T</strong>ime-<strong>F</strong>irst):
+		sirve la petición que encuentra a la distancia más corta de la pista que acaba de servir. Suele dar mejor
+		resultado que la FCFS, pero tampoco es óptimo.
+	</p></li>
+	<li><p>
+		<strong>SCAN</strong> (o <strong>algoritmo del ascensor</strong>): selecciona la petición que encuentra más
+		cerca, pero en una dirección determinada. La cabeza de lectura/escritura empieza en un extremo del disco y se
+		mueve hacia el otro extremo sirviendo las solicitudes a medida que llega a cada pista. Cuando llega al extremo
+		opuesto, se invierte la dirección del movimiento y continúa con el proceso. Es la base de la mayoría de las
+		planificaciones actuales.
+	</p></li>
+	<li><p>
+		<strong>C-SCAN</strong>: Variante del anterior. Cuando llega al final, vuelve inmediatamente al principio para
+		comenzar un nuevo recorrido.
+	</p></li>
+	<li><p>
+		<strong>LOOK</strong> y <strong>C-LOOK</strong>: son planificaciones SCAN en las que la cabeza de
+		lectura/escritura no llega hasta los extremos del disco sino sólo hasta que no quedan solicitudes en la
+		dirección actual.
+	</p></li>
+</ul>
+</body>
+</html>

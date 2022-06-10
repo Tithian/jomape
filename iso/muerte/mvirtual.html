@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Memoria Virtual</title>
+</head>
+<body>
+<h1>MEMORIA VIRTUAL</h1>
+<p>
+	En el año 1961 se desarrolla una nueva técnica de gestión de memoria que consiste en usar la zona libre del disco
+	duro como memoria RAM. Como el tamaño del programa, los datos y la pila combinados pueden ser mayores que la memoria
+	disponible para ese proceso, el SO guarda aquellas partes del programa de uso corriente en la memoria principal y el
+	resto, en disco. A la zona libre del disco duro que se coge como memoria RAM, se le denomina <strong>memoria
+	virtual</strong>.
+</p>
+<p>
+	No todas las partes de un programa se usa al mismo tiempo, luego se carga en memoria los datos que se vayan a
+	utilizar inicialmente y, posteriormente, se irá cogiendo lo necesario del programa que se encuentra en la parte
+	libre del disco. Cuando el SO necesite un bloque de datos que no se encuentre en memoria, se pasaría un bloque de
+	memoria al disco y se traería del disco el bloque de datos que necesita.
+</p>
+<p>
+	El SO decide qué partes del programa puede cargarse en memoria, cuándo cargarlas y dónde ubicarlas; de esta manera,
+	existe el riesgo de perder mucho tiempo en accesos al disco si la elección es errónea.
+</p>
+<p>
+	Las principales ventajas que ofrece la utilización de memoria virtual son:
+</p>
+<ol>
+	<li><p>
+		Permite trabajar con programas de mayor tamaño que la memoria física.
+	</p></li>
+	<li><p>
+		Permite tener más programas cargados a la vez.
+	</p></li>
+	<li><p>
+		Permite que los programas empiecen a ejecutarse antes.
+	</p></li>
+	<li><p>
+		Reduce la frecuencia de intercambio de procesos.
+	</p></li>
+	<li><p>
+		Hay menor trabajo de E/S durante el intercambio de procesos.
+	</p></li>
+</ol>
+<p>
+	La diferencia entre la gestión de memoria virtual y el swapping es que, mediante la primera, puede llegar a ocurrir
+	que el disco esté tan lleno que la gestión sea difícil o imposible, ya que el espacio destinado al intercambio suele
+	ser espacio del disco duro en el que está instalado tanto el SO como el software de aplicaciones y los datos del
+	usuario.
+</p>
+<p>
+	En el swapping no puede ocurrir esto, ya que esta zona siempre estará disponible para el intercambio de programas
+	con la memoria principal. Normalmente, al estar esta zona en un dispositivo diferente, todo el espacio estará
+	disponible cada vez que encendamos el ordenador.
+</p>
+</body>
+</html>

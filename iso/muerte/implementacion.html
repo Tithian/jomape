@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Implementaci&oacute;n del sistema de archivos</title>
+</head>
+<body>
+<h1>Implementación del sistema de archivos</h1>
+<p>
+	<strong>Bloque</strong>: compuesto por N sectores asociados a un único archivo. Un aspecto muy importante es la elección del tamaño
+	del bloque, ya que si es muy grande y el archivo es muy pequeño, se desperdicia gran parte de la capacidad del disco
+	<u>al asignarle el bloque entero</u>. Por otra parte, si es demasiado pequeño para almacenar un archivo, harán falta muchos
+	bloques, lo que producirá un retraso en la lectura del archivo. El tamaño medio de los archivos en LINUX y MS-DOS es
+	1 KB, los más adecuados son de 512 B, 1 KB o 2 KB.
+</p>
+<p>
+	Para manejar los bloques asociados a cada archivo, se pueden utilizar varias técnicas:
+</p>
+<ol>
+	<li><p>
+		<strong>Asignación adyacente</strong>: Almacena los archivos mediante bloques adyacentes en el disco. Su gran
+		<strong>ventaja</strong> es su fácil implementación, el gran <strong>problema</strong> es la necesidad de prever
+		los bloques que ocupará y no es posible. Además genera gran fragmentación del disco que produce pérdida de
+		espacio.
+	</p></li>
+	<li><p>
+		<strong>Asignación en forma de lista ligada</strong>: la carpeta contiene la dirección del primer bloque y cada
+		bloque contiene, la dirección del siguiente bloque o el valor null (nulo) en caso de que sea el último. Con esta
+		técnica se consigue aprovechar todos los bloques del disco y se evita la fragmentación. Los <strong>inconvenientes</strong>
+		que presentan son los siguientes:
+	</p></li>
+	<ul>
+		<li><p>
+			Cada bloque pierde capacidad, ya que se reserva un espacio para la dirección del siguiente.
+		</p></li>
+		<li><p>
+			Se ralentiza la lectura del archivo al tener que leer todos los bloques antes de llegar a uno determinado.
+		</p></li>
+	</ul>
+	<li><p>
+		<strong>Asignación mediante una lista ligada y un índice</strong>: Crea una tabla con un registro por cada uno
+		de los bloques del disco, en cada registro se indica si dicho bloque está libre (null) o cuál es la dirección
+		del siguiente bloque. El acceso a un bloque es mucho más rápido. La desventaja es que al estar toda la tabla de
+		registro permanente en memoria, se pierde dicho espacio para ser usado por otros procesos. En
+		<strong>MS-DOS</strong> y <strong>Windows</strong>, se denomina <strong>FAT</strong> a la tabla de registros
+		(<strong>FAT16</strong> o <strong>FAT32</strong>), dependiendo si direcciona bloques con <strong>16</strong> o
+		<strong>32</strong> bits.
+	</p></li>
+</ol>
+</body>
+</html>

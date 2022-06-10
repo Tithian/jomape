@@ -13,15 +13,11 @@
         <fieldset>
             <legend>Escribe una función llamada potencia que reciba dos argumentos y devuelva como 
                 resultado la potencia del primer número elevado al segundo.</legend>
-            <input type="submit" value="calcular" onclick="
-                 nu1 = prompt('La base');
-        nu2 = prompt('El exponente');
-
-        potencia(parseInt(nu1), parseInt(nu2))
-        
-        
-            ">
+            <input type="text" id="e1i1">
+            <input type="button" value="calcular" onclick="myFunction(e1i1.value)">
         </fieldset>
+        <div id="rf1"></div>
+        <input type="text">
     </form>
 
     <form name="f2">

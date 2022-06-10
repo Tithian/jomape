@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tipos de Acceso</title>
+</head>
+<body>
+<h1>Tipos de acceso</h1>
+<p>
+	Hay dos tipos de soportes:
+</p>
+<ul>
+	<li><p>
+		<strong>Soportes secuenciales</strong>. Son aquellos en los que los registros están dispuestos físicamente uno a continuación de
+		otro y para acceder a un determinado registro se necesitará pasar por todos los anteriores a él.
+	</p></li>
+	<li><p>
+		<strong>Soportes direccionables</strong>. Permiten localizar a un registro directamente por su información (clave) sin tener que
+		pasar por todos los anteriores.
+	</p></li>
+</ul>
+<p>
+	Según las características del soporte empleado y la organización utilizada, se consideran dos tipos de acceso:
+</p>
+<ul>
+	<li><p>
+		<strong>Acceso secuencial</strong> que implica el acceso a un archivo según el orden de almacenamiento de sus registros, uno tras
+		otro. Los registros contienen un registro particular, y el último contiene una marca de fin de archivo.
+	</p>
+		<p>
+			Ventajas:
+		</p>
+		<ul>
+			<li><p>
+				Rapidez en el acceso de un bloque de registros que se encuentran almacenados en posiciones físicamente
+				contiguas.
+			</p></li>
+			<li><p>
+				No deja espacios vacíos entre registro y registro, optimizando al máximo la memoria ocupada.
+			</p></li>
+		</ul>
+		<p>
+			Inconvenientes:
+		</p>
+		<ul>
+			<li><p>
+				El acceso a los registros individuales es muy lento.
+			</p></li>
+			<li><p>
+				Se tiene que procesar todo el fichero para operaciones de inserción y borrado de registros.
+			</p></li>
+		</ul>
+	</li>
+	<li><p>
+		<strong>Acceso directo o aleatorio</strong> que implica el acceso a un registro determinado, sin que ello implique la consulta de
+		los registros precedentes. Se caracterizan porque los registros se sitúan en el fichero y se accede a ellos a
+		través de un identificativo o clave, el cual indica la posición del registro dentro del fichero y la posición de
+		memoria donde está ubicado.
+	</p>
+		<p>
+			Ventajas:
+		</p>
+		<ul>
+			<li><p>
+				Cada posición sólo puede ser ocupada por un registro, pues no se puede tener en el fichero más de un
+				registro con el mismo valor de clave.
+			</p></li>
+			<li><p>
+				Es muy rápido el acceso a los registros individuales.
+			</p></li>
+		</ul>
+		<p>
+			Inconvenientes:
+		</p>
+		<ul>
+
+			<li><p>
+				Deja gran cantidad de huecos dentro del fichero lo que provoca desaprovechamiento del soporte de
+				almacenamiento.
+			</p></li>
+			<li><p>
+				Una consulta total del fichero puede suponer un gran inconveniente, ya que deberá analizar todas las
+				posiciones de memoria, aunque algunas estén vacías.
+			</p></li>
+		</ul>
+	</li>
+</ul>
+</body>
+</html>

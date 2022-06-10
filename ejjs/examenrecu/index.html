@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examen</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="index.js"></script>
+</head>
+<body>
+
+<form class="formulario" id="ej01">
+	<div class="titulo">Números Amigos</div>
+
+	<div class="enunciado">
+		Introduce 2 números para saber si son amigos o no.
+	</div>
+
+	<div class="input-container">
+		<input id="e1i1" class="input" type="number" placeholder=" "/>
+		<div class="cut"></div>
+		<label for="e1i1" class="placeholder">Número Entero</label>
+	</div>
+
+	<div class="input-container">
+		<input id="e1i2" class="input" type="number" placeholder=" "/>
+		<div class="cut"></div>
+		<label for="e1i2" class="placeholder">Número Entero</label>
+	</div>
+
+	<div class="container">
+		<q onclick="ejercicio01(e1i1.value,e1i2.value)"><span>¿Son Amigos?</span></q>
+		<div class="respuesta" id="r1"></div>
+	</div>
+</form>
+
+<form class="formulario" id="ej02">
+	<div class="titulo">Paintball</div>
+	<div class="enunciado">
+		Introducir el número de participantes.
+	</div>
+	<div class="input-container">
+		<input id="e2i1" class="input" type="number" placeholder=" "/>
+		<div class="cut cut-long"></div>
+		<label for="e2i1" class="placeholder">Participantes</label>
+	</div>
+	<div class="container">
+		<q onclick="ejercicio02()"><span>Coste y Bolas</span></q>
+		<div class="respuesta" id="dos"></div>
+	</div>
+
+</form>
+
+
+<footer id="ej03" onclick="changeText()" onmouseenter="moreSize()" onmouseleave="lessSize()">Jose Antono Macías Pérez</footer>
+
+
+<div class="hero">
+
+  <div class="hero__inner">
+    <div class="hero__image" data-x="0.05" data-y="0.05" data-scale="1.05"><img src="https://assets.codepen.io/450456/layer-sky.jpg"/></div>
+    <div class="hero__image hero__image--sun" data-x="0.065" data-y="0.065" data-scale="1.1"><img src="https://assets.codepen.io/450456/layer-sunNoSparkle.png"/></div>
+    <div class="hero__image hero__image--sparkle" data-x="0.065" data-y="0.065" data-scale="1.1"><img src="https://assets.codepen.io/450456/layer-sunSparkle.png"/></div>
+    <div class="hero__image" data-x="0.09" data-y="0.09" data-scale="1.15"><img src="https://assets.codepen.io/450456/layer-smallField.png"/></div>
+    <div class="hero__image" data-x="0.13" data-y="0.13" data-scale="1.15"><img src="https://assets.codepen.io/450456/layer-bigField.png"/></div>
+    <div class="hero__image hero__image--leaf7" data-x="0.17" data-y="0.17" data-scale="1.19"><img src="https://assets.codepen.io/450456/layer-leaf7Trans.png"/></div>
+    <div class="hero__image hero__image--leaf6" data-x="0.22" data-y="0.22" data-scale="1.2"><img src="https://assets.codepen.io/450456/layer-leaf6Trans.png"/></div>
+    <div class="hero__image" data-x="0.25" data-y="0.25" data-scale="1.2"><img src="https://assets.codepen.io/450456/layer-leaf5.png"/></div>
+    <div class="hero__image hero__image--leaf4" data-x="0.28" data-y="0.28" data-scale="1.22"><img src="https://assets.codepen.io/450456/layer-leaf4Trans.png"/></div>
+    <div class="hero__image" data-x="0.3" data-y="0.3" data-scale="1.25"><img src="https://assets.codepen.io/450456/layer-leaf3.png"/></div>
+    <div class="hero__image hero__image--leaf2" data-x="0.2" data-y="0.2" data-scale="1.18"><img src="https://assets.codepen.io/450456/layer-leaf2Trans.png"/></div>
+    <div class="hero__image hero__image--leaf1" data-x="0.28" data-y="0.28" data-scale="1.25"><img src="https://assets.codepen.io/450456/layer-leaf1Trans.png"/></div>
+  </div>
+
+</div>
+<!-- partial -->
+  <script  src="./hero.js"></script>
+</body>
+</html>

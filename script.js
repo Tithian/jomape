@@ -1,4 +1,5 @@
 "use strict";
+
 // Inspired By
 // https://codepen.io/abeatrize/pen/LJqYey
 var _a, _b;

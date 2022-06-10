@@ -309,11 +309,21 @@ function factorial(num) {
     }
 }
 
-function sumaDivisores(n) {
+function listaDivisores(n) {
 	let total = [];
 	for(let i=0;i<n;i++) {
 		if(n%i === 0) {
 			total.push(i);
+		}
+	}
+	return total
+}
+
+function sumaDivisores(n) {
+	let total = 0;
+	for(let i=0;i<n;i++) {
+		if(n%i === 0) {
+			total+=i;
 		}
 	}
 	return total
@@ -382,4 +392,28 @@ function contarDosCosas(ar) {
 function totalSegundos(horas,min,seg) {
     return = seg+(hor*3600)+(min*60);
 
+}
+
+
+for(let numero = 10; numero == 0; numero--)
+    {
+        if(numero==0)
+        {
+            console.log('Despegue');
+        }
+        else{
+            console.log(numero)
+        }
+    }
+
+for(let i=10;i>0;i--) {
+	console.log(i)
+}
+
+function wait(ms) {
+    const start = Date.now();
+    let now = start;
+    while (now - start < ms*1000) {
+      now = Date.now();
+    }
 }

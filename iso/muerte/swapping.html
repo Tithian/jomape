@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Swapping</title>
+</head>
+<body>
+<h1>Swapping</h1>
+<p>
+	Como en la memoria solo puede encontrarse un proceso en un instante determinado, cuando este termina es necesario
+	sacarlo hacia un soporte externo y luego introducir el siguiente en ejecución. Las operaciones E/S consumen gran
+	parte del tiempo y la CPU mientras permanece ociosa.
+</p>
+<p>
+	La técnica del swapping o del intercambio consiste en disponer de una memoria auxiliar (buffer) donde se descarga
+	momentáneamente el proceso saliente y donde se carga el siguiente proceso a ejecutar.
+</p>
+<p>
+	Otra forma de reducir el tiempo de intercambio es realizarlo mientras se está ejecutando, es decir, de forma
+	solapada con la ejecución, utilizando para ello dos buffers, uno para descargar y otro para ejecutar.
+</p>
+<p>
+	Cuando varios usuarios están ejecutando procesos en un mismo ordenador, este se ve obligado a cargarlos en RAM.
+	Según el estado en el que se encuentre el proceso de cada usuario, la memoria se irá liberando o no. Si un usuario
+	interrumpe por un momento la ejecución de su proceso, pasará a la zona de <strong>swap</strong> mediante la técnica llamada <strong>swap-out</strong>.
+	De esta forma, la memoria interna queda liberada para que en ella se pueda almacenar otro proceso del mismo usuario
+	o de otro.
+</p>
+<p>
+	Si el usuario vuelve a solicitar su proceso para seguir ejecutándolo, se produce el denominado <strong>swap-in</strong>, que consiste
+	en pasar el programa de la zona de swap a la memoria interna.
+</p>
+<p>
+	La zona de swap está formada por un espacio físico del disco en el que tenemos el SO y las aplicaciones que se van a
+	ejecutar. Es recomendable que esta zona sea aproximadamente el 20% del espacio total en disco o el doble de la
+	capacidad de RAM del ordenador.
+</p>
+</body>
+</html>

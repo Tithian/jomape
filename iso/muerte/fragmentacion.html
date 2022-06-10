@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fragmentaci&oacute;;n</title>
+</head>
+<body>
+
+<h1>FRAGMENTACIÓN</h1>
+<p>
+	La <strong>fragmentación</strong> puede definirse como la cantidad de memoria desaprovechada por el gestor de
+	memoria. Puede ser de dos tipos:
+</p>
+<ol>
+	<li><p>
+		a) <strong>Fragmentación interna</strong>. Se debe a la diferencia de tamaño entre la partición de memoria y el
+		objeto residente dentro de ella. Una posible solución sería la asignación dinámica de memoria. En ella, los
+		bloques no tienen un tamaño predefinido y el gestor de memoria asignará un espacio de memoria según las
+		características del proceso a ejecutar. </p></li>
+	<li><p>
+		b) <strong>Fragmentación externa</strong>. Se debe al desaprovechamiento de memoria entre particiones no
+		contiguas. Para solucionar esto sería necesario poder reubicar programas en tiempo de ejecución, lo cual es
+		conocido como <strong>compactación de memoria</strong>.
+	</p></li>
+</ol>
+<p>
+	Las particiones fijas no son muy atractivas, sobre todo si se dispone de poca memoria, puesto que la mayor parte de
+	ésta se desperdicia con programas menores que sus particiones. En vez de esto, se utiliza un algoritmo de gestión de
+	memoria basado en <strong>particiones variables</strong>.
+</p>
+<p>
+	Con las particiones variables el número, posición y tamaño de las mismas varía de forma dinámica. Con ello, la
+	gestión de memoria es mucho más eficiente ya que el tamaño de cada bloque se adapta a las necesidades de cada
+	proceso, eliminándose la fragmentación interna.
+</p>
+<p>
+	Lógicamente, trabajar con particiones variables implica un gestor de memoria mucho más complejo.
+</p>
+</body>
+</html>

@@ -47,7 +47,7 @@ function ejercicio01() {
 	let entrada = e1i1.value;
 	if(regInt.test(entrada)) {
 		for(let i=2;i<=entrada;i++) {
-			if(abundante(i)) {
+			if(abundante(i)==true) {
 				lista.push(i)
 			}
 		}

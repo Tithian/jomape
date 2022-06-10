@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructura l&oacute;gica del disco</title>
+</head>
+<body>
+<h1>Estructura lógica del disco</h1>
+<p>
+	El <strong>MBR</strong> o <strong>Registro de Arranque Principal</strong> se ubica en el primer sector del disco (sector 0). Cuando se arranca el
+	ordenador, realiza una serie de pruebas para verificar su hardware y, después, mediante la BIOS comienza su rutina
+	de arranque. Durante ésta se lee el MBR del disco duro, si es de arranque, <u>el SO habrá escrito en este registro para
+	que salte a la dirección del sector</u> en el que se encuentra el cargador del sistema operativo con lo que comenzará
+	así su carga. El resto de los sectores del disco se dividen fundamentalmente en <strong>dos áreas</strong>:
+</p>
+<ul>
+	<li><p>
+		El <strong>área de datos</strong>, los sectores en los que almacenan los datos de usuario.
+	</p></li>
+	<li><p>
+		El <strong>área de localización</strong>, donde se guarda la información necesaria que permitirá conocer qué sectores del área de
+		datos pertenecen a un determinado archivo o directorio y su localización en el disco.
+	</p></li>
+</ul>
+</body>
+</html>
