@@ -9,6 +9,7 @@
   --black: #000;
 }
 * {
+	margin: 0;
 	box-sizing: border-box;
 	font-family: Arial, sans-serif;
 	font-size: 1em;
@@ -49,6 +50,11 @@ height: 100vh;
 
 .container-image {
 	margin: auto;
+}
+
+#alien {
+	width: 100vw;
+	height: 100vh;
 }
 
 /* Gray Scale */
