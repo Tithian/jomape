@@ -20,6 +20,7 @@ body {
 	flex-direction: column;
 	width: 100vw;
 	overflow-x:hidden;
+	background: var(--bg);
 }
 
 .title {
@@ -35,6 +36,21 @@ body {
 			0 0 40px var(--cyan),
 			0 0 80px var(--cyan),
 			0 0 160px var(--cyan);
+}
+
+#name {
+	color: var(--cyan);
+	text-shadow: none;
+}
+
+#name:hover {
+	transition: 1.5s;
+	color: var(--black);
+	text-shadow: 0 0 2px var(--purple),
+			0 0 4px var(--blue),
+			0 0 8px var(--cyan),
+			0 0 16px var(--orange),
+			0 0 32px var(--green);
 }
 
 section {
@@ -137,12 +153,13 @@ NAVBAR
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     overflow: auto;
     background-color: #333;
     width: 100vw;
+    font-size: 1.5em;
 }
 
 
@@ -160,6 +177,8 @@ NAVBAR
 
 #inicio {
   background-color: #04AA6D;
+  position: absolute;
+  left: 0;
 }
 
 .navbar>* {
@@ -290,6 +309,7 @@ NAVBAR
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	transition: 0.5s;
 	padding: 40px;
 	padding-top: 10%;
@@ -313,13 +333,14 @@ NAVBAR
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	width: 100%;
 }
-.button button {
+.button a {
 	position: relative;
 	display: inline-block;
 	padding: 15px 30px;
 	border: 2px solid #0f0;
-	margin: 40px;
+	margin: 20px 40px;
 	text-transform: uppercase;
 	font-weight: 600;
 	text-decoration: none;
@@ -329,8 +350,9 @@ NAVBAR
 	transition: 0.5s;
 	transition-delay: 0s;
 	background: transparent;
+	width: 100%;
 }
-.button button:hover {
+.button a:hover {
 	transition-delay: 1.5s;
 	color: #000;
 	cursor: pointer;
@@ -340,7 +362,7 @@ NAVBAR
 				0 0 80px #0f0,
 				0 0 160px #0f0;
 }
-.button button:focus {
+.button a:focus {
 	transition-delay: 1.5s;
 	color: #000;
 	cursor: pointer;
@@ -350,11 +372,11 @@ NAVBAR
 				0 0 80px #0f0,
 				0 0 160px #0f0;
 }
-.button button span {
+.button a span {
 	position: relative;
 	z-index: 100;
 }
-.button button::before {
+.button a::before {
 	content: '';
 	position: absolute;
 	left: -20px;
@@ -368,7 +390,7 @@ NAVBAR
 	transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
 	transition-delay: 1s, 0.5s, 0s, 0s;
 }
-.button button:hover::before {
+.button a:hover::before {
 	width: 60%;
 	height: 100%;
 	left: -2px;
@@ -376,7 +398,7 @@ NAVBAR
 				5px 0 0 #0f0;
 	transition-delay: 0s, 0.5s, 1s, 1s;
 }
-.button button:focus::before {
+.button a:focus::before {
 	width: 60%;
 	height: 100%;
 	left: -2px;
@@ -384,7 +406,7 @@ NAVBAR
 				5px 0 0 #0f0;
 	transition-delay: 0s, 0.5s, 1s, 1s;
 }
-.button button::after {
+.button a::after {
 	content: '';
 	position: absolute;
 	right: -20px;
@@ -398,7 +420,7 @@ NAVBAR
 	transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
 	transition-delay: 1s, 0.5s, 0s, 0s;
 }
-.button button:hover::after {
+.button a:hover::after {
 	width: 60%;
 	height: 100%;
 	right: -2px;
@@ -406,7 +428,7 @@ NAVBAR
 				-5px 0 0 #0f0;
 	transition-delay: 0s, 0.5s, 1s, 1s;
 }
-.button button:focus::after {
+.button a:focus::after {
 	width: 60%;
 	height: 100%;
 	right: -2px;

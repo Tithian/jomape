@@ -92,7 +92,7 @@ function costeVuelo(n) {
 		if(regInt.test(n)) {
 			if(n<=0){
 				return "Solo queremos gente positiva. <br>&#128522;<br>"
-			} else {
+			} else{
 				return "No cabe tanta gente en el avión."
 			}
 		} else {

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Legui" content="Legui">
+	<script type="text/javascript" src="./funciones.js"></script>
+	<title>Exámen Repaso</title>
+</head>
+<body>
+	<div id="content">
+		<section>
+			<form name="ej1" id="f1">
+				<fieldset>
+					<legend>Números desbordados</legend>
+					Introduce un número para comprobar si es desbordado: <input type="number" name="n1" value="0" size="10"><br>
+					<button type="button" onclick="sum_cuad_dig(ej1.n1.value)">Verificar Número</button>
+					<div id="respuesta1"></div>
+				</fieldset>
+			</form>
+
+			<form name="ej2" id="f2">
+				<fieldset>
+					<legend>Fruteria</legend>
+					Introduce los kilos de Peras que desea: <input type="number" name="n1" value="0" size="10"><br>
+					Introduce los kilos de Manzanas que desea: <input type="number" name="n2" value="0" size="10"><br>
+					Introduce los kilos de Fresas que desea: <input type="number" name="n3" value="0" size="10"><br>
+					Introduce los kilos de Sandías que desea: <input type="number" name="n4" value="0" size="10"><br>
+					<button type="button" onclick="fruteria_calculo(ej2.n1.value, ej2.n2.value, ej2.n3.value, ej2.n4.value)">Mostrar factura</button>
+					<div id="respuesta2p"></div>
+					<div id="respuesta2m"></div>
+					<div id="respuesta2f"></div>
+					<div id="respuesta2s"></div>
+					<div id="respuesta2t"></div>
+				</fieldset>
+			</form>
+			
+			<form name="ej3" id="f3">
+				<fieldset>
+					<legend>Mi colección de discos</legend>
+					Grupo <input id="input" type="text" name="n1" value="" size="10"><button type="button" onclick="mostrar(ej3.n1.value)">?</button> <br>
+					Título del Album <textarea type="text" name="n2" cols="40" rows="5"></textarea><button type="button" onmouseenter="mostrar(ej3.n2.value)">?</button> <br>
+					<button type="button" onclick="crearnodo(ej3.n1.value, ej3.n2.value)">Enviar</button>
+					<button type="button" onclick="killnodo()">Cancelar</button>
+				</fieldset>
+			</form>
+		</section>
+		<footer>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="funciones.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div id="content">
+		<section>
+			<form name="f1">
+				<fieldset>
+					<h2>Números perfectos</h2>
+					Introduce un número para saber sus divisores: <input type="number" name="n1" value="0" size="10"><br>
+					<button type="button" onclick="sumaDivisores(f1.n1.value)">Mostrar divisores</button>
+					<div id="respuesta1"></div>
+				</fieldset>
+			</form>
+
+			<form name="f2">
+				<fieldset>
+					<h2>Viaje de estudios</h2>
+					Numero de alumnos que van a la excursión: <input type="number" name="n1" value="0" size="10"><br>
+					<button type="button" onclick="pago(f2.n1.value)">Mostrar cuanto costara el autobus</button>
+					<div id="respuesta2"></div>
+				</fieldset>
+			</form>
+
+			<form name="f3" id="id3">
+				<fieldset>
+					<h2>Mi colección de discos</h2>
+					Grupo <input id="input" type="text" name="n1" value="" size="10"><button type="button" onclick="mostrar(f3.n1.value)">?</button>
+					<button type="button" onclick="agregarGrupo(f3.n1.value)">+</button><br>
+					Grupos disponibles <select name="s0" id="grupos">
+						<option value="" selected="selected">- selecciona grupo -</option>
+						<option value="Guns N’Roses">Guns N’Roses</option>
+						<option value="Queens">Queens</option>
+						<option value="AC/DC">AC/DC</option>
+					</select><button type="button" onclick="mostrar(f3.s0.value)">?</button><br>
+					Título del Album <textarea type="text" name="n2" cols="40" rows="5"></textarea><button type="button" onclick="mostrar(f3.n2.value)">?</button> <br>
+					Borrar Número <input id="input" type="text" name="n3" value="" size="5"><br>
+					<button type="button" onclick="crearnodo(f3.n1.value, f3.n2.value,f3.s0.value)">Enviar</button>
+					<button type="reset">Cancelar</button>
+					<button type="button" onclick="deletenodo(f3.n3.value)">Borrar</button>
+				</fieldset>
+			</form>
+		</section>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funciones.js"></script>
+    <title>Examen Repaso21 Java Script</title>
+</head>
+
+<body> 
+    <!--<h2>1. Números abundantes.</h2>
+    <p>Crea una función llamada sumaDivisores que tendrá como entrada un número
+        entero n y que devolverá como salida la suma de todos sus divisores incluido el
+        propio número. Ejemplo: sumaDivisores(8) = 1 + 2 + 4 + 8= 15.</p>
+
+    <p>Un número es abundante (o excesivo) si la suma de sus divisores (incluido el
+        propio número) es mayor que el doble del número. Por ejemplo 12 es abundante
+        porque sumaDivisores(12)=28>2*12
+    </p>
+
+    <p>Crea una función llamada abundante que tendrá como entrada un número
+        entero n y que devolverá como salida true si el número es abundante y false en
+        caso contrario. Ejemplo: abundante(8) devuelve true.
+    </p>
+
+    <p>Crea un formulario que admita un número entero y que al pulsar el botón
+        muestre en pantalla TODOS los números abundantes desde el 2 hasta el número
+        introducido.
+    </p>-->
+
+    <div id="content">
+        <section>
+            <form>
+                <fieldset>
+                    <legend><h2>Números abundantes</h2></legend>
+                    Inserte un número entero para mostrar todos los números abundantes desde el 2 hasta el número introducido
+                        <input type="number" id="ej1a" size="10"><br>
+                    <button type="button" onclick="Ejercicio1(ej1a.value)">Mostrar divisores</button>
+                    <div id="respuesta1"></div>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+
+    <!--2. Viaje en avión (3 ptos)
+    El presidente de un equipo de fútbol está organizando un viaje para acudir a la 
+    final que su equipo jugará y necesita saber cuánto va a pagar por el servicio en 
+    función del número de aficionados que se inscriban. La capacidad máxima del 
+    avión son 150 pasajeros.
+
+    La forma de cobrar es la siguiente: Los 10 primeros pasajeros pagan 50€ por 
+    persona, los 40 siguientes pagan 75€ por persona, los 50 siguientes 100€ por 
+    persona y los 50 últimos pagan 150€ por persona.
+
+    Crea un formulario que, introduciendo el número de personas que van a viajar 
+    permita determinar el pago total a la compañía aérea. Dicho importe debe 
+    añadirse justo debajo del formulario como un nodo DOM.
+    -->
+     
+    <div id="formulario2">
+		<section>
+			<form name="ej2" id="f2">
+				<fieldset>
+					<legend><h2>Viaje en avión</h2></legend>
+                    <label>Introduce el número de personas que van a viajar:</label><input type="number" id="n2">
+					<button type="button" onclick="ejercicio2(ej2.n2.value)">Verificar coste</button>
+					<p id="respuesta2"></p>
+				</fieldset>
+			</form>
+        </section>
+    </div>
+    
+
+    <!--3. Colección de discos (4 ptos)
+    En este ejercicio hay que hacer un formulario para mantener nuestra colección 
+    de discos. La estructura es la siguiente:
+
+    El usuario puede introducir grupos de música al teclearlos en la primera caja de textos, 
+    o al seleccionarlos desde una lista que ya contiene las siguientes opciones : -Selecciona 
+    grupo-, Guns N’Roses, Queen y AC/DC. 
+
+    Al darle al botón enviar se comprueba si hay algo escrito en Grupo, en ese caso se 
+    escribe una línea nueva en la parte inferior de la página con el nombre del Grupo y el 
+    Título introducido. Si Grupo está vacío se comprueba que haya seleccionado algo en 
+    Grupos disponibles y se escribirá una nueva línea con esos datos. Si no hay nada en 
+    Grupo o Grupos disponibles mostrar un alert diciendo que hay que introducir algo.
+
+    En cualquier caso, debe haber algo en Título sino mostrar un alert diciendo que hay que 
+    introducir algo.
+
+    Añade un botón para poder borrar un elemento de la colección. El número del elemento 
+    a borrar se añade en un nuevo control. Un nodo se borrar así: padre.removeChild(hijo);-->
+    
+    
+	<div id="formulario3">
+		<section>
+			<form name="f3" id="id3">
+				<fieldset>
+					<legend><h2>Mi colección de discos</h2></legend>
+					Grupo <input id="input" type="text" name="n1" value="" size="10"><button type="button" onclick="mostrar(f3.n1.value)">?</button>
+					<button type="button" onclick="agregarGrupo(f3.n1.value)">+</button><br>
+					Grupos disponibles <select name="s0" id="grupos">
+						<option value="" selected="selected">- selecciona grupo -</option>
+						<option value="Guns N’Roses">Guns N’Roses</option>
+						<option value="Queens">Queens</option>
+						<option value="AC/DC">AC/DC</option>
+					</select><button type="button" onclick="mostrar(f3.s0.value)">?</button><br>
+					Título del Album <textarea type="text" name="n2" cols="40" rows="5"></textarea><button type="button" onclick="mostrar(f3.n2.value)">?</button> <br>
+					Borrar Número <input id="input" type="text" name="n3" value="" size="5"><br>
+					<button type="button" onclick="crearnodo(f3.n1.value, f3.n2.value,f3.s0.value)">Enviar</button>
+					<button type="reset">Cancelar</button>
+					<button type="button" onclick="deletenodo(f3.n3.value)">Borrar</button>
+				</fieldset>
+			</form>
+
+</body>
+
+</html>
