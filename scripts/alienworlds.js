@@ -1,7 +1,7 @@
 
 alien.style = "background:#00000000;margin:0;width:100vw;"
 const t = document.createElement("canvas");
-t.style = "position:absolute;z-index:-500;", alien.appendChild(t);
+t.style = "position:absolute;z-index:-500;max-width:100vw;", alien.appendChild(t);
 const e = (t = 1, e = 0) => e + (t - e) * Math.random(),
     i = (t, e = 0, i = 1) => t < e ? e : t > i ? i : t;
 let r = 1;
@@ -84,6 +84,34 @@ let f = 0,
             S.addColorStop(0, f.clamp().rgba()), S.addColorStop(1, f.subtract(new o(1, 1, 1, 0)).mutate(.4).clamp().rgba()), m = m.mutate(a() ** 2 * .3), C.lineTo(0, t.height), C.lineTo(t.width, t.height), C.fill(), C.beginPath()
         }
     }(f))
-});
+})  ;
 
 y()
+
+var resizeCanvas = function() {
+  cW = window.innerWidth;
+  cH = window.innerHeight;
+  c.width = cW * devicePixelRatio;
+  c.height = cH * devicePixelRatio;
+  C.scale(devicePixelRatio, devicePixelRatio);
+};
+
+(function init() {
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
+})();
+
+function handleInactiveUser() {
+  var inactive = setTimeout(function(){
+    fauxClick(cW/2, cH/2);
+  }, 2000);
+
+  function clearInactiveTimeout() {
+    clearTimeout(inactive);
+    document.removeEventListener("mousedown", clearInactiveTimeout);
+    document.removeEventListener("touchstart", clearInactiveTimeout);
+  }
+
+  document.addEventListener("mousedown", clearInactiveTimeout);
+  document.addEventListener("touchstart", clearInactiveTimeout);
+}
