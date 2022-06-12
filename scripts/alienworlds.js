@@ -1,7 +1,7 @@
 
-alien.style = "background:#00000000;margin:0;width:100vw;"
+lm.style = "background:#00000000;margin:0;width:100vw;"
 const t = document.createElement("canvas");
-t.style = "position:absolute;z-index:-500;max-width:100vw;", alien.appendChild(t);
+t.style = "position:absolute;z-index:-500;max-width:100vw;", lm.appendChild(t);
 const e = (t = 1, e = 0) => e + (t - e) * Math.random(),
     i = (t, e = 0, i = 1) => t < e ? e : t > i ? i : t;
 let r = 1;
@@ -60,8 +60,8 @@ let f = 0,
     m = 0,
     S = 0,
     C = t.getContext("2d"),
-    cW = alien.clientWidth,
-    cH = alien.clientHeight,
+    cW = lm.clientWidth,
+    cH = lm.clientHeight,
     y = (Math.sin, Math.cos, Math.tan, e => {
             requestAnimationFrame(y), e < S - 3 || (S = Math.max(S + 1e3 / 60, e), f = m++/60,function(e){t.width=cW,t.height=cH,r=l;const i=600+a(300),ese=C.fillStyle=C.createLinearGradient(0,0,0,i);ese.addColorStop(0,n.rgba()),ese.addColorStop(1,h.rgba()),C.fillRect(0,0,t.width,t.height),C.globalCompositeOperation="lighter";for(let r=4e3;r--;){const r=a(2,1),l=(new o).setHSLA(a(),a()**3,a()**2),ese=(a(t.width)+a(9)*e)%(t.width+20)-10,n=a(i);C.fillStyle=l.rgba(),C.fillRect(ese,n,r,r)}if(C.globalCompositeOperation="source-over",u){let e=r;for(let l=2;l--;){r=e,C.globalCompositeOperation=l?"source-over":"lighter";for(let e=u;e--;){const r=e?a()**2*5+9:a()**3*30+20,ese=(new o).setHSLA(a(),a(),a(.5,1)),n=a(t.width),h=a(i-300);if(l){let e=C.fillStyle=C.createRadialGradient(n,h,0,n,h,r);e.addColorStop(0,ese.rgba()),e.addColorStop(.8,ese.mutate(.3).rgba()),e.addColorStop(1,ese.mutate(.3).scale(1,0).rgba()),C.fillRect(0,0,t.width,t.height)}else{let e=C.fillStyle=C.createRadialGradient(n,h,0,n,h,400*r);e.addColorStop(0,ese.scale(.3,1).rgba()),e.addColorStop(.1,ese.scale(.1,1).rgba()),e.addColorStop(1,ese.scale(0,1).rgba()),C.fillRect(0,0,t.width,t.height)}}}C.globalCompositeOperation="source-over"}let w=a()>.5?-1:1;for(let e=p?100:20;e--;){const e=a(4,1),r=a(99,p?19:9),l=(new o).setHSLA(a(),a()**7,a(1,.5)),ese=t.width+1e3,n=i+1e3,h=!p||a()<.02?a(-99,99):(r+a(-10,10))*w,d=(a(ese)+f*h)%ese-500,g=(a(n)+f*r)%n-500,c=a(.5,3),b=d-c*h,u=g-c*r,m=(new o).setHSLA(a(),a()**9,a(.1,.5)),S=C.strokeStyle=C.createLinearGradient(d,g,b,u);S.addColorStop(0,m.rgba()),S.addColorStop(1,m.scale(1,0).rgba()),C.globalCompositeOperation="lighter",C.lineWidth=e,C.lineTo(d,g),C.lineTo(b,u),C.stroke(),C.beginPath(),C.globalCompositeOperation="source-over",C.fillStyle=l.rgba(),C.arc(d,g,e/
                 2, 0, 9), C.fill(), C.beginPath()

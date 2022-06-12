@@ -1,3 +1,8 @@
+// Expresiones regulares
+const reg_pos = /^[1-9]\d*$/     // Solo enteros positivos
+const reg_flo = /^(?=.+)(?:[1-9]\d*|0)?(?:\.\d+)?$/ // Solo float positivos
+const reg_cer_pos = /^[0-9]\d*$/     // Solo enteros positivos (o 0)
+
 function magic() {
 	document.getElementById("magic").style.display = "block";
 }
@@ -120,41 +125,34 @@ function bajaCalc() {
 
 }
 
+function calcular() {
+	let respuesta;
+	let dias = total_dias_cotizados.value;
+	let chk_dias = reg_pos.test(dias);
+	if(chk_dias == false) {
+		respuesta = "Ingrese un número positivo de días."
+	} else if(dias>2190) {
+		respuesta = "Los últimos 6 años comprenden solo 2190 días."
+	} else if
+}
+
 function desempleoCalc() {
 	// Paso 1
-	var dias = document.getElementById("total_dias_cotizados").value;
-	var regex1 = /^[1-9]\d*$/     // Solo enteros positivos
-	var chk_dias = dias.match(regex1);
+
 	var dias_paro;
 	// Paso 2
-	var cant_cot = document.getElementById("cantidad_cotizada").value;
-	var regex2 = /^(?=.+)(?:[1-9]\d*|0)?(?:\.\d+)?$/ // Solo float positivos
-	var chk_cant = cant_cot.match(regex2);
+	var cant_cot = cantidad_cotizada.value;
+	var chk_cant = cant_cot.match(reg_flo);
 	var brdiaria, set, cin;
-	// Esto pa los máximos según hijos
-	var hijos = document.getElementById("hijos").value;
-	var regex3 = /^[0-9]\d*$/     // Solo enteros positivos (o 0)
-	var chk_hijos = hijos.match(regex3);
+	// Esto para los máximos según hijos
+	var hijos = hijos.value;
+	var chk_hijos = hijos.match(reg_cer_pos);
 	var max = 1182.16;
 	var min = 540.41;
 	// Para el descuento
 	var desc = Math.round(((cant_cot/6)*0.047)*100)/100;
 
-
-	if (chk_hijos) {
-		switch (true) {
-			case(hijos<2 && hijos>0):
-				min = 722.80;
-				max = 1351.04;
-			break;
-			case(hijos>1):
-				min = 722.80;
-				max = 1519.92;
-			break;
-		}
-	}
-
-	if (chk_dias && dias<=100000) {
+	if (chk_dias && dias<=2190) {
 		switch (true) {
 			case(dias>359 && dias<540):
 				dias_paro = 120;
@@ -200,6 +198,21 @@ function desempleoCalc() {
 		fill("Introducza una cantidad de días cotizados correcta.", false, "tooldesempleo");
 
 	}
+
+	if (chk_hijos) {
+		switch (true) {
+			case(hijos<2 && hijos>0):
+				min = 722.80;
+				max = 1351.04;
+			break;
+			case(hijos>1):
+				min = 722.80;
+				max = 1519.92;
+			break;
+		}
+	}
+
+
 	if (chk_cant && dias_paro>0) {
 		brdiaria = Math.round((cant_cot/180)*100)/100;
 		console.log("BR:"+brdiaria);

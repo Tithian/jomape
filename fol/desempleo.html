@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora de Desempleo</title>
+	<link rel="stylesheet" href="./fol.css">
+	<script src="index.js"></script>
+</head>
+<body>
+
+<section class="header" style="width:100%">
+	<div class="container">
+		<div class="row">
+			<div class="logoM">
+				<a href="http://www.sepe.es/HomeSepe" title="logo-ministerio de empleo" class="disabled"><h1
+						class="oculto">Logo Ministerio Home Sede</h1> <img style=""
+																		   src="https://sede.sepe.gob.es/es/portaltrabaja/resources/img/LOGO_WEB_MARCA_SEPE.jpg"
+																		   alt="Ministerio de Empleo"> </a>
+			</div>
+			<div class="logoS">
+				<a href="/portalSede" title="logo-ministerio de empleo" class="disabled"><h1 class="oculto">Logo
+					Ministerio Home Sede</h1> <img style=""
+												   src="https://sede.sepe.gob.es/es/portaltrabaja/resources/img/sede-electronica-gris.png"
+												   alt="Logo Ministerio SEPE"> </a>
+			</div>
+		</div>
+		<div class="row blue">
+			<div class="nav" id="inicio">
+				<a href="../index.html">inicio</a>
+			</div>
+			<div class="nav">
+				<a>calculadora de desempleo</a>
+			</div>
+			<div class="nav">
+				<a>Calculadora de Prestación por Baja Laboral</a>
+			</div>
+			<div class="header__fecha">
+				<p class="texto">Fecha y hora oficial</p>
+				<p class="dato" id="hora">12/6/2022 14:16:23</p>
+			</div>
+			<script>
+					    var fecha_js = new Date();
+					    var dia = fecha_js.getDate();
+					    var mes = fecha_js.getMonth()+1;
+					    var anio = fecha_js.getFullYear();
+					    var segundos = fecha_js.getSeconds();
+					    var hora = fecha_js.getHours();
+					    var minutos = fecha_js.getMinutes();
+					    function mostrar() {
+					        segundos++;
+					        if (segundos == 60) {
+					            segundos = 0;
+					            minutos++;
+					            if (minutos == 60) {
+					                minutos = 0;
+					                hora++;
+					                if (hora == 24) {
+					                    hora = 0;
+					                }
+					            }
+					        }
+					        if ((hora >= 0) && (hora <= 9)) {
+					            if ((String(hora)).length == 1) {
+					                hora = "0" + hora;
+					            }
+					            if (hora == 0) hora = "00";
+					        }
+					        if ((minutos >= 0) && (minutos <= 9)) {
+					            if ((String(minutos)).length == 1) {
+					                minutos = "0" + minutos;
+					            }
+					        }
+					        if ((segundos >= 0) && (segundos <= 9)) {
+					            if ((String(segundos)).length == 1) {
+					                segundos = "0" + segundos;
+					            }
+					        }
+					        document.getElementById("hora").innerHTML = dia + "/" + mes + "/" + anio + " " + hora + ":" + minutos + ":" + segundos;
+					        window.setTimeout("mostrar()", 1000);
+					    }
+					    window.setTimeout('mostrar()', 1000);
+
+
+
+			</script>
+		</div>
+	</div>
+	</div>
+</section>
+
+<form class="fol" id="desempleo">
+	<h1>Calculadora de Desempleo</h1>
+	<div class="input-container">
+		<input id="total_dias_cotizados" class="input" type="number" placeholder=" "/>
+		<div class="cut cut-extralong"></div>
+		<label for="total_dias_cotizados" class="placeholder">Dias cotizados en los últimos 6 años.</label>
+	</div>
+
+	<div class="input-container">
+		<input id="cantidad_cotizada" class="input" type="number" placeholder=" "/>
+		<div class="cut cut-extralong"></div>
+		<label for="cantidad_cotizada" class="placeholder">Cantidad en € cotizada en los últimos 180 días.</label>
+	</div>
+
+	<div class="input-container">
+		<input id="hijos" class="input" type="number" placeholder=" "/>
+		<div class="cut cut-extralong"></div>
+		<label for="hijos" class="placeholder">Número de Hij@s</label>
+	</div>
+
+	<div class="button" onclick="desempleoCalc()">
+		<a><span>
+			Calcular Prestación
+		</span></a> <span id="tooldesempleo"></span>
+	</div>
+</form>
+</body>
+</html>

@@ -24,6 +24,7 @@ body {
 }
 
 .title {
+	transition: 1.5s;
 	width: 100vw;
 	text-align: center;
 	font-size: 5em;
@@ -46,11 +47,11 @@ body {
 #name:hover {
 	transition: 1.5s;
 	color: var(--black);
-	text-shadow: 0 0 2px var(--purple),
-			0 0 4px var(--blue),
-			0 0 8px var(--cyan),
-			0 0 16px var(--orange),
-			0 0 32px var(--green);
+	text-shadow: 0 0 4px var(--purple),
+			0 0 8px var(--blue),
+			0 0 16px var(--cyan),
+			0 0 32px var(--orange),
+			0 0 64px var(--green);
 }
 
 section {
@@ -64,13 +65,15 @@ height: 100vh;
   padding: 0px;
 }
 
-.container-image {
-	margin: auto;
+#fol {
+    background: url(./src/fol.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-#alien {
-	width: 100vw;
-	height: 100vh;
+.container-image {
+	margin: auto;
 }
 
 /* Gray Scale */
@@ -141,95 +144,6 @@ height: 100vh;
 #bongo-cat .terminal-code,
 #bongo-cat .headphone .speaker path:first-child {
   stroke: var(--cyan);
-}
-
-/*
-NAVBAR
-*/
-
-.navbar {
-    top: 0;
-    left: 0;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    background-color: #333;
-    width: 100vw;
-    font-size: 1.5em;
-}
-
-
-.navmenu>a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 1.5vh 1vw;
-  text-decoration: none;
-}
-
-.navmenu a:hover {
-  background-color: #111;
-}
-
-#inicio {
-  background-color: #04AA6D;
-  position: absolute;
-  left: 0;
-}
-
-.navbar>* {
-}
-
-/*
-
-*/
-.dropdown {
-    padding-right: 2%;
-}
-.dropdown .dropdown-menu {
-  position: fixed;
-  transition: all 0.5s;
-  overflow: hidden;
-  transform-origin: top center;
-  transform: scale(1, 0);
-    display: flex;
-    flex-direction: column;
-  background: #333;
-}
-.dropdown:hover>.dropdown-menu {
-  transform: scale(1);
-}
-.dropdown:focus-within .dropdown-menu {
-  transform: scale(1);
-}
-
-.dropdown a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 1.5vh 1vw;
-  text-decoration: none;
-}
-
-.dropdown a>img {
-    transition: 0.5s;
-    margin-bottom: -10px;
-    position: relative;
-    top: -7px;
-    left: 4px;
-}
-
-.dropdown:hover img {
-    transition: 0.5s;
-  transform: rotate(-180deg);
-}
-.dropdown a:focus img {
-    transition: 0.5s;
-  transform: rotate(-180deg);
 }
 
 /* Toggle */
@@ -333,7 +247,6 @@ NAVBAR
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	width: 100%;
 }
 .button a {
 	position: relative;
@@ -342,6 +255,7 @@ NAVBAR
 	border: 2px solid #0f0;
 	margin: 20px 40px;
 	text-transform: uppercase;
+	text-align: center;
 	font-weight: 600;
 	text-decoration: none;
 	letter-spacing: 2px;
@@ -350,7 +264,6 @@ NAVBAR
 	transition: 0.5s;
 	transition-delay: 0s;
 	background: transparent;
-	width: 100%;
 }
 .button a:hover {
 	transition-delay: 1.5s;
@@ -435,4 +348,95 @@ NAVBAR
 	box-shadow: -5px 0 0 #0f0,
 				-5px 0 0 #0f0;
 	transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+/* FORMS */
+form {
+	color: var(--cyan);
+	display: block;
+	border: 10px solid var(--purple);
+	border-radius: 20px;
+	height: auto;
+	margin: 2%;
+	padding: 1%;
+	width: auto;
+
+}
+
+form h1 {
+  color: var(--green);
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 1%;
+  text-align: center;
+  padding-bottom: 10%;
+  letter-spacing: 2px;
+  overflow-wrap: anywhere;
+}
+
+form .button {
+
+}
+
+.input {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 1.5em;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: var(--cyan);
+}
+
+.input:focus ~ .placeholder {
+  color: var(--green);
+}
+
+
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.cut {
+  background-color: var(--bg);
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 90%;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: auto;
 }
