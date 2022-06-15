@@ -1,4 +1,4 @@
-let sections = ["inicio","fol","fuh","iso","lm","plar","sgbd"];
+let sections = ["inicio","fol","fuh","iso","lm","plar","gbd"];
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	tgbutton.addEventListener('click', function() {

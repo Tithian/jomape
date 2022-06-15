@@ -26,13 +26,21 @@ function horaMeridian(hora24) {
 
 
 function trolearAPaco(num) {
+const meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"]
+const un_dia = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
+respuesta = ""
 fecha_ini = "2022-01-01"
 fecha_fin = "2022-"+num+"-01"
-const un_dia = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
 
 a = Date.parse(fecha_ini);
 b = Date.parse(fecha_fin);
 
-dias = (b-a)/un_dia
-return Math.floor(dias)
+mes = meses[(num%30)-1]
+dias = Math.floor((b-a)/un_dia)
+
+respuesta = "Sería el mes "+mes+" y han pasado "+dias+" dias."
+
+return respuesta
 }

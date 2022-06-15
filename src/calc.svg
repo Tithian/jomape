@@ -6,12 +6,9 @@
    width="1988.7765"
    height="2628.9907"
    viewBox="0 0 1988.7765 2628.9907"
-   sodipodi:docname="vecteezy_calculator-vector-icon-with-long-shadow_.svg"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"><metadata
@@ -46,7 +43,7 @@
      id="g10"
      inkscape:groupmode="layer"
      inkscape:label="ink_ext_XXXXXX"
-     transform="matrix(1.3333333,0,0,-1.3333333,-383.79641,2642.4399)"><path
+     transform="scale(1 1), matrix(1.3333333,0,0,-1.3333333,-383.79641,2642.4399)"><path
        d="M 1778.5229,117.61771 C 1778.4801,58.205833 1730.3047,10.044382 1670.8645,10.086882 L 395.39798,10.73868 C 335.97052,10.76703 287.82324,58.985142 287.84732,118.39702 l 0.90967,1755.88798 c 0.0198,59.4118 48.23797,107.5593 107.64984,107.545 l 1275.47787,-0.6659 c 59.4261,-0.028 107.5733,-48.2323 107.545,-107.6443 l -0.9068,-1755.90209"
        style="fill:#3e4c6b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.141693"
        id="path18" /><path
