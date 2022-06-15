@@ -9,18 +9,35 @@
   --black: #000;
 }
 * {
-	margin: 0;
 	box-sizing: border-box;
 	font-family: Arial, sans-serif;
 	font-size: 1em;
 }
 
-body {
+html, body {
 	display: flex;
 	flex-direction: column;
+	height: 100vh;
 	width: 100vw;
 	overflow-x:hidden;
 	background: var(--bg);
+	z-index: -100;
+}
+
+#c {
+	position: relative;
+	top: -100vh;
+}
+
+.masterbox {
+display: flex;
+	  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.masterbox.lm {
+	height: 100vh;
 }
 
 .title {
@@ -38,10 +55,44 @@ body {
 			0 0 80px var(--cyan),
 			0 0 160px var(--cyan);
 }
+.subtitle {
+	transition: 1.5s;
+	width: 100vw;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 900;
+	letter-spacing: 2px;
+	font-style: italic;
+	color: var(--purple);
+	text-shadow: 0 0 10px var(--orange),
+			0 0 20px var(--orange),
+			0 0 40px var(--orange);
+}
+.subtitle:hover {
+	cursor: context-menu;
+}
+
+section div h2 {
+	transition: 1.5s;
+	width: 100vw;
+	text-align: center;
+	font-size: 3em;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--purple);
+	text-shadow: 0 0 10px var(--green),
+			0 0 20px var(--green),
+			0 0 40px var(--green),
+			0 0 80px var(--green),
+			0 0 160px var(--green);
+}
 
 #name {
 	color: var(--cyan);
 	text-shadow: none;
+	height: 0vh;
+	z-index: 3;
 }
 
 #name:hover {
@@ -57,12 +108,15 @@ body {
 section {
 height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   margin: 0px;
   padding: 0px;
+}
+
+section canvas {
+	height: 100vh;
+	width: 100vw;
+	margin: 0px;
+	padding: 0px;
 }
 
 #fol {
@@ -78,14 +132,16 @@ height: 100vh;
 
 /* Gray Scale */
 .container-image img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.container-image:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
+.container-image img:hover {
+	-webkit-filter: invert(1);
+	filter: invert(1);
+}
+
+#calc {
+	width: 25%;
 }
 
 /* BONGO CAT */
@@ -96,8 +152,9 @@ height: 100vh;
   display: flex;
   place-content: center;
   align-items: flex-end;
-  position: relative;
-  z-index: -100;
+  z-index: 100;
+  align-content: stretch;
+  justify-content: center;
 }
 
 .bongo_cat_container svg {
@@ -373,6 +430,8 @@ form h1 {
   letter-spacing: 2px;
   overflow-wrap: anywhere;
 }
+
+
 
 form .button {
 

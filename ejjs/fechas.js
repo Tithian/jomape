@@ -2,6 +2,8 @@ let fecha = new Date()
 meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"]
 dias = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"]
 
+const un_dia = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
 year = fecha.getFullYear()
 mes = meses[fecha.getMonth()]
 diaSemana = dias[fecha.getDay()]
@@ -21,3 +23,16 @@ function horaMeridian(hora24) {
 	}
 }
 
+
+
+function trolearAPaco(num) {
+fecha_ini = "2022-01-01"
+fecha_fin = "2022-"+num+"-01"
+const un_dia = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
+a = Date.parse(fecha_ini);
+b = Date.parse(fecha_fin);
+
+dias = (b-a)/un_dia
+return Math.floor(dias)
+}

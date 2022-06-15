@@ -9,11 +9,17 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	overflow-x:hidden;
 }
 
 h1 {
 	color: #626262;
+}
+
+h2 {
+	color: #313131;
+}
+h3 {
+	color: #151515;
 }
 
 /* FORMS */
@@ -73,14 +79,53 @@ form h1 {
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: var(--cyan);
-}
-
-.input:focus ~ .placeholder {
-  color: var(--green);
+  color: black;
 }
 
 
+.input:focus ~ .placeholder, .input:focus ~ .cut {
+  transition: 0.5s;
+  color: white;
+  background: #29416c;
+}
+
+form ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+	overflow: auto;
+}
+form ul li {
+	display: flex;
+}
+
+
+
+form ul li label{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: #DDD;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 1.5em;
+  height: 100%;
+  outline: 0;
+  padding: 8px 20px;
+  margin: 1%;
+  -webkit-transition: all 0.25s linear;
+}
+
+form ul li input[type=radio]{
+  visibility: hidden;
+}
+
+input[type=radio]:checked ~ label{
+  color: #FFF;
+  background: #29416c;
+}
 
 .placeholder {
   font-family: sans-serif;
@@ -94,6 +139,7 @@ form h1 {
 }
 
 .cut {
+	background: #eff4f9;
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -151,22 +197,15 @@ margin-top: 5%;
 	transition: 0.5s;
 	    padding: 0.75rem 1.5rem;
 	border-right: 2px solid white;
-}
-.blue .nav a {
-	transition: 0.5s;
 	text-transform: capitalize;
 	text-decoration: none;
 	color: white;
 }
 
-.blue .nav:hover {
-	transition: background 0.5s;
+.blue .nav:hover, .blue .nav:focus {
+	transition: 0.5s;
 	background: white;
 	cursor: pointer;
-}
-
-.blue .nav:hover a {
-	transition: 0.5s;
 	color: black;
 }
 
@@ -183,8 +222,8 @@ margin-top: 5%;
 }
 
 .header__fecha {
-	position: absolute;
-	right: 3%;
+    position: absolute;
+    right: 3%;
 }
 
 .header__fecha p {
@@ -193,4 +232,137 @@ margin-top: 5%;
 
 .oculto {
 	display: none;
+}
+.disabled:focus{
+	outline: none;
+}
+.disabled:focus img{
+	outline: 2px solid black;
+	outline-radius: 5px;
+}
+
+
+/* BUTTON */
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.button a {
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	margin: 20px 40px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: #fff;
+	transition: 0.5s;
+	transition-delay: 0s;
+	background: #29416c;
+	border: 2px solid transparent;
+}
+.button a:hover, .button a:focus {
+	color: #000;
+	background: white;
+	cursor: pointer;
+	border: 2px solid #29416c;
+}
+
+.button a span {
+	position: relative;
+	z-index: 100;
+}
+
+.datos {
+	display:flex;
+	justify-content: space-around;
+	margin-bottom: 2%;
+}
+
+.container-data {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+}
+.trabajador, .empresa {
+	width: 45%;
+}
+.datos.periodo {
+		flex-wrap: nowrap;
+}
+.periodo .container-data{
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+.periodo .input-container {
+	margin: 2%;
+}
+
+.devengosydeducciones {
+	justify-content: flex-start;
+}
+
+.devengosydeducciones ol {
+	list-style-type: upper-roman;
+	margin-top: 2%;
+}
+
+.devengosydeducciones ol li ol{
+	list-style-type: numbers;
+}
+
+.complementos {
+	align-items: center;
+}
+
+#compsal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.button.circle {
+	display: inline-block;
+}
+
+.button.circle a{
+	padding: 0;
+	border-radius: 100%;
+	width: 2vw;
+	height: 2vw;
+}
+
+.button.circle .mas{
+	background-image: url("../src/plus_white.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: 0.5s;
+}
+
+.button.circle .mas:hover{
+	background-image: url("../src/plus.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: 0.5s;
+}
+
+.button.circle .menos{
+	background-image: url("../src/minus_white.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: 0.5s;
+}
+
+.button.circle .menos:hover{
+	background-image: url("../src/minus.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: 0.5s;
 }

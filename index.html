@@ -14,11 +14,10 @@
 </button>
 <div class="rightbar" id="right_bar">
 </div>
-<!-- partial:index.partial.html -->
-<div class="text-container">
-<h1 class="title" id="name">Jose Antonio Macías Pérez</h1>
-</div>
-<section class="bongo_cat_container">
+	<h1 class="title" id="name">Jose Antonio Macías Pérez</h1>
+
+<section class="text-container">
+	<div class="bongo_cat_container">
 	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 783.55 354.91">
 		<g id="bongo-cat">
 			<g class="head">
@@ -230,32 +229,57 @@
 			</g>
 		</g>
 	</svg>
+</div>
 </section>
-<!-- partial -->
-<section class="s2" id="lm">
-	<div class="title">lenguaje de marcas</div>
-	<div class="container-image">
-		<a href="./html/index.html"> <img src="./src/html.png"> </a>
-	</div>
-	<div class="container-image">
-		<a href="./css/index.html"> <img src="./src/css.png"> </a>
-	</div>
-	<div class="container-image">
-		<a href="./js/index.html"> <img src="./src/js.png"> </a>
-	</div>
 
+
+
+<section id="fuh">
+	<h1 class="title">Fundamentos del Hardware</h1>
+	<div class="masterbox">
+		<div class="container-image">
+			<h2>Calculadoras</h2>
+			<a href="./js/index.html"><img id="calc" src="./src/calc.svg"></a>
+		</div>
+	</div>
 </section>
 
 <section id="fol">
-<h1 class="title">Formaci&oacute;n y Orientaci&oacute;n Laboral</h1>
-<a href="./fol/desempleo.html">Calculadora de desempleo</a>
+	<h1 class="title">Formaci&oacute;n y Orientaci&oacute;n Laboral</h1>
+	<div class="masterbox">
+		<div class="container-image">
+			<h2>Calculadoras</h2>
+			<a href="./js/index.html"><img id="calc" src="./src/calc.svg"></a>
+		</div>
+	</div>
+</section>
+
+<section class="s2" id="lm">
+	<div class="masterbox lm">
+		<h1 class="title">lenguaje de marcas</h1>
+		<p class="subtitle">(Haga click para cambiar el color de fondo)</p>
+		<div class="container-image">
+			<a href="./html/index.html"> <img src="./src/html.png"> </a>
+		</div>
+		<div class="container-image">
+			<a href="./css/index.html"> <img src="./src/css.png"> </a>
+		</div>
+		<div class="container-image">
+			<a href="./js/index.html"> <img src="./src/js.png"> </a>
+		</div>
+
+	</div>
+	<canvas id="c" style="z-index:-100"></canvas>
+
 </section>
 
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
 <script src='DrawSVGPlugin3.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js'></script>
 <script src="./script.js"></script>
-<script src="./scripts/alienworlds.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js'></script>
+<script src="./scripts/colorpicking/script.js"></script>
+
 
 </body>
 </html>

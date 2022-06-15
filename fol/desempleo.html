@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Calculadora de Desempleo</title>
 	<link rel="stylesheet" href="./fol.css">
-	<script src="index.js"></script>
+	<script src="prestaciones.js"></script>
 </head>
 <body>
 
@@ -18,26 +18,21 @@
 																		   alt="Ministerio de Empleo"> </a>
 			</div>
 			<div class="logoS">
-				<a href="/portalSede" title="logo-ministerio de empleo" class="disabled"><h1 class="oculto">Logo
-					Ministerio Home Sede</h1> <img style=""
-												   src="https://sede.sepe.gob.es/es/portaltrabaja/resources/img/sede-electronica-gris.png"
-												   alt="Logo Ministerio SEPE"> </a>
+				<a href="https://sede.sepe.gob.es/portalSede/es/" title="logo-ministerio de empleo"><h1 class="oculto">
+					Logo Ministerio Home Sede</h1> <img style=""
+														src="https://sede.sepe.gob.es/es/portaltrabaja/resources/img/sede-electronica-gris.png"
+														alt="Logo Ministerio SEPE"> </a>
 			</div>
 		</div>
 		<div class="row blue">
-			<div class="nav" id="inicio">
-				<a href="../index.html">inicio</a>
-			</div>
-			<div class="nav">
-				<a>calculadora de desempleo</a>
-			</div>
-			<div class="nav">
-				<a>Calculadora de Prestación por Baja Laboral</a>
-			</div>
-			<div class="header__fecha">
+			<a class="nav" id="inicio" href="../index.html"> inicio </a> <a class="nav" href="#"
+																			onclick="inv();disp(desempleo)">desempleo </a>
+			<a class="nav" href="#" onclick="inv();disp(baja)">Baja Laboral </a> <a class="nav" href="#"
+																					onclick="inv();disp(nomina)">nominas </a>
+			<a class="header__fecha">
 				<p class="texto">Fecha y hora oficial</p>
 				<p class="dato" id="hora">12/6/2022 14:16:23</p>
-			</div>
+			</a>
 			<script>
 					    var fecha_js = new Date();
 					    var dia = fecha_js.getDate();
@@ -82,6 +77,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			</script>
 		</div>
 	</div>
@@ -108,11 +123,177 @@
 		<label for="hijos" class="placeholder">Número de Hij@s</label>
 	</div>
 
-	<div class="button" onclick="desempleoCalc()">
-		<a><span>
+	<div class="button" onclick="calcularDesempleo()">
+		<a href="#r1"><span>
 			Calcular Prestación
-		</span></a> <span id="tooldesempleo"></span>
+		</span></a>
+	</div>
+	<div id="r1"></div>
+</form>
+
+<form class="fol" id="baja" style="display:none">
+	<h1>Calculadora de Prestación por Baja Laboral</h1>
+	<h2>Elija el tipo de baja:</h2>
+
+	<ul>
+		<li>
+			<input id="ecanl" class="radio" type="radio" name="bc" value="brcc" checked="checked"> <label for="ecanl"
+																										  class="radiolabel">Enfermedad
+			Común o Accidente No Laboral </label>
+		</li>
+		<li>
+			<input id="atep" class="radio" type="radio" name="bc" value="brcp"> <label for="atep" class="radiolabel">
+			Accidente de Trabajo o Enfermedad Profesional </label>
+		</li>
+	</ul>
+
+	<div class="input-container">
+		<input id="inicio_baja" class="input" type="date" placeholder=" "/>
+		<div class="cut"></div>
+		<label for="base" class="placeholder">Empieza: </label>
+	</div>
+
+	<div class="input-container">
+		<input id="fin_baja" class="input" type="date" placeholder=" "/>
+		<div class="cut"></div>
+		<label for="base" class="placeholder">Termina: </label>
+	</div>
+
+	<div class="input-container">
+		<input id="base" class="input" type="number" placeholder=" "/>
+		<div class="cut cut-extralong"></div>
+		<label for="base" class="placeholder">Salario Base Mensual</label>
+	</div>
+
+	<div class="input-container" id="">
+		<input id="num_pagas" class="input" type="number" value="2" placeholder=" "/>
+		<div class="cut cut-extralong"></div>
+		<label for="num_pagas" class="placeholder">Número de Pagas Extra Anuales</label>
+	</div>
+
+
+	<div class="input-container" id="magic">
+		<input id="media_horas_extra" class="input" type="number" placeholder=" "/>
+		<div class="cut cut-extralong"></div>
+		<label for="media_horas_extra" class="placeholder">Media de Horas Extra del Año Previo</label>
+	</div>
+
+
+	<div class="button" onclick="calcularBaja()">
+		<a href="#r2"><span>
+			Calcular Prestación
+		</span></a>
+	</div>
+	<div id="r2"></div>
+</form>
+
+<form class="fol" id="nomina" style="display:none">
+	<h1>Calculadora de Nóminas</h1>
+	<h2>Datos de la Empresa y el Trabajador</h2>
+	<div class="datos">
+		<div class="container-data empresa">
+			<div class="input-container">
+				<input id="empresa" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="empresa" class="placeholder">Empresa:</label>
+			</div>
+			<div class="input-container">
+				<input id="domicilio" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="domicilio" class="placeholder">Domicilio:</label>
+			</div>
+			<div class="input-container" style="width:30%">
+				<input id="cif" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="cif" class="placeholder">CIF:</label>
+			</div>
+			<div class="input-container" style="width:60%">
+				<input id="cccss" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="cccss" class="placeholder">CCC Seguridad Social:</label>
+			</div>
+		</div>
+		<div class="container-data trabajador">
+			<div class="input-container">
+				<input id="trabajador" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="trabajador" class="placeholder">Trabajador:</label>
+			</div>
+			<div class="input-container" style="width:30%">
+				<input id="nif" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="nif" class="placeholder">NIF:</label>
+			</div>
+			<div class="input-container" style="width:60%">
+				<input id="nafilss" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="nafilss" class="placeholder">Nº Afiliación Seguridad Social:</label>
+			</div>
+			<div class="input-container" style="width:40%">
+				<input id="cp" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="cp" class="placeholder">Categoría Profesional:</label>
+			</div>
+			<div class="input-container" style="width:25%">
+				<input id="gc" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="gc" class="placeholder">Grupo de cotización:</label>
+			</div>
+			<div class="input-container" style="width:25%">
+				<input id="nlm" class="input" type="text" placeholder=" "/>
+				<div class="cut"></div>
+				<label for="nlm" class="placeholder">Nº Libro Matrícula:</label>
+			</div>
+		</div>
+	</div>
+	<h2>Periodo de liquidación:</h2>
+	<div class="datos periodo">
+		<div class="input-container">
+			<input id="del" class="input" type="date" placeholder=" "/>
+			<div class="cut"></div>
+			<label for="del" class="placeholder">Del:</label>
+		</div>
+		<div class="input-container">
+			<input id="al" class="input" type="date" placeholder=" "/>
+			<div class="cut"></div>
+			<label for="al" class="placeholder">Al:</label>
+		</div>
+		<div class="input-container">
+			<input id="dias" class="input" type="number" placeholder=" "/>
+			<div class="cut"></div>
+			<label for="dias" class="placeholder">Nº Días:</label>
+		</div>
+	</div>
+	<div class="datos devengosydeducciones">
+		<ol>
+			<li>
+				<h2>Devengos</h2>
+				<ol>
+					<li>
+						<h3>Percepciones salariales</h3>
+						<div class="input-container">
+							<input id="sbase" class="input" type="number" placeholder=" "/>
+							<div class="cut"></div>
+							<label for="sbase" class="placeholder">Salario base</label>
+						</div>
+						<h4>Complementos salariales</h4>
+						<div class="button circle" onclick="addCom()">
+							<a class="mas"></a>
+						</div>
+						<div class="button circle" onclick="remCom()">
+							<a class="menos"></a>
+						</div>
+						<div id="compsal">
+
+						</div>
+
+					</li>
+				</ol>
+			</li>
+
+		</ol>
 	</div>
 </form>
+
 </body>
 </html>
