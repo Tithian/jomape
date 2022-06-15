@@ -32,6 +32,7 @@ html, body {
 #fuh {
 	background-image: url("./src/cpubg.svg");
 	background-size: cover;
+	background-position: center center;
 }
 
 .container-image a {
