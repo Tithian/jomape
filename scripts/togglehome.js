@@ -1,13 +1,13 @@
 window.addEventListener("load", function start() {
     let togglehome = document.createElement("a")
-    togglehome.setAttribute("href", "/index.html")
+    togglehome.setAttribute("href", "/jomape/index.html")
     togglehome.style.position = "fixed"
     togglehome.style.top = "10%"
     togglehome.style.right = "5%"
     togglehome.style.width = "5vh"
     togglehome.style.height = "5vh";
 	togglehome.style.backgroundColor = "#cc00cc";
-	togglehome.style.backgroundImage = "url('/src/home.svg')"
+	togglehome.style.backgroundImage = "url('/jomape/src/home.svg')"
 	togglehome.style.backgroundSize = "cover"
 	togglehome.style.backgroundPosition = "center center"
 	togglehome.style.border = "0px solid transparent"
