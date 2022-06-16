@@ -24,7 +24,7 @@ window.addEventListener("load", function start() {
 
     togglehome.onmouseover = function() {
 		togglehome.style.backgroundColor = "#0f0";
-		togglehome.style.backgroundImage = "url('/src/homeblack.svg')";
+		togglehome.style.backgroundImage = "url('/jomapesrc/homeblack.svg')";
 		togglehome.style.boxShadow = "0 0 10px #0f0";
 		togglehome.style.boxShadow += ", 0 0 20px #0f0";
 		togglehome.style.boxShadow += ", 0 0 40px #0f0";
