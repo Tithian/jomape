@@ -23,13 +23,13 @@ window.addEventListener("load", function start() {
     togglehome.style.boxShadow = "0 0 0 #cc00cc";
     document.body.appendChild(togglehome);
 
-    toggleh.addEventListener("mouseenter", change());
-    toggleh.addEventListener("focusin", change());
-    toggleh.addEventListener("mouseleave", back());
-    toggleh.addEventListener("focusout", back());
-});
+    toggleh.addEventListener("mouseenter", change);
+    toggleh.addEventListener("focusin", change);
+    toggleh.addEventListener("mouseleave", back);
+    toggleh.addEventListener("focusout", back);
 
-function change() {
+
+    function change() {
 		toggleh.style.backgroundColor = "#0f0";
 		toggleh.style.backgroundImage = "url('/jomape/src/homeblack.svg')";
 		toggleh.style.boxShadow = "0 0 10px #0f0";
@@ -39,8 +39,10 @@ function change() {
 		toggleh.style.boxShadow += ", 0 0 160px #0f0";
     };
 
-function back() {
+	function back() {
         togglehome.style.backgroundColor = "#cc00cc";
         togglehome.style.backgroundImage = "url('/jomape/src/home.svg')";
         togglehome.style.boxShadow = "";
     };
+});
+
