@@ -34,7 +34,7 @@ window.addEventListener("load", function start() {
 
     togglehome.onmouseleave = function() {
         togglehome.style.backgroundColor = "#cc00cc";
-        togglehome.style.backgroundImage = "url('/src/home.svg')";
+        togglehome.style.backgroundImage = "url('/jomape/src/home.svg')";
         togglehome.style.boxShadow = "";
     };
 
