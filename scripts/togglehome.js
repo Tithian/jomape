@@ -24,7 +24,7 @@ window.addEventListener("load", function start() {
     document.body.appendChild(togglehome);
 
     toggleh.addEventListener("mouseenter", change());
-    toggleh.addEventListener("focus", change());
+    toggleh.addEventListener("focusin", change());
     toggleh.addEventListener("mouseleave", back());
     toggleh.addEventListener("focusout", back());
 });
