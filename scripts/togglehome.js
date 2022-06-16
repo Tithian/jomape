@@ -23,7 +23,7 @@ window.addEventListener("load", function start() {
     togglehome.style.boxShadow = "0 0 0 #cc00cc";
     document.body.appendChild(togglehome);
 
-	togglehome.mouseenter = function() {
+	togglehome.onmouseenter = function() {
 		togglehome.style.backgroundColor = "#0f0";
 		togglehome.style.backgroundImage = "url('/jomape/src/homeblack.svg')";
 		togglehome.style.boxShadow = "0 0 10px #0f0";
@@ -33,7 +33,7 @@ window.addEventListener("load", function start() {
 		togglehome.style.boxShadow += ", 0 0 160px #0f0";
     };
 
-    togglehome.focusin = function() {
+    togglehome.onfocus = function() {
 		togglehome.style.backgroundColor = "#0f0";
 		togglehome.style.backgroundImage = "url('/jomape/src/homeblack.svg')";
 		togglehome.style.boxShadow = "0 0 10px #0f0";
@@ -43,13 +43,13 @@ window.addEventListener("load", function start() {
 		togglehome.style.boxShadow += ", 0 0 160px #0f0";
     };
 
-    togglehome.mouseleave = function() {
+    togglehome.onmouseleave = function() {
         togglehome.style.backgroundColor = "#cc00cc";
         togglehome.style.backgroundImage = "url('/jomape/src/home.svg')";
         togglehome.style.boxShadow = "";
     };
 
-	togglehome.focusout = function() {
+	togglehome.onblur = function() {
         togglehome.style.backgroundColor = "#cc00cc";
         togglehome.style.backgroundImage = "url('/jomape/src/home.svg')";
         togglehome.style.boxShadow = "";
