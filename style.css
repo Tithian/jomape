@@ -166,6 +166,10 @@ section canvas {
 	-webkit-filter: invert(1);
 	filter: invert(1);
 }
+.container-image:focus-within img {
+	-webkit-filter: invert(1);
+	filter: invert(1);
+}
 
 /* BONGO CAT */
 .bongo_cat_container {
