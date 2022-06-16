@@ -8,6 +8,7 @@
   --mgreen: #0f0;
   --black: #000;
 }
+
 * {
 	box-sizing: border-box;
 	font-family: Arial, sans-serif;
@@ -29,8 +30,16 @@ html, body {
 	top: -100vh;
 }
 
+#fol {
+    background: url("./src/fol.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 #fuh {
 	background-image: url("./src/cpubg.svg");
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 }
@@ -138,13 +147,6 @@ section canvas {
 	width: 100vw;
 	margin: 0px;
 	padding: 0px;
-}
-
-#fol {
-    background: url(./src/fol.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .container-image {
@@ -438,7 +440,6 @@ form {
 	margin: 2%;
 	padding: 1%;
 	width: auto;
-
 }
 
 form h1 {
@@ -450,12 +451,6 @@ form h1 {
   padding-bottom: 10%;
   letter-spacing: 2px;
   overflow-wrap: anywhere;
-}
-
-
-
-form .button {
-
 }
 
 .input {
@@ -470,10 +465,12 @@ form .button {
   padding: 4px 20px 0;
   width: 100%;
 }
+
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
   transform: translateY(8px);
 }
+
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
@@ -486,8 +483,6 @@ form .button {
 .input:focus ~ .placeholder {
   color: var(--green);
 }
-
-
 
 .placeholder {
   color: #65657b;
