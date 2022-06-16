@@ -23,7 +23,7 @@ window.addEventListener("load", function start() {
     togglehome.style.boxShadow = "0 0 0 #cc00cc";
     document.body.appendChild(togglehome);
 
-    function change() {
+	togglehome.mouseenter = function() {
 		togglehome.style.backgroundColor = "#0f0";
 		togglehome.style.backgroundImage = "url('/jomape/src/homeblack.svg')";
 		togglehome.style.boxShadow = "0 0 10px #0f0";
@@ -33,16 +33,26 @@ window.addEventListener("load", function start() {
 		togglehome.style.boxShadow += ", 0 0 160px #0f0";
     };
 
-	function back() {
+    togglehome.focusin = function() {
+		togglehome.style.backgroundColor = "#0f0";
+		togglehome.style.backgroundImage = "url('/jomape/src/homeblack.svg')";
+		togglehome.style.boxShadow = "0 0 10px #0f0";
+		togglehome.style.boxShadow += ", 0 0 20px #0f0";
+		togglehome.style.boxShadow += ", 0 0 40px #0f0";
+		togglehome.style.boxShadow += ", 0 0 80px #0f0";
+		togglehome.style.boxShadow += ", 0 0 160px #0f0";
+    };
+
+    togglehome.mouseleave = function() {
         togglehome.style.backgroundColor = "#cc00cc";
         togglehome.style.backgroundImage = "url('/jomape/src/home.svg')";
         togglehome.style.boxShadow = "";
     };
 
-    togglehome.addEventListener("mouseenter", change());
-    togglehome.addEventListener("focusin", change());
-    togglehome.addEventListener("mouseleave", back());
-    togglehome.addEventListener("focusout", back());
-
+	togglehome.focusout = function() {
+        togglehome.style.backgroundColor = "#cc00cc";
+        togglehome.style.backgroundImage = "url('/jomape/src/home.svg')";
+        togglehome.style.boxShadow = "";
+    };
 });
 
