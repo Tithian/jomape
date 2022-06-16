@@ -32,7 +32,7 @@ window.addEventListener("load", function start() {
 		togglehome.style.boxShadow += ", 0 0 160px #0f0";
     };
 
-    togglehome.focus = togglehome.onmouseover
+    togglehome.focusin = togglehome.onmouseover
 
     togglehome.onmouseleave = function() {
         togglehome.style.backgroundColor = "#cc00cc";
