@@ -1,5 +1,5 @@
 window.addEventListener("load", function start() {
-    let togglehome = document.createElement("a")
+    var togglehome = document.createElement("a")
     togglehome.setAttribute("href", "/jomape/index.html")
     togglehome.style.position = "fixed"
     togglehome.style.top = "10%"
@@ -20,7 +20,7 @@ window.addEventListener("load", function start() {
     togglehome.style.zIndex = "300";
     togglehome.style.transition = "0.5s";
     togglehome.style.boxShadow = "0 0 0 #cc00cc";
-    document.body.appendChild(togglehome)
+    document.body.appendChild(togglehome);
 
     togglehome.addEventListener("mouseenter", change());
     togglehome.addEventListener("focus", change());
